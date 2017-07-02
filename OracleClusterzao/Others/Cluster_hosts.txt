@@ -1,0 +1,34 @@
+#####################<ORACLE SERVERS SECTION>#####################
+# REDE ORACLE SCAN
+
+10.32.118.8		rj01orascan01.bcsul.corp		rj01orascan01
+10.32.118.9		rj01orascan02.bcsul.corp		rj01orascan02
+10.32.118.10	rj01orascan03.bcsul.corp		rj01orascan03	
+
+# REDE PUBLICA (Producao)
+
+10.32.118.11	rj01linoracloud01.bcsul.corp 	rj01linoracloud01
+10.32.118.12	rj01linoracloud02.bcsul.corp 	rj01linoracloud02
+10.32.118.13	rj01linoracloud03.bcsul.corp 	rj01linoracloud03
+10.32.118.14	rj01linoracloud04.bcsul.corp 	rj01linoracloud04
+
+# REDE VIRTUAL (vip)
+
+10.32.118.21	rj01linoracloud01v.bcsul.corp 	rj01linoracloud01v
+10.32.118.22	rj01linoracloud02v.bcsul.corp 	rj01linoracloud02v
+10.32.118.23	rj01linoracloud03v.bcsul.corp 	rj01linoracloud03v
+10.32.118.24	rj01linoracloud04v.bcsul.corp 	rj01linoracloud04v
+
+# REDE PRIVADA (Interconnect)
+
+192.168.100.11		rj01linoracloud01i			rj01linoracloud01i
+192.168.100.12		rj01linoracloud02i			rj01linoracloud02i
+192.168.100.13		rj01linoracloud03i			rj01linoracloud03i
+192.168.100.14		rj01linoracloud04i			rj01linoracloud04i
+
+# REDE BACKUP
+
+192.168.0.133		rj01linoracloud01b			rj01linoracloud01b
+192.168.0.134		rj01linoracloud02b			rj01linoracloud02b
+192.168.0.135		rj01linoracloud03b			rj01linoracloud03b
+192.168.0.136		rj01linoracloud04b			rj01linoracloud04b
