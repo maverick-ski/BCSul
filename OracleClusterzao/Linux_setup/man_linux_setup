@@ -1,0 +1,32 @@
+NAME
+		linux_setup.sh
+		
+SYNOPSIS
+		linux_setup [OPTION...] [FILE]...
+		
+DESCRIPTION
+		USe this script to configure and prepare a fresh linux installation to receive oracle database and cluster products.
+		This script will setup hostname, resolve.conf, create base users, configure sudoers privileges and etc.
+
+EXAMPLES
+		linux_setup.sh
+		
+Main operation mode:
+
+
+
+Common options:
+
+
+
+
+AUTHOR
+       Written by John Gilmore and Jay Fenlason.
+
+REPORTING BUGS
+       Report bugs to <bug-tar@gnu.org>.
+
+COPYRIGHT
+       Copyright © 2013 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+

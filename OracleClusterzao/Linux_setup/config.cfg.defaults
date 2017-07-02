@@ -1,0 +1,6 @@
+hostname=localhost
+domain=.bcsul.corp
+search=bcsul.corp
+dns1=10.32.112.76
+dns2=10.64.112.107
+dns3=8.8.8.8

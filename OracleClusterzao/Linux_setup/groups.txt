@@ -1,0 +1,10 @@
+oinstall:5000
+dba:5001
+oper:5002
+asmdba:5003
+asmoper:5004
+asmadmin:5005
+backupdba:5006
+dgdba:5007
+kmdba:5008
+racdba:5009
