@@ -1,0 +1,6 @@
+TYPE=Ethernet
+NAME=bond-slave-em3
+DEVICE=em3
+ONBOOT=yes
+MASTER=bond1
+SLAVE=yes

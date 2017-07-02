@@ -1,0 +1,16 @@
+DEVICE=bond1
+NAME=backup
+ONBOOT=yes
+TYPE=Bond
+BONDING_OPTS="resend_igmp=1 updelay=0 use_carrier=1 arp_all_targets=any miimon=100 lp_interval=1 min_links=0 tlb_dynamic_lb=1 downdelay=0 xmi
+t_hash_policy=layer2 packets_per_slave=1 primary_reselect=always ad_actor_sys_prio=65535 fail_over_mac=none arp_validate=none mode=4 ad
+_user_port_key=0 lacp_rate=slow all_slaves_active=0 arp_interval=0 ad_select=stable num_unsol_na=1 num_grat_arp=1"
+BONDING_MASTER=yes
+BOOTPROTO=none
+IPADDR=192.168.200.133
+NETMASK=255.255.255.0
+DEFROUTE=no
+PEERDNS=no
+PEERROUTES=no
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
