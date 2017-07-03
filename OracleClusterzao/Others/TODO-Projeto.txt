@@ -1,0 +1,10 @@
+-- script:
+	- para configurar bonding
+	- criar bloco main
+	- permitir passar config.cfg na como parâmetro
+	- terminar bloco getopts e menu
+
+
+-- Pendencias:
+
+	- Rede de backup não está operacional
