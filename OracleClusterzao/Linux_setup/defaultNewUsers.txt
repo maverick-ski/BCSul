@@ -1,0 +1,5 @@
+oracle:5100:oinstall:dba,oper,backupdba,dgdba,kmdba,asmdba,asmoper,asmadmin,racdba:Oracle Database Software Owner:/bin/bash
+oragrid:5101:oinstall:asmdba,asmoper,asmadmin,racdba:Oracle Grid Infrastructure Adm:/bin/bash
+oraasm:5102:oinstall:asmdba,asmoper,asmadmin:Oracle ASM Adm:/bin/bash
+oma:5103:oinstall:dba,oper:Oracle Management Agent user:/bin/bash
+pierre:5104:oinstall:dba,oper,backupdba,dgdba,kmdba,asmdba,asmoper,asmadmin,racdba:Oracle Dba:/bin/bash
