@@ -1,4 +1,6 @@
-oracle:5000:Oracle Database Software Owner:/bin/bash
+oracle:5100:oinstall:dba,oper,backupdba,dgdba,kmdba,asmdba,asmoper,asmadmin,racdba:Oracle Database Software Owner:/bin/bash
+pierre:5101:oinstall:dba,oper,backupdba,dgdba,kmdba,asmdba,asmoper,asmadmin,racdba:Oracle Dba:/bin/bash
+
 oragrid:5001:Oracle Grid Infrastructure Adm:/bin/bash
 oraasm:5002:Oracle ASM Adm:/bin/bash
 pierre:5003:Oracle DBA:/bin/bash

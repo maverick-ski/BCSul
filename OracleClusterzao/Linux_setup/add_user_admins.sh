@@ -15,14 +15,25 @@ echo "#####################################################"
 echo " "
 echo "Oracle's Administrative Groups"
 echo " "
-GROUP="bcsul_admin:grid:asm:oper"
-set -f                      # avoid globbing (expansion of *)
-array=(${GROUP//:/ })
-for i in "${!array[@]}"
-do
-    echo "$i=>${array[i]}"
-    echo "groupadd -g 500$i ${array[i]}"
-done
+# get newgroups file from first arg on cmd line or default to 'defaultNewGroups.txt'
+NGF="${1:-defaultNewGroups.txt}"
+# get existing groupnames and guids.
+gnames="^($(getent group | cut -d: -f1 | paste -sd'|'))$"
+gids="^($(getent group | cut -d: -f3 | paste -sd'|'))$"
+
+while IFS=: read GNAME GID ; do
+
+    groupadd -g $GID $GNAME
+    echo "Created group => $GNAME (GID $GID)"
+	
+done < <(awk -F: '$1 !~ gnames && $2 !~ gids' gnames="$gnames" gids="$gids" "$NGF")
+
+echo "#####################################################"
+echo " "
+echo "Groups not created because the Groupname or GID already exist:"
+echo " "
+awk -F: '$1 ~ gnames || $2 ~ gids' gnames="$gnames" gids="$gids" "$NGF" >&2
+echo 
 echo "Done...."
 echo " "
 echo "#####################################################"
@@ -31,40 +42,30 @@ echo "#####################################################"
 echo " "
 echo "Oracle's Administrative Users"
 echo " "
-# get newusers file from first arg on cmd line or default to 'newusers.txt'
-nf="${1:-newusers.txt}"
+# get newusers file from first arg on cmd line or default to 'defaultNewUsers.txt'
+NUF="${2:-defaultNewUsers.txt}"
 
 # get existing usernames and uids.
 names="^($(getent passwd | cut -d: -f1 | paste -sd'|'))$"
- uids="^($(getent passwd | cut -d: -f3 | paste -sd'|'))$"
+uids="^($(getent passwd | cut -d: -f3 | paste -sd'|'))$"
 
-while IFS=: read u uid gecos shell; do
-    gid="$uid" ; homedir="/home/$u"
+while IFS=: read u uid gname subg gecos shell; do
+    homedir="/home/$u"
 
-    echo "useradd  -m -d "$homedir" -c "$gecos" -u "$uid" -g "$gid" -s "$shell" "$u""
-	echo ""$u" | passwd --stdin -f $u"
-	
+    useradd -m -u "$uid" -g "$gname" -G "$subg" -c "$gecos" -s "$shell" -d "$homedir" "$u"
 	echo "Created user => $u"
-	echo "Default password => $u"
-	
-    echo "groupadd -g "$gid" "$u""
+    echo "$u" | passwd --stdin -f $u
+  	echo "Default password => $u"
+    echo " "
 
-done < <(awk -F: '$1 !~ names && $2 !~ uids' names="$names" uids="$uids" "$nf")
+done < <(awk -F: '$1 !~ names && $2 !~ uids' names="$names" uids="$uids" "$NUF")
 
 echo "#####################################################"
 echo " "
-echo "Users not created because the username or uid already existed: >&2"
+echo "Users not created because the username or uid already exist:"
 echo " "
-awk -F: '$1 ~ names || $2 ~ uids' names="$names" uids="$uids" "$nf" >&2
+awk -F: '$1 ~ names || $2 ~ uids' names="$names" uids="$uids" "$NUF" >&2
+echo " "
 echo "Done...."
 echo " "
 echo "#####################################################"
-
-
-
-
-
-
-
-
-
