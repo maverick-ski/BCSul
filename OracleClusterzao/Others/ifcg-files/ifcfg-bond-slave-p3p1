@@ -1,7 +1,7 @@
 TYPE=Ethernet
 NAME=bond-slave-p3p1
-UUID=8557372f-e194-4a4f-b76b-0015af279f68
 DEVICE=p3p2
 ONBOOT=yes
 MASTER=bond2
 SLAVE=yes
+UUID=

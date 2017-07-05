@@ -4,3 +4,4 @@ DEVICE=em3
 ONBOOT=yes
 MASTER=bond1
 SLAVE=yes
+UUID=
