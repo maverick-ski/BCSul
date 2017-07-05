@@ -35,6 +35,11 @@
 #								- Rewrited function Fix_Hosts() to setup /etc/hosts file based on template file
 #									or  HOSTNAME variable
 #								- Rewrited function Base_Config() added "Seting static hostname" code
+#
+#	05/07/2017 - Pierre Ribeiro - Rewrited Main Section at while getops. Add "A)" option in case condition
+#								- Rewrited Setup_Admins function layout
+#
+#
 #########################################################################################################################
 
 # Load the config library functions
@@ -156,18 +161,18 @@ Base_Systemctl() {
         }
 
 Setup_Admins() {
-		Init_vars
-        echo "#####################################################"
-        echo " "
-        echo "Creating admin users, adding $ADMINGROUP to sudoers"
+		Init_vars              
         $SETUP_DIR/add_user_admins.sh
-
+		echo "#####################################################"
+        echo " "
+        echo "Adding $ADMINGROUP to sudoers"
+		echo " "
+		echo "#####################################################"
         #add $ADMINGROUP to sudoers file
         echo "%"$ADMINGROUP' ALL=(ALL)     ALL' >> /etc/sudoers
-
         echo " "
         echo "Done."
-
+		echo "#####################################################"
         }
 
 OL6_Update() {
@@ -421,6 +426,11 @@ do
 		s)	Base_Systemctl;;
 		a)	Setup_Admins;;
 		o)	Oracle_12cR2Pre;;
+		A)	Base_Config;;
+			Fix_Hosts;;
+			Base_Systemctl
+			Setup_Admins;;
+			Oracle_12cR2Pre;;
 		h)	Usage;;
 		\?)	echo >&2 "usage: $0 [-v] [-f filename] [file ...]"
 			exit 1;;
