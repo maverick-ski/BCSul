@@ -1,0 +1,35 @@
+#!/bin/bash
+
+Setup_Net_Intefaces(){
+	Init_vars
+	
+	OLD_IFCFG=`ls /etc/sysconfig/network-scripts/ |grep ifcfg* |grep -v  ifcfg-lo`
+	mv $OLD_IFCFG /tmp
+	cp /root/linux_setup/ifcfg/* /etc/sysconfig/network-scripts/
+	
+	PROD_ADDR=10.32.118.2
+	PRIV_ADDR=192.168.100.1
+	BKP_ADDR=192.168.200.133
+	
+	NEW_IFCFG=( $(ls /root/linux_setup/ifcfg/ |grep ifcfg) )
+	
+	for i in "${NEW_IFCFG[@]}"
+	do
+		NEW_UUID=`uuidgen`
+		sed -i -e "s/UUID=/UUID=$NEW_UUID/g" $i
+		IFNAME=`cat $i | grep 'NAME' | cut -d '=' -f2`
+		case "$IFNAME" in
+			producao)
+				sed -i -e "s/IPADDR=/IPADDR=$PROD_ADDR/g" $i ;;
+			backup)
+				sed -i -e "s/IPADDR=/IPADDR=$BKP_ADDR/g" $i ;;
+			interconnect)
+				sed -i -e "s/IPADDR=/IPADDR=$PRIV_ADDR/g" $i ;;		
+		esac
+		unset NEW_UUID 	
+	done
+	
+	
+
+
+}
