@@ -160,7 +160,7 @@ Setup_Admins() {
         echo "#####################################################"
         echo " "
         echo "Creating admin users, adding $ADMINGROUP to sudoers"
-        $SETUP_DIR/user_add_admins.sh
+        $SETUP_DIR/add_user_admins.sh
 
         #add $ADMINGROUP to sudoers file
         echo "%"$ADMINGROUP' ALL=(ALL)     ALL' >> /etc/sudoers
