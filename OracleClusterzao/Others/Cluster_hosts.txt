@@ -28,7 +28,7 @@
 
 # REDE BACKUP
 
-192.168.0.133		rj01linoracloud01b			rj01linoracloud01b
-192.168.0.134		rj01linoracloud02b			rj01linoracloud02b
-192.168.0.135		rj01linoracloud03b			rj01linoracloud03b
-192.168.0.136		rj01linoracloud04b			rj01linoracloud04b
+192.168.200.133		rj01linoracloud01b			rj01linoracloud01b
+192.168.200.134		rj01linoracloud02b			rj01linoracloud02b
+192.168.200.135		rj01linoracloud03b			rj01linoracloud03b
+192.168.200.136		rj01linoracloud04b			rj01linoracloud04b
