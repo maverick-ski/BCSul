@@ -39,9 +39,9 @@
 #	05/07/2017 - Pierre Ribeiro - Rewrited Main Section at while getops. Add "A)" option in case condition
 #								- Rewrited Setup_Admins function layout
 #
-#	11/07/2017 - Pierre Ribeiro - Added function Setup_Net_Intefaces
+#	11/07/2017 - Pierre Ribeiro - Added functions Setup_Net_Intefaces and Extra_Pkgs
 #								- Included variables PROD_ADDR/PRIV_ADDR/BKP_ADDR at Init_vars function
-#								- Added Setup_Net_Intefaces as option in "A)" case condition at while getops
+#								- Added Setup_Net_Intefaces andd Extra_Pkgs as option in "A)" case condition at while getops
 #								- Added constant CP
 #
 #########################################################################################################################
@@ -210,6 +210,19 @@ Setup_Admins() {
 		echo "#####################################################"
         }
 
+Extra_Pkgs() {
+        echo "#####################################################"
+        echo " "
+        echo "Install Extra Packages"
+		echo " "
+        yum iperf3-3.1.3-1.fc24.i686.rpm -y
+        sleep 10
+		yum install netapp_linux_unified_host_utilities-7-1.x86_64.rpm -y
+        echo " "
+        echo "Done."
+
+        }
+		
 OL6_Update() {
 		Init_vars
         echo "#####################################################"
@@ -467,6 +480,7 @@ do
 			Base_Systemctl
 			Setup_Admins;;
 			Oracle_12cR2Pre;;
+			Extra_Pkgs;;			
 		h)	Usage;;
 		\?)	echo >&2 "usage: $0 [-v] [-f filename] [file ...]"
 			exit 1;;
