@@ -39,6 +39,10 @@
 #	05/07/2017 - Pierre Ribeiro - Rewrited Main Section at while getops. Add "A)" option in case condition
 #								- Rewrited Setup_Admins function layout
 #
+#	11/07/2017 - Pierre Ribeiro - Added function Setup_Net_Intefaces
+#								- Included variables PROD_ADDR/PRIV_ADDR/BKP_ADDR at Init_vars function
+#								- Added Setup_Net_Intefaces as option in "A)" case condition at while getops
+#								- Added constant CP
 #
 #########################################################################################################################
 
@@ -48,6 +52,7 @@ source config.shlib
 # Filling constants with command which
 
 MV=`which mv | awk '{print $1}'`
+CP=`which cp | awk '{print $1}' | grep -v alias`
 RPM=`which rpm | awk '{print $1}'`
 CAT=`which cat | awk '{print $1}'`
 TAR=`which tar | awk '{print $1}'`
@@ -84,6 +89,9 @@ Init_vars () {
 		DNS1="$(config_get $cfgFile dns1)"
 		DNS2="$(config_get $cfgFile dns2)"
 		DNS3="$(config_get $cfgFile dns3)"
+		PROD_ADDR="$(config_get $cfgFile prod_addr)"
+		PRIV_ADDR="$(config_get $cfgFile priv_addr)"
+		BKP_ADDR="$(config_get $cfgFile bkp_addr)"
 		
 		}
 
@@ -146,6 +154,33 @@ Base_Config() {
         echo "#####################################################"
 
         }
+
+Setup_Net_Intefaces(){
+	Init_vars
+	
+	OLD_IFCFG=`ls /etc/sysconfig/network-scripts/ |grep ifcfg* |grep -v  ifcfg-lo`
+	mv $OLD_IFCFG /tmp
+	cp /root/linux_setup/ifcfg/* /etc/sysconfig/network-scripts/
+		
+	NEW_IFCFG=( $(ls /root/linux_setup/ifcfg/ |grep ifcfg) )
+	
+	for i in "${NEW_IFCFG[@]}"
+	do
+		NEW_UUID=`uuidgen`
+		sed -i -e "s/UUID=/UUID=$NEW_UUID/g" $i
+		IFNAME=`cat $i | grep 'NAME' | cut -d '=' -f2`
+		case "$IFNAME" in
+			producao)
+				sed -i -e "s/IPADDR=/IPADDR=$PROD_ADDR/g" $i ;;
+			backup)
+				sed -i -e "s/IPADDR=/IPADDR=$BKP_ADDR/g" $i ;;
+			interconnect)
+				sed -i -e "s/IPADDR=/IPADDR=$PRIV_ADDR/g" $i ;;		
+		esac
+		unset NEW_UUID 	
+	done
+
+}
 
 Base_Systemctl() {
 		Init_vars
@@ -428,6 +463,7 @@ do
 		o)	Oracle_12cR2Pre;;
 		A)	Base_Config;;
 			Fix_Hosts;;
+			Setup_Net_Intefaces;;
 			Base_Systemctl
 			Setup_Admins;;
 			Oracle_12cR2Pre;;
