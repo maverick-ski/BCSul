@@ -70,7 +70,6 @@ IPLOCAL=`ifconfig  | grep 'inet' | awk '{print $2}' | cut -d ':' -f2 | grep -v 1
 
 #flag=$1
 
-#cfgFile=config.cfg
 SCRIPT="linux_setup.sh"
 TARBALL="/root/linux_setup.tar"
 SETUP_DIR="/root/linux_setup"
@@ -215,10 +214,13 @@ Extra_Pkgs() {
         echo " "
         echo "Install Extra Packages"
 		echo " "
-        yum iperf3-3.1.3-1.fc24.i686.rpm -y
+		cd rpms/
+        yum localinstall iperf3-3.1.3-1.fc24.i686.rpm -y
         sleep 10
-		yum install netapp_linux_unified_host_utilities-7-1.x86_64.rpm -y
+		yum localinstall netapp_linux_unified_host_utilities-7-1.x86_64.rpm -y
+		sleep 10
         echo " "
+		cd ..
         echo "Done."
 
         }
@@ -466,20 +468,20 @@ if ( ! getopts "f:bsaoh" opt); then
 	exit $E_OPTERROR;
 fi
 
-while getopts f:bsaoh opt
+while getopts f:bsdoah opt
 do
     case "$opt" in
 		f)  cfgFile="$OPTARG";;
 		b)  Base_Config;;
 		s)	Base_Systemctl;;
-		a)	Setup_Admins;;
+		d)	Setup_Admins;;
 		o)	Oracle_12cR2Pre;;
-		A)	Base_Config;;
-			Fix_Hosts;;
-			Setup_Net_Intefaces;;
+		a)	Base_Config
+			Fix_Hosts
+			Setup_Net_Intefaces
 			Base_Systemctl
-			Setup_Admins;;
-			Oracle_12cR2Pre;;
+			Setup_Admins
+			Oracle_12cR2Pre
 			Extra_Pkgs;;			
 		h)	Usage;;
 		\?)	echo >&2 "usage: $0 [-v] [-f filename] [file ...]"
