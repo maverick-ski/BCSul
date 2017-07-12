@@ -158,10 +158,11 @@ Setup_Net_Intefaces(){
 	Init_vars
 	
 	OLD_IFCFG=`ls /etc/sysconfig/network-scripts/ |grep ifcfg* |grep -v  ifcfg-lo`
+	cd /etc/sysconfig/network-scripts/
 	mv $OLD_IFCFG /tmp
-	cp /root/linux_setup/ifcfg/* /etc/sysconfig/network-scripts/
+	cp $SETUP_DIR/ifcfg/* /etc/sysconfig/network-scripts/
 		
-	NEW_IFCFG=( $(ls /root/linux_setup/ifcfg/ |grep ifcfg) )
+	NEW_IFCFG=( $(ls $SETUP_DIR/ifcfg/ |grep ifcfg) )
 	
 	for i in "${NEW_IFCFG[@]}"
 	do
@@ -178,11 +179,11 @@ Setup_Net_Intefaces(){
 		esac
 		unset NEW_UUID 	
 	done
-
+	cd $SETUP_DIR
 }
 
 Base_Systemctl() {
-		Init_vars
+		#Init_vars
         echo "#####################################################"
         echo " "
         echo "Changing systemctl settings"
@@ -213,11 +214,10 @@ Extra_Pkgs() {
         echo "#####################################################"
         echo " "
         echo "Install Extra Packages"
-		echo " "
-		cd rpms/
-        yum localinstall iperf3-3.1.3-1.fc24.i686.rpm -y
+		echo " "		
+        yum localinstall $RPM_DIR/iperf3-3.1.3-1.fc24.i686.rpm -y
         sleep 10
-		yum localinstall netapp_linux_unified_host_utilities-7-1.x86_64.rpm -y
+		yum localinstall $RPM_DIR/netapp_linux_unified_host_utilities-7-1.x86_64.rpm -y
 		sleep 10
         echo " "
 		cd ..
