@@ -195,7 +195,7 @@ Base_Systemctl() {
         }
 
 Setup_Admins() {
-		Init_vars              
+		#Init_vars              
         $SETUP_DIR/add_user_admins.sh
 		echo "#####################################################"
         echo " "
