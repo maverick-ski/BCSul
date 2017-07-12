@@ -1,7 +1,7 @@
 TYPE=Ethernet
-NAME=bond-slave-p3p1
-DEVICE=p3p1
+NAME=bond-slave-p3p2
+UUID=
+DEVICE=p3p2
 ONBOOT=yes
 MASTER=bond2
 SLAVE=yes
-UUID=

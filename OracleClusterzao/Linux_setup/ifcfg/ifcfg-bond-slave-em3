@@ -1,7 +1,7 @@
 TYPE=Ethernet
 NAME=bond-slave-em3
 DEVICE=em3
+UUID=
 ONBOOT=yes
 MASTER=bond1
 SLAVE=yes
-UUID=
