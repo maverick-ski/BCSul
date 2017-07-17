@@ -89,8 +89,12 @@ Init_vars () {
 		DNS2="$(config_get $cfgFile dns2)"
 		DNS3="$(config_get $cfgFile dns3)"
 		PROD_ADDR="$(config_get $cfgFile prod_addr)"
+		PROD_NETMASK="$(config_get $cfgFile prod_netmask)"		
 		PRIV_ADDR="$(config_get $cfgFile priv_addr)"
+		PRIV_NETMASK="$(config_get $cfgFile priv_netmask)"
 		BKP_ADDR="$(config_get $cfgFile bkp_addr)"
+		BKP_NETMASK="$(config_get $cfgFile bkp_netmask)"
+		DF_GATEWAY="$(config_get $cfgFile df_gateway)"
 		
 		}
 
@@ -148,6 +152,24 @@ Base_Config() {
         echo SELINUX=disabled >> /etc/selinux/config
         rm -rf /etc/selinux/config.new
         echo " "
+        echo "#####################################################"
+		echo " "
+        echo "#####################################################"
+        echo " "
+        echo "Setting up /etc/sysconfig/network"
+		cp /etc/sysconfig/network /etc/sysconfig/network.orig
+		echo NOZEROCONF=yes >> /etc/sysconfig/network
+		echo NETWORKING=yes >> /etc/sysconfig/network
+		echo NETWORKING_IPV6=no >> /etc/sysconfig/network
+		echo GATEWAY=$DF_GATEWAY >> /etc/sysconfig/network
+		echo " "
+        echo "#####################################################"
+		echo " "
+        echo "#####################################################"
+        echo " "
+        echo "Setting up /etc/multipath.conf"
+		cp $SETUP_DIR/multipath.conf /etc/multipath.conf		
+		echo " "
         echo "Done...."
 		echo " "
         echo "#####################################################"
@@ -171,11 +193,14 @@ Setup_Net_Intefaces(){
 		IFNAME=`cat $i | grep 'NAME' | cut -d '=' -f2`
 		case "$IFNAME" in
 			producao)
-				sed -i -e "s/IPADDR=/IPADDR=$PROD_ADDR/g" $i ;;
+				sed -i -e "s/IPADDR=/IPADDR=$PROD_ADDR/g" $i
+				sed -i -e "s/NETMASK=/NETMASK=$PROD_NETMASK/g" $i ;;
 			backup)
-				sed -i -e "s/IPADDR=/IPADDR=$BKP_ADDR/g" $i ;;
+				sed -i -e "s/IPADDR=/IPADDR=$BKP_ADDR/g" $i
+				sed -i -e "s/NETMASK=/NETMASK=$BKP_NETMASK/g" $i ;;
 			interconnect)
-				sed -i -e "s/IPADDR=/IPADDR=$PRIV_ADDR/g" $i ;;		
+				sed -i -e "s/IPADDR=/IPADDR=$PRIV_ADDR/g" $i
+				sed -i -e "s/NETMASK=/NETMASK=$PRIV_NETMASK/g" $i ;;		
 		esac
 		unset NEW_UUID 	
 	done

@@ -9,7 +9,7 @@ _user_port_key=0 lacp_rate=slow all_slaves_active=0 arp_interval=0 ad_select=sta
 BONDING_MASTER=yes
 BOOTPROTO=none
 IPADDR=
-NETMASK=255.255.240.0
+NETMASK=
 GATEWAY=10.32.112.1
 DEFROUTE=yes
 PEERDNS=yes
