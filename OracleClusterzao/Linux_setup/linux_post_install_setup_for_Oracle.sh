@@ -44,6 +44,10 @@
 #								- Added Setup_Net_Intefaces andd Extra_Pkgs as option in "A)" case condition at while getops
 #								- Added constant CP
 #
+#	15/07/2017 - Pierre Ribeiro - Included variables DF_GATEWAY/PROD_NETMASK/PRIV_NETMASK/BKP_NETMASK at Init_vars function
+#								- Rewrited function Setup_Net_Intefaces() to add NETMASK in case loop
+#								- Rewrited function Base_Config() to add Setting up /etc/sysconfig/network and multipath.conf
+#
 #########################################################################################################################
 
 # Load the config library functions
@@ -100,16 +104,20 @@ Init_vars () {
 
 Fix_Hosts() {
 		Init_vars
-		echo "#####################################################"
+		echo "######################################################"
+		echo "########### /etc/hosts adjustments section ###########"
+		echo "######################################################"
         echo " "
 		file="hosts_template"
 		if [ -f "$file" ]
 		then
 			$CAT hosts_template >> /etc/hosts
-			echo "New entries added to /etc/hosts file."
+			echo "The following new entries was added to /etc/hosts file:"
+			$CAT hosts_template
 		else			
 			echo $IPLOCAL   $HOSTNAME$DOMAIN  $HOSTNAME >> /etc/hosts
-			echo "New entries added to /etc/hosts file."
+			echo "The following new entries was added to /etc/hosts file:"
+			echo $IPLOCAL   $HOSTNAME$DOMAIN  $HOSTNAME
 		fi
 		echo " "
         echo "Done....."
@@ -119,17 +127,20 @@ Fix_Hosts() {
 
 Base_Config() {
 		Init_vars
-		echo "#####################################################"
+		echo "######################################################"
+		echo "##### Basic OS configuration adjustments section #####"
+		echo "######################################################"
         echo " "
+		echo "Original HOSTNAME info:"
 		$HOSTNAMECTL status
 		echo " "
-		echo "Seting static hostname"
+		echo "Seting new HOSTNAME:"
 		$HOSTNAMECTL set-hostname $HOSTNAME
 		echo " "
         $HOSTNAMECTL status
         echo "#####################################################"
         echo " "
-        echo "Setting DNS Servers, Domain Search"
+        echo "Setting DNS Servers and Domain Search to:"
         cp /etc/resolv.conf /etc/resolv.conf.orig
         echo 'search '$SEARCH > /etc/resolv.conf
         echo 'nameserver '$DNS1 >> /etc/resolv.conf
@@ -140,10 +151,9 @@ Base_Config() {
 			echo 'nameserver '$DNS3 >> /etc/resolv.conf
 		fi
         echo " "
+		cat /etc/resolv.conf
         echo "#####################################################"
 		echo " "
-        echo "#####################################################"
-        echo " "
         echo "Disabling selinux"
         setenforce 0
         cp /etc/selinux/config /etc/selinux/config.orig
@@ -154,24 +164,24 @@ Base_Config() {
         echo " "
         echo "#####################################################"
 		echo " "
-        echo "#####################################################"
-        echo " "
-        echo "Setting up /etc/sysconfig/network"
+        echo "Setting up /etc/sysconfig/network to:"
 		cp /etc/sysconfig/network /etc/sysconfig/network.orig
 		echo NOZEROCONF=yes >> /etc/sysconfig/network
 		echo NETWORKING=yes >> /etc/sysconfig/network
 		echo NETWORKING_IPV6=no >> /etc/sysconfig/network
 		echo GATEWAY=$DF_GATEWAY >> /etc/sysconfig/network
 		echo " "
+		cat /etc/sysconfig/network
         echo "#####################################################"
 		echo " "
-        echo "#####################################################"
-        echo " "
-        echo "Setting up /etc/multipath.conf"
+        echo "Setting up basic /etc/multipath.conf to:"
 		cp $SETUP_DIR/multipath.conf /etc/multipath.conf		
 		echo " "
-        echo "Done...."
+		cat /etc/sysconfig/network
 		echo " "
+		echo " "
+        echo "All basic adjustments was done...."
+		echo "Original files was saved with .orig extension "
         echo "#####################################################"
 
         }
@@ -179,32 +189,51 @@ Base_Config() {
 Setup_Net_Intefaces(){
 	Init_vars
 	
-	OLD_IFCFG=`ls /etc/sysconfig/network-scripts/ |grep ifcfg* |grep -v  ifcfg-lo`
-	cd /etc/sysconfig/network-scripts/
-	mv $OLD_IFCFG /tmp
-	cp $SETUP_DIR/ifcfg/* /etc/sysconfig/network-scripts/
+		echo "######################################################"
+		echo " Network interfaces configuration adjustments section "
+		echo "######################################################"
+        echo " "	
+		OLD_IFCFG=`ls /etc/sysconfig/network-scripts/ |grep ifcfg* |grep -v  ifcfg-lo`
+		echo "Backing up original ifcfg files to /tmp"		
+		cd /etc/sysconfig/network-scripts/
+		mv $OLD_IFCFG /tmp
+		echo " "
+		echo "Seting up new ifcfg files based on templates"
+		cp $SETUP_DIR/ifcfg/* /etc/sysconfig/network-scripts/
+			
+		NEW_IFCFG=( $(ls $SETUP_DIR/ifcfg/ |grep ifcfg) )
 		
-	NEW_IFCFG=( $(ls $SETUP_DIR/ifcfg/ |grep ifcfg) )
-	
-	for i in "${NEW_IFCFG[@]}"
-	do
-		NEW_UUID=`uuidgen`
-		sed -i -e "s/UUID=/UUID=$NEW_UUID/g" $i
-		IFNAME=`cat $i | grep 'NAME' | cut -d '=' -f2`
-		case "$IFNAME" in
-			producao)
-				sed -i -e "s/IPADDR=/IPADDR=$PROD_ADDR/g" $i
-				sed -i -e "s/NETMASK=/NETMASK=$PROD_NETMASK/g" $i ;;
-			backup)
-				sed -i -e "s/IPADDR=/IPADDR=$BKP_ADDR/g" $i
-				sed -i -e "s/NETMASK=/NETMASK=$BKP_NETMASK/g" $i ;;
-			interconnect)
-				sed -i -e "s/IPADDR=/IPADDR=$PRIV_ADDR/g" $i
-				sed -i -e "s/NETMASK=/NETMASK=$PRIV_NETMASK/g" $i ;;		
-		esac
-		unset NEW_UUID 	
-	done
-	cd $SETUP_DIR
+		for i in "${NEW_IFCFG[@]}"
+		do
+			NEW_UUID=`uuidgen`
+			sed -i -e "s/UUID=/UUID=$NEW_UUID/g" $i
+			IFNAME=`cat $i | grep 'NAME' | cut -d '=' -f2`
+			case "$IFNAME" in
+				producao)
+					sed -i -e "s/IPADDR=/IPADDR=$PROD_ADDR/g" $i
+					sed -i -e "s/NETMASK=/NETMASK=$PROD_NETMASK/g" $i
+					echo "The following bonded interface was created:"
+					echo $i
+					echo "IpAddress|Netmask: $PROD_ADDR|$PROD_NETMASK";;
+				backup)
+					sed -i -e "s/IPADDR=/IPADDR=$BKP_ADDR/g" $i
+					sed -i -e "s/NETMASK=/NETMASK=$BKP_NETMASK/g" $i
+					echo "The following bonded interface was created:"
+					echo $i
+					echo "IpAddress|Netmask: $BKP_ADDR|$BKP_NETMASK";;
+				interconnect)
+					sed -i -e "s/IPADDR=/IPADDR=$PRIV_ADDR/g" $i
+					sed -i -e "s/NETMASK=/NETMASK=$PRIV_NETMASK/g" $i
+					echo "The following bonded interface was created:"
+					echo $i
+					echo "IpAddress|Netmask: $PRIV_ADDR|$PRIV_NETMASK";;
+			esac
+			unset NEW_UUID 	
+		done
+		cd $SETUP_DIR
+		echo " "
+        echo "New bonded interfaces creation done...."		
+        echo "#####################################################"
 }
 
 Base_Systemctl() {
@@ -486,6 +515,12 @@ Usage()
 }
 		
 # Main Section
+
+echo "##############################################################"
+echo " "
+echo "#Adjusting fresh install linux to Oracle RAC/Database product#"
+echo " "
+echo "##############################################################"
 
 if ( ! getopts "f:bsaoh" opt); then
 	echo "`basename $0`: You must one of these options [-bsao] [-f filename]";
