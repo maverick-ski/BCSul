@@ -34,10 +34,8 @@ echo "Groups not created because the Groupname or GID already exist:"
 echo " "
 awk -F: '$1 ~ gnames || $2 ~ gids' gnames="$gnames" gids="$gids" "$NGF" >&2
 echo 
-echo "Done...."
+echo "Done..."
 echo " "
-echo "#####################################################"
-
 echo "#####################################################"
 echo " "
 echo "Oracle's Administrative Users"
@@ -66,6 +64,6 @@ echo "Users not created because the username or uid already exist:"
 echo " "
 awk -F: '$1 ~ names || $2 ~ uids' names="$names" uids="$uids" "$NUF" >&2
 echo " "
-echo "Done...."
+echo "Done..."
 echo " "
 echo "#####################################################"

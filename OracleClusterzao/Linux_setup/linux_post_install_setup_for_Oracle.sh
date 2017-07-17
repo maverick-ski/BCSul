@@ -189,9 +189,9 @@ Base_Config() {
 Setup_Net_Intefaces(){
 	Init_vars
 	
-		echo "######################################################"
-		echo " Network interfaces configuration adjustments section "
-		echo "######################################################"
+		echo "##########################################################"
+		echo "## Network interfaces configuration adjustments section ##"
+		echo "##########################################################"
         echo " "	
 		OLD_IFCFG=`ls /etc/sysconfig/network-scripts/ |grep ifcfg* |grep -v  ifcfg-lo`
 		echo "Backing up original ifcfg files to /tmp"		
@@ -238,21 +238,27 @@ Setup_Net_Intefaces(){
 
 Base_Systemctl() {
 		#Init_vars
-        echo "#####################################################"
+		echo "######################################################"
+		echo "####### Systemctl services adjustments section #######"
+		echo "######################################################"
         echo " "
-        echo "Changing systemctl settings"
+		echo "Starting ntp service"
         $SYSTEMCTL start ntpd.service
+		echo "Disabling iptables service"
         $SYSTEMCTL disable iptables.service
         $SYSTEMCTL disable ip6tables.service
         echo " "
-        echo "Done."
-
+        echo "Done..."
+		echo "#####################################################"
         }
 
 Setup_Admins() {
-		#Init_vars              
-        $SETUP_DIR/add_user_admins.sh
-		echo "#####################################################"
+		#Init_vars
+		echo "###############################################################"
+		echo "####### Adding administratives users and groups section #######"
+		echo "###############################################################"
+        echo " "
+		$SETUP_DIR/add_user_admins.sh		
         echo " "
         echo "Adding $ADMINGROUP to sudoers"
 		echo " "
@@ -260,14 +266,14 @@ Setup_Admins() {
         #add $ADMINGROUP to sudoers file
         echo "%"$ADMINGROUP' ALL=(ALL)     ALL' >> /etc/sudoers
         echo " "
-        echo "Done."
+        echo "Done..."
 		echo "#####################################################"
         }
 
 Extra_Pkgs() {
-        echo "#####################################################"
-        echo " "
-        echo "Install Extra Packages"
+		echo "##############################################"
+		echo "####### Install Extra Packages section #######"
+		echo "##############################################"
 		echo " "		
         yum localinstall $RPM_DIR/iperf3-3.1.3-1.fc24.i686.rpm -y
         sleep 10
@@ -275,8 +281,8 @@ Extra_Pkgs() {
 		sleep 10
         echo " "
 		cd ..
-        echo "Done."
-
+        echo "Done..."
+        echo "#####################################################"
         }
 		
 OL6_Update() {
@@ -344,15 +350,15 @@ Oracle_12cR1Pre() {
         }
 
 Oracle_12cR2Pre() {
-        echo "#####################################################"
-        echo " "
-        echo "Oracle RDBMS Preinstall"
+		echo "###############################################"
+		echo "### Oracle RDBMS Preinstall Package section ###"
+		echo "###############################################"
+		echo " "		
         yum install oracle-database-server-12cR2-preinstall.x86_64 -y
         sleep 10
-
         echo " "
-        echo "Done."
-
+        echo "Done..."
+        echo "#####################################################"
         }		
 		
 Oracle_Password() {
@@ -518,7 +524,7 @@ Usage()
 
 echo "##############################################################"
 echo " "
-echo "#Adjusting fresh install linux to Oracle RAC/Database product#"
+echo " Adjusting fresh install linux to Oracle RAC/Database product "
 echo " "
 echo "##############################################################"
 
@@ -549,3 +555,9 @@ do
     esac
 done
 shift `expr $OPTIND - 1`
+echo "##############################################################"
+echo " "
+echo " All adjustment tasks was executed. "
+echo " Please review the screen output for any error occurrence."
+echo " "
+echo "##############################################################"
