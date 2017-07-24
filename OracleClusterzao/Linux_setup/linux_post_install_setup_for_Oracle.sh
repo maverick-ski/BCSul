@@ -177,8 +177,6 @@ Base_Config() {
         echo "Setting up basic /etc/multipath.conf to:"
 		cp $SETUP_DIR/multipath.conf /etc/multipath.conf		
 		echo " "
-		cat /etc/sysconfig/network
-		echo " "
 		echo " "
         echo "All basic adjustments was done...."
 		echo "Original files was saved with .orig extension "
