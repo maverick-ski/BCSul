@@ -48,8 +48,8 @@
 #								- Rewrited function Setup_Net_Intefaces() to add NETMASK in case loop
 #								- Rewrited function Base_Config() to add Setting up /etc/sysconfig/network and multipath.conf
 #
-#	25/07/2017 - Pierre Ribeiro - Excluded Oracle_Password() function. Code was inserted into Setup_Admins() funtion and
-#									add_user_admins.sh external module
+#	25/07/2017 - Pierre Ribeiro - Excluded Oracle_Password() and Oracle_Agent() functions. Code was inserted into Setup_Admins()
+#									funtion and add_user_admins.sh external module
 #
 #########################################################################################################################
 
@@ -361,17 +361,6 @@ Oracle_12cR2Pre() {
         echo "Done..."
         echo "#####################################################"
         }		
-
-Oracle_Agent() {
-        echo "#####################################################"
-        echo " "
-        echo "Oracle Management Agent user setup"
-        $SETUP_DIR/user_add_oma.sh
-
-        echo " "
-        echo "Done."
-
-        }
 
 12cR1_Pre() {
         echo "#####################################################"
