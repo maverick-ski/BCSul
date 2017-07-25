@@ -48,6 +48,9 @@
 #								- Rewrited function Setup_Net_Intefaces() to add NETMASK in case loop
 #								- Rewrited function Base_Config() to add Setting up /etc/sysconfig/network and multipath.conf
 #
+#	25/07/2017 - Pierre Ribeiro - Excluded Oracle_Password() function. Code was inserted into Setup_Admins() funtion and
+#									add_user_admins.sh external module
+#
 #########################################################################################################################
 
 # Load the config library functions
@@ -358,22 +361,6 @@ Oracle_12cR2Pre() {
         echo "Done..."
         echo "#####################################################"
         }		
-		
-Oracle_Password() {
-        echo "#####################################################"
-        echo " "
-        echo "Changing Oracle user password and dba group changes for /etc/sudoers"
-        for USER in oracle
-                do
-                        echo "yourpassword" | passwd --stdin -f $USER
-                done
-
-
-        echo "%dba  ALL=(ALL)       NOPASSWD: ALL"   >> /etc/sudoers
-        echo " "
-        echo "Done."
-
-        }
 
 Oracle_Agent() {
         echo "#####################################################"
