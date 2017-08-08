@@ -1,0 +1,1 @@
+./linux_post_install_setup_for_Oracle.sh -f rj01linoracloud01Config.cfg -a
