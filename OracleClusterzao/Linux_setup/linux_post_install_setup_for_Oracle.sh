@@ -51,6 +51,10 @@
 #	25/07/2017 - Pierre Ribeiro - Excluded Oracle_Password() and Oracle_Agent() functions. Code was inserted into Setup_Admins()
 #									funtion and add_user_admins.sh external module
 #
+#	25/07/2017 - Pierre Ribeiro - Created etc directory to hold server configuration files
+#								- Rewrited functions Fix_Hosts(), Base_Config(), Base_Systemctl() to reflect new dir
+#								- Rewrited function Base_Systemctl() to disable ntpd service and enable chrony
+#
 #########################################################################################################################
 
 # Load the config library functions
@@ -114,7 +118,7 @@ Fix_Hosts() {
 		file="hosts_template"
 		if [ -f "$file" ]
 		then
-			$CAT hosts_template >> /etc/hosts
+			$CAT $SETUP_DIR/etc/hosts_template >> /etc/hosts
 			echo "The following new entries was added to /etc/hosts file:"
 			$CAT hosts_template
 		else			
@@ -178,7 +182,7 @@ Base_Config() {
         echo "#####################################################"
 		echo " "
         echo "Setting up basic /etc/multipath.conf to:"
-		cp $SETUP_DIR/multipath.conf /etc/multipath.conf		
+		cp $SETUP_DIR/etc/multipath.conf /etc/multipath.conf		
 		echo " "
 		echo " "
         echo "All basic adjustments was done...."
@@ -243,9 +247,18 @@ Base_Systemctl() {
 		echo "####### Systemctl services adjustments section #######"
 		echo "######################################################"
         echo " "
-		echo "Starting ntp service"
-        $SYSTEMCTL start ntpd.service
-		echo "Disabling iptables service"
+		echo "Adjustments on Chrony"
+		echo "Backing up original conf file"
+		mv -p /etc/chrony.conf /etc/chrony.conf.original
+		cp $SETUP_DIR/etc/chrony.conf /etc/chrony.conf
+		echo "Enabling services"
+        $SYSTEMCTL enable chronyd.service
+		echo "Starting services"
+        $SYSTEMCTL start chronyd.service
+		echo "Stoping unnecessary services"
+		$SYSTEMCTL stop ntpd.service
+		echo "Disabling services"
+		$SYSTEMCTL disable ntpd.service
         $SYSTEMCTL disable iptables.service
         $SYSTEMCTL disable ip6tables.service
         echo " "
