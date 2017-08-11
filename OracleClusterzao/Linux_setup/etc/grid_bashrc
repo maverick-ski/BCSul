@@ -1,0 +1,16 @@
+# Oracle Grid Settings
+export HOST=`/bin/hostname`
+export ORACLE_BASE=/u01/app/grid_base_dir
+export ORACLE_SID=+ASM1
+export GRID_HOME=/u01/app/grid_1/12.2.0.1
+export ORACLE_HOME=$GRID_HOME
+export ORACLE_HOSTNAME=$HOST
+export ORACLE_TERM=xterm
+export CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+
+export TMP=/tmp
+export TMPDIR=$TMP
+export PATH=$ORACLE_HOME/bin:.:/usr/sbin:$PATH
+
+alias sys='sqlplus / as sysasm'
