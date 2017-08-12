@@ -55,6 +55,8 @@
 #								- Rewrited functions Fix_Hosts(), Base_Config(), Base_Systemctl() to reflect new dir
 #								- Rewrited function Base_Systemctl() to disable ntpd service and enable chrony
 #
+#	25/07/2017 - Pierre Ribeiro - Added systemctl restart and status calls on Base_Systemctl() function
+#
 #########################################################################################################################
 
 # Load the config library functions
@@ -75,6 +77,9 @@ UNAME="`which uname | awk '{print $1}'` -r"
 SYSTEMCTL=`which systemctl | awk '{print $1}'`
 HOSTNAMECTL=`which hostnamectl | awk '{print $1}'`
 IPLOCAL=`ifconfig  | grep 'inet' | awk '{print $2}' | cut -d ':' -f2 | grep -v 127.0.0`
+SETUP_DIR="/root/linux_setup"
+RPM_DIR="$SETUP_DIR/RPMS"
+ADMINGROUP=dba
 
 # Initializing Variables
 # Ver o que fazer com as variaveis abaixo
@@ -83,9 +88,6 @@ IPLOCAL=`ifconfig  | grep 'inet' | awk '{print $2}' | cut -d ':' -f2 | grep -v 1
 
 SCRIPT="linux_setup.sh"
 TARBALL="/root/linux_setup.tar"
-SETUP_DIR="/root/linux_setup"
-RPM_DIR="$SETUP_DIR/RPMS"
-ADMINGROUP=dba
 REPO1='http://192.168.3.131/stage/repo_files/08262014_OL6_UEKR3.repo'
 PASSWORD=yourpassword
 db12cR1_stage_file1="http://your.ip.address/stage/oem/linuxamd64_12c_database_1of2.zip"
@@ -115,7 +117,7 @@ Fix_Hosts() {
 		echo "########### /etc/hosts adjustments section ###########"
 		echo "######################################################"
         echo " "
-		file="hosts_template"
+		file="$SETUP_DIR/etc/hosts_template"
 		if [ -f "$file" ]
 		then
 			$CAT $SETUP_DIR/etc/hosts_template >> /etc/hosts
@@ -261,6 +263,14 @@ Base_Systemctl() {
 		$SYSTEMCTL disable ntpd.service
         $SYSTEMCTL disable iptables.service
         $SYSTEMCTL disable ip6tables.service
+		echo "Restarting services"
+		$SYSTEMCTL restart network.service
+		echo "Retriving status from services"
+		$SYSTEMCTL status chronyd.service
+		$SYSTEMCTL status ntpd.service
+		$SYSTEMCTL status iptables.service
+		$SYSTEMCTL status ip6tables.service
+		$SYSTEMCTL status network.service
         echo " "
         echo "Done..."
 		echo "#####################################################"
