@@ -122,7 +122,7 @@ Fix_Hosts() {
 		then
 			$CAT $SETUP_DIR/etc/hosts_template >> /etc/hosts
 			echo "The following new entries was added to /etc/hosts file:"
-			$CAT hosts_template
+			$CAT $SETUP_DIR/etc/hosts_template
 		else			
 			echo $IPLOCAL   $HOSTNAME$DOMAIN  $HOSTNAME >> /etc/hosts
 			echo "The following new entries was added to /etc/hosts file:"
