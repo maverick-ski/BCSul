@@ -251,7 +251,7 @@ Base_Systemctl() {
         echo " "
 		echo "Adjustments on Chrony"
 		echo "Backing up original conf file"
-		mv -p /etc/chrony.conf /etc/chrony.conf.original
+		mv /etc/chrony.conf /etc/chrony.conf.original
 		cp $SETUP_DIR/etc/chrony.conf /etc/chrony.conf
 		echo "Enabling services"
         $SYSTEMCTL enable chronyd.service
