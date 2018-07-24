@@ -1,0 +1,9 @@
+SQL> 
+SQL> @@put_tbl_rwrite_on.sql
+SQL> alter table SDBANCO.BC_CADOC_3040_CONTA_COSIF READ WRITE;
+
+Table altered.
+
+Elapsed: 00:00:00.24
+SQL> 
+SQL> spool off;

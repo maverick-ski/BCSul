@@ -1,0 +1,4 @@
+SQL> 	USING 'WEBCRED';
+SP2-0734: unknown command beginning "USING 'WEB..." - rest of line ignored.
+SQL> 
+SQL> spool off

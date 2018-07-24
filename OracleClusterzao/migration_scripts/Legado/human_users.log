@@ -1,0 +1,4098 @@
+SQL> set echo on
+SQL> create user MARAUJO identified by values '42EB715F8900FC23' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADMIO identified by values 'BE61E91CB81E256A' default tablespace USER_DATA temporary tablespace TEMP;
+create user ADMIO identified by values 'BE61E91CB81E256A' default tablespace USER_DATA temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'ADMIO' conflicts with another user or role name 
+
+
+SQL> create user AAGUIAR identified by values '90A512F124278FFE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AALVES identified by values '1E05A22BB4B60E64' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ABRAAO identified by values 'ECB30C7C20FA56B7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ABRAINER identified by values '4E70BD0882B16DEB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACARNEIRO identified by values 'F23321803EC519F7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACARVALHO identified by values '150EA9560EE1A75A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACHRISTINE identified by values '7CF7DCCD8ACA73CE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACL identified by values '076FED9D2617E2F5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACLAUDIA identified by values '4F948DB119876879' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACOSTA identified by values '809DF488A71B8A7F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACRISTINA identified by values '59145AF952370F06' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADAO identified by values 'E73BD0448E5CAF11' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADIAS identified by values '48CBAB116B2B2B52' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADM identified by values '99F64E8748F793EF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALBA identified by values '742B6EA8FF22897A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADMOMINGUES identified by values 'EF13391383D586D5' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADMOVEIA identified by values '5DB61079967D1D9F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADOLFO identified by values '97D120A72B098874' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADOLPHO identified by values '62F2590CCD574472' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADOMINGUES identified by values '9F6A618DE5502C4F' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADOMINGUEZ identified by values '64752CE501A45F10' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADONO identified by values '62639BA78433B26E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADRIANA identified by values '2F507675F75556E2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADSIQUEIRA identified by values 'EC0DBC2F5C6A2963' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AFERREIRA identified by values 'F2AA0894C842E5A2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AFONSO identified by values '73B399AB10BD877E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AFSANTOS identified by values 'B9464576D7BCACC6' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AFULY identified by values 'D9DCBCABE21FEF3B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AGALDINO identified by values '94C7C9DCBD6C45EB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AGERALDO identified by values '8E316C147A34C35F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AGNALDO identified by values '87BF745B46C91229' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AGONCALVES identified by values '97853E3728D3636A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AIRTON identified by values '6039B8BA4BAFCD6C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALAIRTON identified by values '3A14AE47E30B86E1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALAN identified by values '6D41255724B66E3A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANDERSON identified by values 'B530924F64E77FFB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALBERTO identified by values 'BF3E386DB57F4539' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALDENIR identified by values '7529927D95FE5C0D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALDERNIR identified by values 'FCDA24B614DA6432' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALESSANDRA identified by values 'A5C3ECB0FAD82D8D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALESSANDRO identified by values '9E8357E5AEAEC5B6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALEXANDRE identified by values '121D572317112826' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALEXSSANDRA identified by values '54F178A8B3D9359B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALINY identified by values '4004808AA2FEF95E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALISSON identified by values '7BA0FD299DF28FF5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALMIR identified by values 'F86E2E7277614708' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALOLIVEIRA identified by values 'F664B31A49FBAAE0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALYNE identified by values 'ABB148390462A404' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMAGOSSI identified by values 'DD0755E1ADA33283' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMARTINS identified by values 'FB96173EC50A6F25' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMATTOS identified by values '606A970882216D07' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMELO identified by values '37E6A1A807C8C41F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMORIM identified by values 'AD918483D8F416FD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMOTTA identified by values '1B2B362E50AA9679' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANA identified by values '95B3E36384DAA3D8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANAGASHIMA identified by values '7AB0DA9902B852C3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASILVA identified by values 'AD9C1B81C0E68F8D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANDRE identified by values '766EE518723EA3A0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANESSO identified by values '4C3B3D18C2B14209' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANETO identified by values '03A8657FDDC83FF4' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANGELA identified by values '9EFBDD2F3EE3B38C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANGELO identified by values '7536D82CD9B5BEBE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANIK identified by values '48AA1D99BD3074A0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANTONIO identified by values '5F546B9306CFD11A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AOLIVEIRA identified by values 'B847EB490CF9A264' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AOLIVIERA identified by values '661E0AE4706729F2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user APEDROZA identified by values 'C5ABAFA34240BB52' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user APRADO identified by values '101EA53C4255ACAC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user APREGNOLATTO identified by values 'E9C347DEF48E606F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AQUEIROZ identified by values '9695E452DA52FA61' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AQUELHAS identified by values '428A23D38413A321' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ARMANDO_JOSE identified by values '8F3C27E7D552A52B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASANTANA identified by values 'BAB707C8D19309B1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASANTELLO identified by values '3840602097293C05' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASANTOS identified by values '7CAC1B698570F04C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BARBARA identified by values '683255B09836B92F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASIQUEIRA identified by values 'BF0B2F7AE4BA8173' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASOARES identified by values 'DF98E29BBFAAAAFC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASOLIVEIRA identified by values '8F7400BE23A1BBE0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASOROZINI identified by values 'BC06DDFA79C04FE5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASOUZA identified by values '7EF376CA87879B83' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATAVARES identified by values 'B4366AA347B0E211' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATRAMONTINI identified by values 'EBDD2B14796C804C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATROTTA identified by values '2B9746C0ECABAC04' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AUREA identified by values '6183692E8768DD87' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AVAZ identified by values '3EC41CB62FCEF1DA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AVILA identified by values '4DCD62260BE17EE0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AZNETO identified by values '93D2869544B2A0B5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BAGUIAR identified by values '162AFA569CD57346' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CARLOSR identified by values 'FF3BAB079CD0722F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BBRAGA identified by values 'F57C95D2FCCCDA8C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BGROBMAN identified by values 'BE0538DF500EBC2E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BOLINTO identified by values '791BACBBF100638C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BOLIVEIRA identified by values '1FE840782EFD6E18' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BOUZAN identified by values '7E7DA73014E2A54B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BPECLAT identified by values '9211C857CDA396FA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BRAZ identified by values '039D838C29D1C5FE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BRID identified by values '0021E7E7A6425EE6' default tablespace SPB_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BRUNETTO identified by values 'C3AE103024F776E5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CALDEIRA identified by values '45CD23E91D6E2A4C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CALVES identified by values 'F894A707AF3DFECC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CAMACHO identified by values 'F0D056CAAD71F41D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CAMARAL identified by values '55446BF1BECB99B1' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CARLOR identified by values '594A3195FC1AC179' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CARLOS identified by values '20006836903E768D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CARLOS_HENRIQUE identified by values '2F0E9FF9F4D33306' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CFARIAS identified by values '81E546B56770FFC7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CCESAR identified by values '0F9F210EE492A13A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CCLEMENTINO identified by values '499A37DAB126EF52' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CCORREA identified by values '2EC767F381162DD1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CCRUZ identified by values 'DD579BB389E53B85' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CCS identified by values '68B1ED04B6A0ED74' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CDIAS identified by values 'AFBDE5C3453D0427' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CDUTRA identified by values '11423C153D29C904' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CEDUARDO identified by values 'CA851E91F966AC90' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CESAR identified by values '8AD8E292F00CCEF6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CFAGUNDES identified by values '9B146ECD4C267EBA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CPEREIRA identified by values 'F20B32D49ED9B97A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CFIORELLO identified by values 'A3143268BBDCEE07' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CFSILVA identified by values '588FF17491680FA9' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CGUIMARAES identified by values '02FBA283B5135A45' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CHANGE identified by values 'A584D502925203EF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CHENRIQUE identified by values 'CE902D4C52D4B225' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CHOLANDA identified by values '705FDF3AF906D492' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CICERA identified by values '8096AE7EFF514210' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CIDA identified by values '10A26B250766CF9A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CKUHLMANN identified by values '1321596F8EE0F1B2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CLARA identified by values '78F91D1228B0F181' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CLECIO identified by values '3F006D195A2CDBC9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CLEONARDI identified by values 'BE12D8DBE4F1ABCB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CLUCIA identified by values 'B3B4CF3D4FC77339' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CNASCIMENTO identified by values 'D200B437CAFEE50A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CNOGUEIRA identified by values '3B802C9A8F37DDFE' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user COLIVEIRA identified by values 'ED90AA37D05B255A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CONRADO identified by values '77163460DA5B0A03' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user COSME identified by values '221646514A08997E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCO_CRUZ identified by values 'BDAC39201AD48F05' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRAMOS identified by values '726CD9A9E788E4A5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRISTIANE identified by values 'BF6114A87AE221B2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRISTIANI identified by values '34A6BF158F4414FC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRISTINA identified by values 'BBB4C042EA5FB132' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRISTINI identified by values 'B1790621003E4483' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRISTOVAM identified by values '3D150B7F19FA9F19' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CROCHA identified by values '0F62C820C2B6647E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRODRIGUES identified by values '6EE543C140D734CF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CSANTOS identified by values 'BD7155E9BD05B852' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CSARTORI identified by values 'D4A41233DF1F73A2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CSILVA identified by values '8DF0B86E8D8F625A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CSUHETT identified by values '7381827B6664AEA7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CVICENTINI identified by values 'CF1BEDB57F4E11C0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DANIELLE identified by values 'C8E678AA6DEB9EBA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DATABASE identified by values '86DF7B25F949310F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DBARBOSA identified by values '6F80A99AC5DC73F8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RODRIGO_ALMAS identified by values '5536D00485DEA3DE' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DBISPO identified by values 'E6FF9032E6A4439F' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DSOARES identified by values '6BD48D8672881A70' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DCALIANO identified by values 'E0A90A86E1E53627' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DDURU identified by values '8F82CCC0803E634D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DELMA identified by values '52E594B2BDCC0EBD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DELOMO identified by values 'AC6F987410BD486B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DENIS identified by values 'CBA2152C4C7EE98B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DENISE identified by values '6E52B66D4B2F9A0C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DFREITAS identified by values '28E34DE7021DF8C5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DIEGO identified by values '273B6B9A5859F76F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DMARIA identified by values 'C8EA73C4911E9E86' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DMATHEUS identified by values 'DA250461D3C99DEC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DSANTOS identified by values 'B207D11E7E0927E0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DSILVA identified by values 'E4A28E1AF9F168FF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EJESUS identified by values '5BA2B966F92AB0A2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DSOMMA identified by values '678CD0D31BF3D25F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DSOUZA identified by values '028836ED73DC6A36' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EANDRADE identified by values '9321D7B939B220B2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EBARBOSA identified by values '738809FF32A8D82B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EBENTO identified by values 'FD049525E0A2598F' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ECARNELOSSI identified by values 'E916831983A58711' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ECOELHO identified by values '73F691C9694FC9D7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ECOSTA identified by values 'F1BA311815042967' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EDILZA identified by values '4FFAB7C073728AED' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EDIMAR identified by values 'BC9722D0E703C515' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EDINUCCI identified by values 'CFCA6F864A7297FB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EDMILSON identified by values '50C8A6ECA6477CB7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EDSON identified by values 'F0B9EC6A5887248E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EDUARDA identified by values '9B668D3F658D396E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EEHRLICH identified by values '8F916CAF40B4E1C3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EETEROVICK identified by values 'F11298911E9988BF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EFILHO identified by values '2B918EC50C589A0D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EFREGINI identified by values '9547C2EB21D63C3E' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EGRECO identified by values '6A3FE4CB77E1173A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EIKE identified by values 'B5E1A8A7E196990A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ERNANI identified by values 'FA08D8B532572B8A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELAURELLI identified by values 'A6A6E7B52917C4D3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELCIO identified by values 'DFF9470974BD3A2D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELDO identified by values 'BB8BA0FB85A29910' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELEUSIS identified by values '09A9AED7392FC4C9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELI identified by values '9640CB7F32DA959D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELIANDRA identified by values 'ADFC265A77138BA8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELISANGELA identified by values 'FF399A9BA97F9BC4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELSIE identified by values '6260A90DFD980575' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EMENDES identified by values 'C789E7615AA73F49' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EMENESCAL identified by values '611559D2008953E7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EMMANUEL identified by values '8CC8896BDBFE1053' default tablespace MIDDLE_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EMY identified by values 'B4A7DC0F21F55DE1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ENETO identified by values '765A8CD3180A6361' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EOLIVEIRA identified by values 'B51BB3C8F4540202' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EPICCOLOTTO identified by values '63B6A8A571A37999' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ERAGGIO identified by values 'BE1D577C6DE540E8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ERANGEL identified by values '1D0D7A05344D6FDF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ERIC identified by values 'F4395545540211A7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ERICA identified by values 'FB65270B5171A4B6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ERICO identified by values '4FADB231E193E126' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FGIANINI identified by values 'B69EA183464B37D6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ESOARES identified by values '7A4314E5C33B1EA1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EVARJAO identified by values '8C19D55AB1F4EB52' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EVIEIRA identified by values '303F2557F6A18BC8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EXTRATO identified by values '5FB4E70FA8041959' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FABIO identified by values '1714F85A42C1359F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FABIULA identified by values '87090C73066E71F0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FALVES identified by values '329F84CED6B74892' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FARAGAO identified by values 'DF83245DC036762F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FBARROS identified by values '0147878B15D584C7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FBEZERRA identified by values 'CBE9EB1DD0026DB6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FBRANDAO identified by values '73713E62C0CDAFC5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FBRITES identified by values '938EA7132BC52537' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FCABRAL identified by values '16C38D66809E4780' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FCAPUTE identified by values '73746C943B267F40' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FCARLOS identified by values 'D92B49D7AE231882' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FCARVALHO identified by values '2E56F0D8448B0524' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FCHRISTE identified by values '0B70454A8879933F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FERNANDA identified by values '0BD22B76A5D3480F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FERNANDO identified by values 'E8B05F7D2F98BF1C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AFIGUEIREDO identified by values 'AD720982C94E5476' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GBLANCH identified by values 'A0AF003D670EEC46' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FGLORIA identified by values 'C07F6C9AFBF4530D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FGODOY identified by values '01B34824B8CA4D65' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FIGUEIREDO identified by values 'E885495295BC0BFD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+
+SQL> create user VSANTOS identified by values '6113033D53F8AB0B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FINPAC_SUPORTE identified by values 'D9C7283D0FEB2BA8' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FLAVIO identified by values '12936FAA62B8CA1C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FLAVIOR identified by values '5BF935E13C1D7DED' default tablespace MIDDLE_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PDIAS identified by values '3178C85F2CDB58D4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FLIMA identified by values '64EF67E284C8AB94' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FMATTOS identified by values '25B1ED52B9FB8EE1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FMEYER identified by values 'AB83B399E54B2285' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FMOREIRA identified by values 'F4110E37BE4A9129' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FNETO identified by values '019928B896F7DC8A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FOLIVEIRA identified by values 'CD33E3587A36040E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FSILVA identified by values 'D17EC61227B3D214' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FSOUZA identified by values 'C4B0878EB382A7F8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FTAKANO identified by values 'E50F0E6BA69CA4FB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FTOSCANO identified by values '82B74B0DD71EA8B8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HEMILENE identified by values 'B88D69994EF9E908' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GCAPOZZI identified by values '55E23917DD9103ED' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GCOMPRI identified by values '1FED37294CCB33AE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GELSON identified by values 'EFBAE9E0ACAE5169' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GEORGETE identified by values '12031D986D20E4DA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GERALDO identified by values '4D2349DAD62CCA64' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GILBERTO identified by values '4C4D2C656E07BAE8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GILSON identified by values '2237832949799527' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GIOLO identified by values 'F51DB85734CEFB87' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GISLEI_SANTOS identified by values '2F4F346EF5539C5D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GLEITE identified by values 'DC101C3FB49CABE8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GLIMA identified by values '86569989DFE0D52A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GLORIA identified by values '6F79C54C2621AD42' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GPUGLIESSA identified by values '4877F305D0A597EC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GROCHA identified by values '1A5698375E839C4A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GSANTOS identified by values '8644E2EBA173A858' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GSOUTELO identified by values 'E6A85DF7D909040B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GUEST identified by values '78429D2BB721C89F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GUSTAVO identified by values '6613204E13B382BB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HELENA identified by values '0B3BCA9AB3750829' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HELIO identified by values 'A839EF76271B0BB1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JACIARA identified by values '3DA6EDDEFDE70270' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HERME identified by values '377E0888EA268544' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HILTON identified by values '581327E9EB7D4A59' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HORACIO identified by values '29348C4DE6DD5A2F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HSANTOS identified by values 'D57BF392ED7D916B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IBARRETO identified by values 'D24DBB7FDA59FD10' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ICARVALHO identified by values '8DC737B4D579E349' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IGNACCHITTI identified by values '5282EC4F27AA536B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IJESUS identified by values 'AAA1F9BAB40A55A0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ILMA identified by values 'CBA5FE2995049D5F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IMARQUES identified by values '2743EC276709F0C5' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IMARTINS identified by values 'EDB362DB7FE852AD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IPONTES identified by values '5B4F15511A24ED6C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IRENEB identified by values '96A0F79A3A51C59A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ISABEL identified by values '86500DA69F4122E9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ISABEL_REGINA identified by values '76F64528974BB040' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JABARROS identified by values 'B280D0F4D79CFF64' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JABREU identified by values 'FB4790CE7920E6D6' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JNSILVA identified by values '3044456DB0CBBDC9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JAIR identified by values 'C5EB6B5D35E9C9B9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JASILVA identified by values '7CD3820F6DFDF8EA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JCAMPESTRINI identified by values '41D851FE80646113' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JCESAR identified by values '9193CBAA8CDC098D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JEFERSON identified by values '3870ABC424231F7A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JERONIMO identified by values '0CA5FFEA87E49EED' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JFIUZA identified by values '9517A6F60D0F87CC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JGARCIA identified by values 'CDF756FE53028BFD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JGOMES identified by values '95DC858C67E7D9C9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JGONCALVES identified by values 'FFF061D6F6217443' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JGUIMARAES identified by values 'A48CCF3666FCB2A8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JKLEIN identified by values '3DC4E92EE8F15780' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JLACERDA identified by values 'B292AA44820AECC1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JLEITAO identified by values '9B4A77D95876B778' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JLEOPOLDO identified by values 'D4F985A6EAD9D296' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JMARANHAO identified by values '46DF322EC7083847' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JMARCELO identified by values 'D56EE6C724886A1C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JMARCOS identified by values 'C6295C191CBC8FCD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JMENDES identified by values 'B5E039568A5D3AB1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JMESQUITA identified by values '39D593A21607FB24' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KANO identified by values '8A4FA2749E000A5F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOAO identified by values '9581E65308AB007E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOAQUIM identified by values 'EEB2AF6DCFC3EB1C' default tablespace MIDDLE_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOLIVEIRA identified by values '66D048E307F94353' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOSECESAR identified by values '9EAB5388F1939FE6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOSEQUINTAS identified by values 'D862CD9EE946BF42' default tablespace MIDDLE_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOSE_SALLES identified by values '75F254147D924382' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOSIANA identified by values 'B69433EB97D7B1BE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JPECORARO identified by values 'E3C1BF8627E044DC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JPOTRAFKE identified by values 'E8D8725EFC073A38' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JQUINTAS identified by values 'EC5CDFCBAFD5438A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JREIS identified by values 'EA8F73D044A58FFC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JROSA identified by values '2D7A6DF157FB7F67' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JSILVA identified by values 'F283309F517D1F50' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JSOUZA identified by values 'F65289B63FF8E6F0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JTEIXEIRA identified by values '91E222CA54E2575E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JTORRES identified by values '1CAFED9F1BA342AE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JTRUSCHI identified by values 'FC16BE0E43C78E17' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JULIO identified by values '1CDC9E66520E2D19' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JWINTER identified by values 'D25375CE4029B859' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KAMARAL identified by values 'AFDE55625B52C7F9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LLARAUJO identified by values 'FA605E7A4EDD224C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KHOLANDA identified by values '5A9854D4BB0C72AB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KIKO identified by values 'E80375913839C1A0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KLEBER identified by values '5435FC7A7FF7A855' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KRODRIGUES identified by values 'EB879A0B6E1F5DDB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KSANTOS identified by values '020E0F2AE3BA0E6A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KSOUSA identified by values 'FF40CAA5217F4CCD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LAERTE identified by values '793C335220D82A92' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LALMEIDA identified by values '412A22695EDE3D0B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LARAUJO identified by values 'C33B4F4068E74D3E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LARISSA identified by values 'FB3C31246B87CE0F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LAVOZIER identified by values '0F882A27371B8DC0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LBORGES identified by values '0D68BA0B42C312FD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LCARLOS identified by values '6A06F431C67BC018' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LCARVALHO identified by values '32027B83BDBBA8E2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LCSILVA identified by values '88439554970AD038' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LDEUS identified by values 'A48A89724149247D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LFELIPPE identified by values '4E96F9096AD38C0A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LGIANNI identified by values '837D9A9AABFD139E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LGONCALVES identified by values '45250685360E5FCC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LIMA identified by values '752D0548D9A65999' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIZ_ROBERTO identified by values '1D6B4B4B036947F3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LLIMA identified by values '18FC8F3973F93DB2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LLOJA identified by values '62E93022DE39D770' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LMENDES identified by values '4422F6D118EF8F9B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LMORALES identified by values '1B57DF3C334A4A35' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LOGMIO identified by values '8E3E6B7BCA0E9360' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LOLIVEIRA identified by values '20B4AA86784A4B79' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LORIVAL identified by values 'B03858D6C4AE0AAD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LOURDINHA identified by values 'ED1AE8C17F0FAF7B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LOURIVAL identified by values '614A8AEA61088681' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LPEREIRA identified by values '31ABE03D0F5A99EF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LSALGUEIRO identified by values '39B3FE6BD408FB2E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LSERPA identified by values 'FC7AFF9F80E919F3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LSILVA identified by values '8426154B0B80C016' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LTSILVA identified by values 'BDB3C2211B203FF2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIS identified by values '8A76175FB1BA36F6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUISA identified by values 'DABBE2B4BF412A7F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIS_OTAVIO identified by values 'FAD7C15C8C2BA2B2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIZ identified by values 'B066E904E815AA5B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIZ_EDUARDO identified by values 'EF990C2B0DB03268' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIZ_FERNANDO identified by values 'DC22A43985DDF14C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIANAJ identified by values '39886D6E632255B5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIZ_THOMPSON identified by values 'BBF4FE551EB1D77C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LULA identified by values '1A65C4859D02F3B1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MAGALI identified by values '6F62680C530BEA1F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MALMEIDA identified by values 'D0369896369BED1C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MALVES identified by values '6CDCEFAA8120816D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MANSELMO identified by values 'A91E15C43B017C97' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARA identified by values '184B7377D045CDA5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCELO identified by values '014DE1E7928B0FB0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCIA identified by values '477820EC74B73566' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCILIO identified by values '38B4A77ABBFFB5C3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCIO identified by values '1BACDD73FDEEBA35' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCOS identified by values 'F5C75ADB0FBE5F05' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MAREDES identified by values 'EC705E69E6D3BD06' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIA_BETANIA identified by values 'D1DD9957E066DE69' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIABETANIA identified by values '5D44764E1C6C2D56' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIACLARA identified by values '4556B8E36A93625F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIAJOSE identified by values 'E093496327F30F4D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIAJULIA identified by values 'A29EC425356FB4ED' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIA_JULIA identified by values 'F037B9A8DA00F6FF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARIA_LOURDES identified by values 'E031AB3FFB832579' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MKERNEL identified by values '4C77FA87BB023470' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARINA identified by values '4B216CC1BF7EDAAC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARISA identified by values '6B66B95E14F60CF1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARTAMARIA identified by values '3DAF6D0B45EFC801' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MAURICIO identified by values 'F9AB3CCCC3B2A4DF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MBARBOSA identified by values '5383181992FAB17A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MBELO identified by values 'DF2B17641C1C61F8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCALAZANS identified by values '3D91489658E26527' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCARVALHO identified by values 'A634A41CED1B8FFA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCESAR identified by values '51B6ADDA9017B7D7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCOELHO identified by values 'AD462D06A5C91EC7' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCORRADINO identified by values '7E2BF264CC78AB27' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MDREHER identified by values 'A6EC7CFB8A21D90D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MDSOUZA identified by values '9470A4A0E6650B64' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MDUARTE identified by values '0D40945E5E824532' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MEIRELLES identified by values '4E0DC1AD9D28D7B4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MFORBES identified by values '949CE0E5738E4F54' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MFORDES identified by values '9DA72032B28206C1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MGUIRAU identified by values '6430489F8397C633' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PEDRO_SANTORO identified by values '042D739D58B5FCFF' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSOARES identified by values '60ADB9247E8A8066' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MLIMA identified by values '0681E485E4C495C7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MLOPES identified by values 'E176E5A546E5FB51' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MMAGNO identified by values 'CABEA2BB3C8F2206' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MNASCIMENTO identified by values '619825BE2780C15E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MOACIR identified by values '2204E3F77ABCA7C3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MOLIVEIRA identified by values 'CB4F9FCA40C8E32C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MONIQUE identified by values '51DC21D4F2AABCBA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MOTTA identified by values '0608319E25A02D46' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MPACHECO identified by values '2F10DA363C4364DF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MPEREIRA identified by values 'F8669B1ECEBF9E90' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MPINHEIRO identified by values 'FF1518364CEC296A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MPIZZO identified by values 'A64D9EA71CD4199B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MPLIMA identified by values 'DEC78CE38225CB3E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MPONTES identified by values '196C44E85CC2A7FE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MRALMEIDA identified by values '91A33A564A664740' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MRENATA identified by values '8DD009F3EB8D6CBE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MROBERTO identified by values '3A907237AD7BA1A2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSANTIAGO identified by values '324AC29ED43A433E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSILVA identified by values '2A4ABEFC7722123D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSIQUEIRA identified by values '32005FF2357121B5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OMERO identified by values '375BDBC1CFD2DA16' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSOUZA identified by values '6DBA10CAC5216E2E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MTEIXEIRA identified by values '3E3E3DFFA4CB4F9F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MVIEIRA identified by values 'F0EBBC317458BEEF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MXANDO identified by values '0307DDFBA50CB1BA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NADIA identified by values 'C114E5D0F82F61C2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NARASAWA identified by values 'F7629E468016CEDD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NAZIRSD identified by values '2E92F3E8AE65A264' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NBAVIERA identified by values '3F8DBFEA3C126B75' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NCOLOMINA identified by values 'E2AB369391B14F1A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NEIB identified by values '64B62B9B5CED0FCF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NERIA identified by values '0C3EE619DAD3F916' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NFREITAS identified by values 'BCFE930C70D680D2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NLIRA identified by values 'CB3D25C0CF9D2153' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NORIVAL identified by values 'B677D16FCFFAFE50' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NPAIXAO identified by values 'B56D8D63DAA33DEC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NUNES identified by values 'F42F3EE99AC39C43' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ODAIR identified by values '86E5AFBB60BFDE4D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OLGA identified by values '04703633D24329EB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OLIVEIRA identified by values '4776F04118B9EDB8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OMELO identified by values '93CBDA77744853ED' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PEPI identified by values 'CF64279D45105771' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OPERTES identified by values '4172F12286AB52BF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OTAVIA identified by values '0CEFF99589793E5D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAGCPP identified by values '0456271928A2A5D8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAGOSTINI identified by values 'F69AF7DE0E41B45E' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAGREEMB identified by values '2AF0F023D2FAA486' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAMARAL identified by values '7DAC1661C1311754' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAOLONE identified by values 'F19228DA6E3F8F60' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PARISI identified by values '8D8475E9E3F16C68' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAUGUSTO identified by values 'F9C088F68A0454B2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAULINHO identified by values 'FC13B71F2DB46F6B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAULO identified by values 'B1BFAC7BEA5BAA97' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAULOF identified by values '79E880EA101E2A6A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PBRAZ identified by values 'F55703514D7AF8BF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PCALDAS identified by values 'F805F1F672C65E06' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PCOLETA identified by values 'F7114DFCB1185991' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PEDRO identified by values '01578EC2D8D078B3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PEDRO_PERRI identified by values '1BE617863363DB17' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PTEPLIK identified by values '3420BFFA2533534A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PERSIO identified by values '8CB9B0D7AD155990' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PFERNANDES identified by values '77C6DF06A8E7F3A9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PGARCIA identified by values '1383C5D2E5D21247' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PIEDADE identified by values 'B4F641D8570E437B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PIMENTA identified by values 'E886727F2103FDB2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PJARDIM identified by values 'CA5BEE31213556AC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PLOBATO identified by values '9E5490B2920B4937' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PMACHADO identified by values 'DA2C65C5BA4DCC32' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PMAXIMINO identified by values '6E60500DCC5E6702' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PMSILVA identified by values '35EDF56CCA2D292E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PNUNES identified by values '2F4B7F8637533D0B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PPAIVA identified by values 'CF133CF10AE99B7A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PPERCILIA identified by values 'B14B5CAB392F8588' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PPINHEIRO identified by values '259DAFC533AB8DD4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PPITA identified by values '65B2CE8DA1DB9CB9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PSERGIO identified by values 'D76C43A0A5F3A04D' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PSILVA identified by values '5FF331C07478669D' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RDANIEL identified by values '6DE954FEF827FEAF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PURGAL identified by values 'B057B374F0AC4752' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RAIZAWA identified by values 'A1FA0C8BA2BBBF7F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RALBUQUER identified by values '884C0C92B1B4B905' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RALMAS identified by values '5D3817AC1458541F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RAUL identified by values '39944EF0F5F1ED4A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBARREIRA identified by values '3297B79DCF648827' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBARTELS identified by values 'B814DC96A45F09AB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBITTENCOURT identified by values '474AB500C21C371C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBRENELLI identified by values '00822C45D588EE5B' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBRITO identified by values '6C9C8D075F0C494B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCAMPOS identified by values 'E1FD9F640F4DEB3D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCANOVA identified by values '83393FAAAE6C1E62' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCAPALBO identified by values 'C760BD35649709CB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCARMO identified by values '8C9D8EEA294ADBB8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCARVALHO identified by values '96A2A1EBC591E932' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCASTRO identified by values '05391490663270E9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCORDEIRO identified by values 'F9B10DBE75F210E0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCORREA identified by values 'B620545A771E2B40' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCOSTA identified by values '64AA682CAA056563' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCSOUZA identified by values '5080465637109D7A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMARANHAO identified by values '779C0F75CACD1A14' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user REBECA identified by values '0F8E714E35C57B40' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user REGINA identified by values '1D2F674C729BF8CC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user REGINALDO identified by values '2D62DE42609D8EF8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user REIRAS identified by values '997EF26E8686CBDA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RFARIZEL identified by values '1E570EDC2F8074F3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RFERNANDES identified by values 'C21CCFBD62F460A6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RFREITAS identified by values 'CDDDE4BE58E12697' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RGALVAO identified by values 'D0D55C269E1555F8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RGERIASTE identified by values 'D887567312CF4B02' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RGHELMAN identified by values '489072101661AD27' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RGLEITE identified by values '3F6AF8F487E89F24' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RGOMES identified by values 'F073B5333CACD50C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RHENRIQUE identified by values '83432C66F59BAD1D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RICARDO identified by values 'BA7C9399A9C79B54' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RISCO identified by values 'EB637BEF357BC091' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RITA identified by values '4E2CDDD1526D9E10' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RJRODRIGUES identified by values '8EC153608BCA2157' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RJUNIOR identified by values '506080C4E7928CE9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RLEITE identified by values 'E70ED33F322F2E64' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMANSO identified by values '4CE01BA3F8BB8ED6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RUBIA identified by values 'B4F501EF0054F225' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMENDONCA identified by values '08356500E0257FD4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMORENO identified by values 'D289603FBA1AB073' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROBERTA identified by values 'C692507AAAC7D5AF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROBERTO identified by values 'D6094BD368BF6362' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROBSON identified by values 'FF9A577EE0A2F90E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RODRIGO identified by values 'F697FBF0BB2DA2EC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROGERIO identified by values 'AD790B7856522C06' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROLIVEIRA identified by values '9CF411447B4A0835' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RONALDO identified by values 'C39236C70C7974CF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROSA identified by values '08539D4E6E157415' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROSANA identified by values '2155C96B1F41F68E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROSANAS identified by values '51B0B0743F78DB49' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROSANGELA identified by values '4C990B17792F00AE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROSE identified by values '1166A1F535AF6EFB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RPORTO identified by values 'CD41526128E5B934' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RRODRIGUES identified by values '3E3E1530F2F02776' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RSANTOS identified by values 'E7A6AB4EB9CC3968' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RSILVA identified by values '4950F0E11FFC6499' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RSOUZA identified by values '369DBEAF999AB829' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RTAVARES identified by values 'E59C80D8D04C48BB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELTON_SOUZA identified by values '5B5E724BED9A4696' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVALENTE identified by values '5A5DA26EBB3D5C20' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVENTURA identified by values '07F45D0313A814D4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVIEIRA identified by values '1A75723CA0B63DC5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SABRINA identified by values '0D5341F13E073A97' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SALVIANO identified by values 'F5780F0BAF7D8D9D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SAMIRA identified by values '352DECBA8F49E84F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SANDRA_HINNIGER identified by values 'ED5311B165199268' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SARENATA identified by values '4BBE4B1EA511EA22' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SATIKA identified by values '0512DC2EF4B0982F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SBORGES identified by values 'FE6D60772C0FAE64' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SCAPELLA identified by values '26DFCD67953783AD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SCRISTINA identified by values '4A237D07ECE18D6B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FRANCISCO_SICILIANO identified by values '904F483912874EC2' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SEBASTIAO identified by values 'B5D018F0B1F96DD8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SELMA identified by values 'B28150527BF9FC29' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SFERREIRA identified by values '625C941D5C09C0E6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SFREITAS identified by values 'C82F4541C7E7C81C' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SGARCIA identified by values '39A870070CF3067D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SHEILA identified by values '90D2F9D787C2F137' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SIDNEY identified by values '18BB0B76A887DF60' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SIDNEY_JOSE identified by values '18D9FDB9A55E6214' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SIMONE identified by values '0CFC01427AA3B4C0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SIMONEMELO identified by values '23E96A79D98A6FD2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SMIYAGUI identified by values 'C176D38EFB3D1E59' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SMOREIRA identified by values '8C319407C634EDBB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SOFTDES identified by values '1B5F3B529A99DCFE' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SOLANGE identified by values '10ACE9ED7E7932B4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SONIA identified by values 'D9C525BF94D7B3C5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FTOLEDO identified by values '719DF61256A7CFCE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SRENATA identified by values 'DB41D67E7760054A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SRICARDO identified by values 'D98892505E8C948A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SSANTOS identified by values '055A31B560334876' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SSILVA identified by values 'EE23CB4D42200F24' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SVILLELA identified by values '303FCEC4F03071D4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SYLLAS identified by values 'F4D958B835F0198D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TAF identified by values 'C460A554D522D6F4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TARCISIO identified by values '42BB3C6BE974D628' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TBURGOS identified by values '7323372C0ACB25E6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TEMPERINI identified by values '488C772B87DE25DB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user THIAGO identified by values '7FE6CD40693D4F7E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user THOMAS identified by values '063D8DE086C2860D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WALDEMAR identified by values '776A5D08CB37AE5C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TRODRIGUES identified by values '735133F457EF304F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user UIDMERE identified by values '076B433D765EE829' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user USUARIO identified by values 'A86FAC067959A954' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VASOUZA identified by values '9B92EFD1F6741BDC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VCARREIRO identified by values '42B7B59A6005B880' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VCORREA identified by values 'B63186B8857EC465' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VCORREIA identified by values '610BB6D60C478A58' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VERA identified by values '901388C9148DA645' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VERA_LUCIA identified by values '1E3CA48B70AEA94C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VERAM identified by values '26CB5243A7F7D670' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VGEMELGO identified by values '12FB2D81F86480E5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VIDAL identified by values '9C37F699D9DEDA30' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VINICIUS identified by values 'C7A81C2EEC0053DE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VITOR identified by values '3356E0C074845717' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VLADMIR identified by values 'E5B48E8A4B1973F0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VLESSA identified by values 'A22ECB5D52D41C96' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VLOPES identified by values '7AE6F869D8CA45BD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VNOGUEIRA identified by values '2D832567BBCD5313' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VREGINA identified by values '15FD61258037C97A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VSOUZA identified by values '485E43AFA392C52F' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WALTER identified by values 'FC82B33C3F4DA4FD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WANDA identified by values 'C33ACAB1DDAE59A0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WANDA_BAN identified by values '7BE9D2E59CE5F6F4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WANDA_PRJ identified by values '5E89528D5EE60BE6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WARAUJO identified by values '67934F6D5D9B22B4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WEBBAN identified by values '821B26510BD8EF7C' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WEBCOR identified by values 'C4A1DD77072BE1A3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WFERREIRA identified by values '68F8B47237F903A6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WILLIAMS identified by values 'C286D63C1DBE1608' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WJUNIOR identified by values '6A8475D6C423E708' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WMERCES identified by values '74EDFDD59A939376' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WSALES identified by values 'FBEA097F83B23E62' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WSARAIVA identified by values '7C9AFDB0723BFE9C' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ZILDA identified by values 'BD8B68C5A2AF264E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GRODRIGUES identified by values 'AE3F8A7482EC36AC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OBJECTRISK identified by values 'D93C8569021E073D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RICARDOSILVA identified by values 'BCFD924330A45F00' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DFERREIRA identified by values '88CEB819C60EFA97' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCAVALHEIRO identified by values 'E4E9010DBE15E3DC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LSOUSA identified by values '518F6544F417E6FF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVELLOSO identified by values '91DBE42797363877' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KATSUMI identified by values 'B1683338B9D600CE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JSECKLER identified by values 'F615E37F752C598C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ABATISTA identified by values '99CCF2F32551F471' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALCOSTA identified by values '01BC694900ECA702' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATOKASHIKI identified by values '77DB1D108BF6C682' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BCAMAROTTO identified by values '005E9075C346326D' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DTOLOZA identified by values '03E02DC2946D4178' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SRIBEIRO identified by values 'E137A598562495E0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JCRUZ identified by values '7B2942183EF0106F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JCSILVA identified by values 'ED2D35F72CE99548' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JDSILVA identified by values '450131F7C37F86D9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KKAWAMURA identified by values '201366C29F87AC0C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KVIVO identified by values 'E630102EED79E145' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LBOLIVEIRA identified by values '75942D6160D71AAD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MHENRIQUES identified by values '2C462FAAABA471E3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NLIMA identified by values '1B91DC3BABE4DA6E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PALMEIDA identified by values '3E546D8B33715BBB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PEVANGELISTA identified by values 'C79AC3095A8655BC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBAZAGLIA identified by values 'C7CDD62353923710' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCALIXTO identified by values '5AE3DC1D84347FD0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ECLIMACO identified by values '9B4CC6F83054DC05' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RPAIXAO identified by values '3C6384388BD5E8C4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TSATO identified by values 'CD1E14C60BCCB428' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TVIEIRA identified by values '9156F939F1E504ED' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSOLIVEIRA identified by values '4E4B9BB844E70BF9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LMARQUES identified by values '0A6F78AC9D2FED11' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ICOSTA identified by values 'BD83A6C6718E0632' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RXIMENES identified by values 'F23EA5982583D5A0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LRIGONATI identified by values '834B69933A36825A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RALVES identified by values '861E9CE8E5EF314E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RRABELLO identified by values '35D9E8C84CE0AEB2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VTREVIZAN identified by values 'DBB2274F19CD2C6F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PCOSTA identified by values '432A536707F98AFC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NDIAS identified by values '2CF36E48ECBF5060' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELSILVA identified by values 'BF5D3023AFBCAC07' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACRISTINE identified by values '320E35C0F2A030AF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MFOLIVEIRA identified by values '7C0C3F0CB018E5F3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MMIRANDA identified by values '03370A93B49CE8B9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MGOMES identified by values 'A2B58AD64147CDED' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACAMPOS identified by values 'CCA93B5B02B6CDA4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CASANTOS identified by values '470EA78E38BEEF83' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCOSTA identified by values 'E3652565EDC9CA29' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MMILHOMEM identified by values 'B84A100CF59C6D0D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LFIUZA identified by values 'A1B347D8DA3B8A6E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATOBIAS identified by values 'BDEC415861CA9C66' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TRIBUTOSMIU identified by values '3FC328972CEC1E03' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MFERNANDES identified by values '03B1C64AFE39DBBC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MBARRETO identified by values '89513C30C0C25BC2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JSEGUNDO identified by values 'F24FF0811E354E20' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VARRUDA identified by values '7A78D59F05277C4F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AREGUEIRO identified by values '3F570711FA618FD0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ARIBEIRO identified by values 'C0C2CFE959E04B70' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CALVIM identified by values '2E804212F8C6DF47' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LALVES identified by values '75B9F991790B9522' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADGONCALVES identified by values '7A7D1078AAC3D195' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMENDES identified by values '9B43D8863FB999A0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HAMARAL identified by values '336B98A5E5490AF8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATURCATO identified by values 'C852B6BD42F8BD93' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NEUTRON identified by values 'CD5E5F88C6454BAC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JJUNIOR identified by values '86C56B6D5D351F9A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EJUNIOR identified by values 'D74A73EDFE73086A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FALVARENGA identified by values '7DBC511C59967593' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JBONVINI identified by values '389288EA5DB53BF8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSOUSA identified by values '231E78A281672B1D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LPSILVA identified by values '832B394A8D3FF5DC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASCOSTA identified by values '339C887876277B06' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DTUTUNIC identified by values '232689DD653C479B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RANTONIO identified by values '288955305EF5F4E3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PAULA identified by values 'BB0DC58A94C17805' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CFRAMOS identified by values 'E7A76CB831BA63EF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TLEME identified by values '79F7C0CE551B1E81' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBSILVA identified by values '2135EA89A351591C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMELLO identified by values '25819289F560D22B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SCONCEICAO identified by values '3DAF086F5765F80F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RSIQUEIRA identified by values '7B2301E097AE1EC5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VLATTANZI identified by values 'CF459EAC1776D5A0' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RPIMENTA identified by values '3EADC419CA04D723' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CDSANTOS identified by values '911E1DFB4BE00FF1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KMEDEIROS identified by values '8B7B0B25490AC55C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SNAKAO identified by values 'D82DFDE927C26F48' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBARBOSA identified by values 'B68573EFF2EF13D7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DBLINK_TOOLSH identified by values '020A1336486CE44C' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ESILVA identified by values '8AACEA20DCAD6811' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OBARBOZA identified by values '5D5027707DED55C2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HCARLOS identified by values '6CF6AE5AFB0AD82D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DBULLE identified by values '02562D39625FB886' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KIORIO identified by values '3FE12311A9C4D432' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANGELICA identified by values '71A086C3574B03F6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MJUNIOR identified by values '16033BC8EB6B6CFD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUCIANO identified by values 'CCAED6C480F34692' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SASILVA identified by values 'E2F9A744BF89E9DD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RSEIXAS identified by values '8FEE8A8B2D924AD6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PBARBOSA identified by values '682BC316947DDC66' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SVSILVA identified by values '27F14671ED7DD2FC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TPEREIRA identified by values 'D3C640A35EA07C9F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PLOCENA identified by values '51E35FE67D0E2BDD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AVILLARINHO identified by values 'D97D696913E20184' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DOLIVEIRA identified by values '858928DD631753B9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSANCHES identified by values '59FB8CF5497FE23F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MAVIEIRA identified by values 'F18105CCBCBE5AED' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AVOLPE identified by values 'E74B01485292EE12' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JROCHA identified by values '7A38F4B18C284577' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PCSILVA identified by values 'DEDEACE3579B925C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JPSILVA identified by values '7CDFAA64F91ED4C1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RAZEVEDO identified by values '683A11BE18B9A7BB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WOLIVEIRA identified by values 'ACE4D1BF49ECF7A4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PCASTRO identified by values '9ACF165F1F17FB8A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CSSANTOS identified by values '67DE9D2DB8475A55' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CVICENTE identified by values 'FABA2813DA8DC78F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JAJUNIOR identified by values '0C2AE52D45B83BEA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVOLIVEIRA identified by values '6D61C7805AF0B173' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TMENABO identified by values 'CAF517D5FF3F24AF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TALMEIDA identified by values '6C5BBBFE2112DC86' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FMARTOS identified by values '8FB4FA73FD10B4E7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CEZAR.FGC identified by values 'F685A8F8F249E3D8' default tablespace USER_DATA temporary tablespace TEMP;
+create user CEZAR.FGC identified by values 'F685A8F8F249E3D8' default tablespace USER_DATA temporary tablespace TEMP
+                 *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user SRODRIGUES identified by values '4BB717D2F68A7143' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CVOTO identified by values 'C73756CCB6B4F119' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RTAKAYAMA identified by values 'EFB7C34B36455D4B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RHINATA identified by values 'EDEAB6BEFC359532' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HHINATA identified by values 'B4B163A084B8EE8F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JCORREA identified by values 'DC08989AD8C8DF8E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALPRADO identified by values '8ACF04373495DD6D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MLEITE identified by values 'A1E953C22D0976D6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OBARTELS identified by values '6B2BFF602DA3CE09' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ECASANOVA identified by values 'E30B2D3AC67BEE3F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATERRON identified by values '723F4603AE2A0B91' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KPARO identified by values 'FB94AE80331080F9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VPENTIADO identified by values '46576E972F276DB7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EFSILVA identified by values '7F896007F0A1309B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IAMARAL identified by values '6AC3C46FC46D9EC0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ROMENDES identified by values '678720A6F528C522' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VBAPTISTA identified by values 'BD620B745B011989' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VBOTELHO identified by values 'A5A8D3BD22B7789F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RLSANTOS identified by values 'BB1867F083FF7871' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EBISPO identified by values 'A56D0411B9562452' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LLOPES identified by values 'C171BF460A5BDBF9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SRAMOS identified by values '454F7891E7A11A9D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GMARTINS identified by values '086B07BF847DEC47' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WMATTOS identified by values 'F21A9DCB3939EEDE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LPEDROSO identified by values '71F081E5165F9B7C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GANDRADE identified by values '9329677BA28361AB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NBORGES identified by values 'D5697E052979EF12' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RPEREIRA identified by values '6FD30A84F99CCDC4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CVILELA identified by values '476985FF1E164F23' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NYOSHIKAWA identified by values '920207E5B495E0B5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RALBERTINE identified by values '5EC767B6914B6480' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RALBERTINI identified by values '163968E3BDC94B05' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RALBERTI identified by values '18CA40A254E1DFDC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PGRANJA identified by values '1608001DC8FE788C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CNUNES identified by values 'ADE95A372F40D58B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NRIOS identified by values 'F97171EE00C284EF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TNERY identified by values '0BF542312526F2C2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PCRUZ identified by values 'BDB1EADF3D5D4DA7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JPOMARI identified by values '98D02A457E12963B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACUNHA identified by values 'A182DCBF6F45F632' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RDONDONI identified by values 'D3A3D5B4A14B1F40' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user XCOSTA identified by values 'BEAA673727BB4166' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MRUBIN identified by values 'F66D0F0BD1505815' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user YMF_USER identified by values '86878AC46F851D4E' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GPARISI identified by values 'BDDA7E8E81038EDF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VTREVISANUTO identified by values 'FBAB0A979EF9EAA0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user INTEGRAFINANCEIRO identified by values '9550435347498D67' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RCESARINO identified by values '1BE22EEC96F540A2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SREIS identified by values 'CA830ED010D6E56F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JLTEIXEIRA identified by values 'B0563ABA90B3FE31' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FSOUSA identified by values '3DCA30234CF4CFD8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVCOSTA identified by values 'C72518F38D5CFBA3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RNOGUEIRA identified by values '23B17D8E51F85D83' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TESTE222 identified by values '562DAD5CA3D05DEA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSANTOS identified by values '0F522DA42649F51D' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TPAIVA identified by values '7EEE6AAC947890DD' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LLORENZI identified by values 'DAB917210A2E8631' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FROSA identified by values '5C06BF35987336C1' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACARASSA identified by values '3CE33493EBE345CB' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMENON identified by values 'FE785C55F3BF6029' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MGONCALVES identified by values '2547BD4F21A9BFC9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WSILVA identified by values 'A413B879D39138A1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AFERNANDES identified by values '641C420D65706333' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user HSHITSUKA identified by values '73D8A68314930305' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CCORSI identified by values '7904C867749AB423' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BTRAVASSO identified by values '9CA1EBEDB6287988' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TPINGHERO identified by values '87C114D2681D2CD6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DCAVALCANTE identified by values '396EFF885F83A67E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NMINAMI identified by values '46B2885E53319E06' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BUETI identified by values '9D97DCC5FA31B894' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FFASSULA identified by values 'D84D61545108CA8E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JARMANDO identified by values 'B3D09FB2F2D2DE53' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user INTEGRASINACOR identified by values '2247B27C91B28F93' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LCLIMA identified by values '9F72273C2813F2A3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RAJUNIOR identified by values 'B8FD33E8D3EEA516' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LK_BCSULBANCO_MIDDLE identified by values '3492ECFE86FCC70B' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RNYGAARD identified by values '75BEF7C7A09FC134' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVICENTI identified by values '7B647DC029A3550F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GSEMENZINI identified by values 'FB0BD7F2338868EC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BMAIO identified by values '079BA0A8AAECA82D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCSILVA identified by values '7018712BF4A7B574' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VCARMAGNANI identified by values '209D5A54D5B0AE00' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ATEIXEIRA identified by values 'C26B36DB0C521BF0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RVICENTINI identified by values '94C6BAF7C604984D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AGFERNANDES identified by values 'A1A538D9D6AEC1FA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GVSEMENZINI identified by values '9A774DACAB782968' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RSANTANA identified by values '366B6EE7D54ED4C9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JROLDAN identified by values '99DD75D7FC780BF0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BR_CONSULTA identified by values '145C0F6C69163EE0' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMSILVA identified by values '1A2777ABBC2B21F8' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+
+SQL> create user MJSANTOS identified by values '9D166DD73FE216E1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SBELLATE identified by values '8CAFD420E8A771B4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AGIBARA identified by values '47911D7A8CD58A73' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JPSOUZA identified by values '867E9CD08EAAD7A8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MMAGALHAES identified by values '1B1EB9E40A917B81' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GPUTZOLU identified by values 'EE3655008B3E6B4D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WLIMA identified by values '5795E4B715B8A1BD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FSOARES identified by values 'D2D79EE5B11C114E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MTALAMO identified by values '2F2FC011C2091A1D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RPEIXINHO identified by values '4E77B2A9F986CDDD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RBARROS identified by values '8A1ECF0832B8AA60' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LZAZERI identified by values '0D0F601C54048552' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LTEIXEIRA identified by values '9A39EEF302DF5518' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RTEIXEIRA identified by values 'B00554DBDB237568' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELMENDES identified by values 'F367A829DB507AE3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PSANTOS identified by values '6BC126B48690CF19' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MOHLSON identified by values '4FDFA16A0EEB85D2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ASHIM identified by values 'BBDECE5B813CEA95' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FFUJIWARA identified by values '0B3A7DB1C992841E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LBARBALHO identified by values 'E3715D6DB2F8B53A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MNAKAGAWA identified by values 'A10259A745338EE2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CANGELO identified by values 'ECA9F465B373EB7F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMARCASSA identified by values '8F90AEC85E06064F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MMORAES identified by values '49C5212685991F6E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AFSILVA identified by values '1BC4BC6F4F3B0F76' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ISTOLIAR identified by values 'AE09D84BD8DA8B10' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MMATOS identified by values '39E8397573D193DD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MFREITAS identified by values '3F4B436820EC4008' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LGARCIA identified by values '769FADADED49D946' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GAVELLAR identified by values 'DEE6CFA7FE5AD0CB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SAGARCIA identified by values 'F614A1225F0A5338' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NSILVA identified by values 'CF89770A38B84186' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PIERRE_RIBEIRO identified by values 'EE2EBD40697498B8' default tablespace SYSTEM temporary tablespace TEMP;
+create user PIERRE_RIBEIRO identified by values 'EE2EBD40697498B8' default tablespace SYSTEM temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'PIERRE_RIBEIRO' conflicts with another user or role name 
+
+
+SQL> create user SIMONE_GASPAR identified by values '2518D102E3940A52' default tablespace SYSTEM temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FRCARVALHO identified by values '3FD08F4A3143207A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LFREITAS identified by values 'CA19553EE5351041' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BMESQUITA identified by values 'B0EA370D2598EC32' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FPASTI identified by values '210C7B8E90D46097' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FSICILIANO identified by values '825404EF7DEE955C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RPESSANHA identified by values '51A8CE968797B76C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MALBUQUERQUE identified by values 'F493A742B25ADB69' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AHALLAIS identified by values '452094B45AEE9B36' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ABSANTANA identified by values 'D9068110340DE3F9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EMELLO identified by values 'A5FC2F3997B3F550' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TESTE2 identified by values 'FF852568FAE75FF6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PLAGE identified by values '11D4177B96DF7EDD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSACCO identified by values 'C41C03CD3BDA5B2B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AAREOSA identified by values '9261D5E0AF002B8F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BSEXTO identified by values 'A34F74EC42CFE539' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CREGES identified by values '3B07B5C8C9ED09F7' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CFERNANDES identified by values '708F1E0609D3E5E3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FGONCALVES identified by values 'DE2422085CAC304C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMACHADO identified by values '2726D2D0EEA074BD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SDIAS identified by values '03F70EB1A5945CB1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user TESTE1 identified by values '77E789113053F98A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EXPORT identified by values 'BE29F6EBCB963EF9' default tablespace SYSTEM temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MONITORIA identified by values 'E804567AD6ACF96D' default tablespace SYSTEM temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LMARUYAMA identified by values '078447DB333A5926' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FROCHA identified by values 'AABCAF8242E2C4E4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BADEODATO identified by values '5D27D6EAD0280C24' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RDUNCAN identified by values 'C141B892931473D3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EPADOVAN identified by values '8ACEFBBB642E0683' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RALEITE identified by values '64177547271FADF1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AMACEDO identified by values '58404116D4F90B41' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FRSOUSA identified by values 'C0879435AF75151D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+
+SQL> create user WGARCIA identified by values '81A851E40AD8DE24' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LMSILVA identified by values 'D8CFEB33D0C97B7E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FRAMOS identified by values '4CD4785D21BDF34E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALEAS identified by values '8A033FE39EDBE948' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PSANTORO identified by values '007AD325C75FCFC0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user APESSOA identified by values '4C02E521943E1155' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WBATISTA identified by values '97B9270196318490' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EMSOUSA identified by values '2861901385E15308' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user APPEP identified by values '4A5F1C74C27E07BF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JPEREIRA identified by values '2FDB744BE09E9856' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DNETO identified by values '1A5C9A1D4A07FBE3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NPFEILSTICKER identified by values 'BB656A8975010AE8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RGAIA identified by values '79835F2B696A0943' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DLUCENA identified by values '075D4FB4A73D849E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JMIGUEL identified by values '459D3E8EB89CF4F2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACSILVA identified by values 'C4AE6B151A259FF1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NSOUZA identified by values '9D5EBF6FD038A21D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCELO_SSOARES identified by values 'BDB7432D2DE23494' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ESOUSA identified by values 'C812CC52B7421B0D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VPIMENTEL identified by values 'E3A43007B9CD0FC2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JGASPULA identified by values '22082F4D5953065E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AGARAUJO identified by values 'ADC90FE1C47F2A5C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BCARVALHO identified by values 'F6C2D5921DC94626' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CSANTORO identified by values '9AE95342DA70C95B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MCFREITAS identified by values '2252BBDE600B15FA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EPEREIRA identified by values 'E4EC4613958DE3BD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMARTINS identified by values 'F0E75A77A499F3C2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LAFFONSO identified by values 'DBEF73C781913EB0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALBERTO_ROBERS identified by values 'F07ECD82E42C3E94' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ADRIANO_BASTOS identified by values 'EC2A6D9974ADE8A3' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CARLOS_XAVIER identified by values 'D608B6C2B67236E0' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user GUSTAVO_AVELLAR identified by values '413D226A6C7729C9' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LIVIA_SILVA identified by values 'E8E8E834619A68F8' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JOAO_ALVES identified by values '00C2A81E7D271149' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DIEGO_PEREIRA identified by values '15DEA3B337182B54' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ALSANTOS identified by values '311A045258C48090' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EPSILVA identified by values '173F4F625E7E899C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AUGUSTO_FREIRE identified by values 'E7F4F30D6DEA380F' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JCOLOMBARA identified by values '016E8D038F23529E' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCOS_SILVA identified by values 'CCE021E2A0F2589C' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JORGE_BASTOS identified by values '030CE9F6282743AB' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LUIS_POLLI identified by values 'BE1D6F6943353139' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JBASTOS identified by values '3AF743AC52ADDC56' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LPOLLI identified by values '7F846353C890F112' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PSERODIO identified by values '24BD16827C5A9596' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DFIGUEIREDO identified by values '6D364ED2B84C8B63' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NELSON_CARVALHO identified by values '57279A142F796335' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NRUARO identified by values '8FDDB7EB63929188' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CMELLO identified by values '35D48E976BE13737' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user WMENDES identified by values 'E83C8831A02358D8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EWERTON_MELLO identified by values 'F0EFDB8BA1E9E849' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANDERSON_SANTANA identified by values 'A0DB2CC747AA2AD5' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user AVSOUZA identified by values 'E37BFF13CB947CC8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FRANCISCO.FGC identified by values '573BB51252CBA256' default tablespace USER_DATA temporary tablespace TEMP;
+create user FRANCISCO.FGC identified by values '573BB51252CBA256' default tablespace USER_DATA temporary tablespace TEMP
+                     *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user LUIS_YAMAN identified by values 'EFC57BCD7466E2BD' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VALTER_SJR identified by values '1F1174FDF07B912A' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+
+SQL> create user LUIS_SJR identified by values 'F9A783A90861E05D' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RONALDO_YAMAN identified by values '4839B28A9F13E4DA' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANDRE_SJR identified by values '62DD589C042D5164' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JKNAUER identified by values 'FD9DADEFAAE2BF1D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BBARBOSA identified by values '1FF010D4206EA882' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RMSILVA identified by values '42EBE67701A183B5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LATHANASIO identified by values 'E17DE02B65A2A301' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SECURITY identified by values '229CC4C7B2AF08C2' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DPOLIVEIRA identified by values '0F7B0CC2B23044A1' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACAPARROZ identified by values '7D95E95558FA1C8C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ACANAL identified by values '1619808394DC90DB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MAPEREIRA identified by values 'EADC514433DDF7DB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MAZEVEDO identified by values '302C8ADE931C57D4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CRISTOVAM_AMARAL identified by values 'BC15D6E9F02234A5' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user PATRICIA_MATERA identified by values 'A8F34C0269B3C6F6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DMASSON identified by values '22D89CB0D873522B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EGONCALVES identified by values 'AD4723235EB6272C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JALVES identified by values '6C1EC901FAB6325A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SJUNIOR identified by values '68480C9176BF9108' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MARCO_MATERA identified by values '5514F041354C1571' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JMAGRO identified by values 'F539F943C9D4790C' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CTAVARES identified by values '00983B79A60F372E' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MSILVEIRA identified by values 'D722B44879209DC1' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user OGAGLIARDI identified by values 'A68BBFA62775E5E3' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ISAAC_SILVA identified by values 'B0467D242A111FEC' default tablespace SYSTEM temporary tablespace TEMP;
+
+User created.
+
+
+SQL> create user JLUIZ identified by values '1B6B41F6D034E381' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DCOUTO identified by values 'F13243C286160E73' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user FRANCISCOIMS identified by values 'E0D8E4E9688254CE' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user RNBARBOSA identified by values '59CB8FEAB50AF8BB' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DESOMMA identified by values 'A82C21E76AC3AF10' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user APINHEIRO identified by values '8711F8CCA07BDD6B' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ANDRE_MATERA identified by values '18CB3360DD3F0A3A' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VLUCIA identified by values '41A8C61889CE91FB' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DAVI identified by values 'E53BC625F8D6BE36' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SAYURI identified by values '1EF57BD2511EAA8A' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user CINACHI identified by values 'B801D9BD31C852E6' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELINE identified by values 'C383120B693798FB' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user VFLORIPES identified by values '35EED43989377A4F' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user IAN_CARVALHO identified by values 'ADFFBADA63DE347B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MTRAPPUSER identified by values '1A3A4834015079C1' default tablespace MIO_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user ELISIANE identified by values '4204B648EC4F2D4F' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user JROCCO identified by values 'E752A04F9565EC63' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user KELFRI identified by values '591A4BE8ACFC8126' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DANIEL identified by values '568755EF445AB709' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user NCARVALHO identified by values 'E7D1481DC1A86A6F' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SCA identified by values '7ED8ECE4E517CD8D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user BSOLIVEIRA identified by values '1C734D9CC9F82D19' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MAPOLINARIO identified by values '6645C50033546F2C' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user EYAMABE identified by values '9A317B02B3E69860' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user LNOVAES identified by values '4A39DF7205FEEA42' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user DTOMA identified by values '40DC9FFE05B228D7' default tablespace USERS temporary tablespace TEMP;
+
+User created.
+
+SQL> create user MOACIR identified by "2204E3F77ABCA7C3" default tablespace USERS temporary tablespace TEMP;
+create user MOACIR identified by "2204E3F77ABCA7C3" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'MOACIR' conflicts with another user or role name 
+
+
+SQL> spool off

@@ -1,0 +1,39 @@
+SQL> 
+SQL> set echo on
+SQL> set timing on
+SQL> 
+SQL> -- Grant on sys.DBMS_AQADM
+SQL> 
+SQL> /*grant execute on DBMS_AQADM to public;
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> grant execute on sys.DBMS_AQADM to public;
+
+Grant succeeded.
+
+Elapsed: 00:00:00.06
+SQL> 
+SQL> -- create_job_class
+SQL> 
+SQL> BEGIN
+  2  DBMS_SCHEDULER.CREATE_JOB_CLASS (
+  3  	job_class_name		    =>	'JOBS_FINPAC3',
+  4  	service 		    =>	'matera',
+  5  	comments		    =>	'CLASS PARA JOBS QUE RODAM NO FINPAC3');
+  6  END;
+  7  /
+BEGIN
+*
+ERROR at line 1:
+ORA-00042: Unknown Service name matera 
+ORA-06512: at "SYS.DBMS_ISCHED", line 491 
+ORA-06512: at "SYS.DBMS_SCHEDULER", line 922 
+ORA-06512: at line 2 
+
+
+Elapsed: 00:00:00.01
+SQL> */
+SP2-0042: unknown command "*/" - rest of line ignored.
+SQL> spool off

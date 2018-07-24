@@ -1,0 +1,268 @@
+SQL> create user FINPAC_CP identified by values '8DE8FBA773DFD0BE' default tablespace USUARIOS temporary tablespace TEMP;
+create user FINPAC_CP identified by values '8DE8FBA773DFD0BE' default tablespace USUARIOS temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'USUARIOS' does not exist 
+
+SQL> create user SERGIO.FGC identified by values 'F4EDCFA222EA2C2B' default tablespace USER_DATA temporary tablespace TEMP;
+create user SERGIO.FGC identified by values 'F4EDCFA222EA2C2B' default tablespace USER_DATA temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user LVLIMA identified by values 'EA57C54B4A4C4C60' default tablespace INDX temporary tablespace TEMP;
+create user LVLIMA identified by values 'EA57C54B4A4C4C60' default tablespace INDX temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'INDX' does not exist 
+
+SQL> create user GERSON.FGC identified by values 'AE5E308E05B7CD05' default tablespace USER_DATA temporary tablespace TEMP;
+create user GERSON.FGC identified by values 'AE5E308E05B7CD05' default tablespace USER_DATA temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user NIVALDO.FGC identified by values '5250EA2EF9F13EFD' default tablespace USER_DATA temporary tablespace TEMP;
+create user NIVALDO.FGC identified by values '5250EA2EF9F13EFD' default tablespace USER_DATA temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user ANDREZA.PWC identified by values '5DCD9FB940487D22' default tablespace USER_DATA temporary tablespace TEMP;
+create user ANDREZA.PWC identified by values '5DCD9FB940487D22' default tablespace USER_DATA temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user MANOEL.FGC identified by values '09293772C58E16BB' default tablespace USER_DATA temporary tablespace TEMP;
+create user MANOEL.FGC identified by values '09293772C58E16BB' default tablespace USER_DATA temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user ADEMIR.FGC identified by values '2C24D8DA2B410180' default tablespace USER_DATA temporary tablespace TEMP;
+create user ADEMIR.FGC identified by values '2C24D8DA2B410180' default tablespace USER_DATA temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user VICTOR.CORDEIRO identified by values 'AB1D383E8A4BB300' default tablespace USER_DATA temporary tablespace TEMP;
+create user VICTOR.CORDEIRO identified by values 'AB1D383E8A4BB300' default tablespace USER_DATA temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user HUMBERTO.FGC identified by values 'FEAB1A76425C05F9' default tablespace USER_DATA temporary tablespace TEMP;
+create user HUMBERTO.FGC identified by values 'FEAB1A76425C05F9' default tablespace USER_DATA temporary tablespace TEMP
+                    *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user RENATA.BARBOSA identified by values '3B50EC884F23B8B5' default tablespace USERS temporary tablespace TEMP;
+create user RENATA.BARBOSA identified by values '3B50EC884F23B8B5' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user SANDRA.IMS identified by values '5621BCE87EA8B897' default tablespace USERS temporary tablespace TEMP;
+create user SANDRA.IMS identified by values '5621BCE87EA8B897' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user JORGE.IMS identified by values '441DEE68E6F46425' default tablespace USERS temporary tablespace TEMP;
+create user JORGE.IMS identified by values '441DEE68E6F46425' default tablespace USERS temporary tablespace TEMP
+                 *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user NELSON.CARVALHO identified by values '2E87A03A8A18FFDC' default tablespace USERS temporary tablespace TEMP;
+create user NELSON.CARVALHO identified by values '2E87A03A8A18FFDC' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user DENISE.FONSECA identified by values '451A0400BD0B5E87' default tablespace USERS temporary tablespace TEMP;
+create user DENISE.FONSECA identified by values '451A0400BD0B5E87' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user VALDIR.IMS identified by values '0711E0390613E13A' default tablespace USERS temporary tablespace TEMP;
+create user VALDIR.IMS identified by values '0711E0390613E13A' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+SQL> create user ANTONIO.SBRAGIA identified by values '0920AEA6891814FE' default tablespace USER_DATA temporary tablespace TEMP;
+create user ANTONIO.SBRAGIA identified by values '0920AEA6891814FE' default tablespace USER_DATA temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user ARISTEU.FILHO identified by values '022DC01FF1F8DCEC' default tablespace USER_DATA temporary tablespace TEMP;
+create user ARISTEU.FILHO identified by values '022DC01FF1F8DCEC' default tablespace USER_DATA temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user SANDRA.LAPA identified by values '31D71137B276C2C9' default tablespace USERS temporary tablespace TEMP;
+create user SANDRA.LAPA identified by values '31D71137B276C2C9' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+SQL> create user NAIRA.OEY identified by values 'AA1EF3B457D161B7' default tablespace USERS temporary tablespace TEMP;
+create user NAIRA.OEY identified by values 'AA1EF3B457D161B7' default tablespace USERS temporary tablespace TEMP
+                 *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+SQL> create user MARIANA.BELO identified by values 'B12FEAA04ADEC13B' default tablespace USERS temporary tablespace TEMP;
+create user MARIANA.BELO identified by values 'B12FEAA04ADEC13B' default tablespace USERS temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+SQL> create user DANIELA.FLOR identified by values '23E8B0BBEB0551AB' default tablespace USERS temporary tablespace TEMP;
+create user DANIELA.FLOR identified by values '23E8B0BBEB0551AB' default tablespace USERS temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user MARIO.CESAR identified by values '2F35098DA6FDEAD4' default tablespace USERS temporary tablespace TEMP;
+create user MARIO.CESAR identified by values '2F35098DA6FDEAD4' default tablespace USERS temporary tablespace TEMP
+                 *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user RODRIGO.COLTELLI identified by values 'D674D0B8429E3107' default tablespace USERS temporary tablespace TEMP;
+create user RODRIGO.COLTELLI identified by values 'D674D0B8429E3107' default tablespace USERS temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user ARIANE.ROBERTA identified by values 'B1E8653BDA7B0501' default tablespace USERS temporary tablespace TEMP;
+create user ARIANE.ROBERTA identified by values 'B1E8653BDA7B0501' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user M.RODRIGUES identified by values 'A99F294D502B307E' default tablespace USERS temporary tablespace TEMP;
+create user M.RODRIGUES identified by values 'A99F294D502B307E' default tablespace USERS temporary tablespace TEMP
+             *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user L.FIUZA identified by values '14DD9D4BDE2C7046' default tablespace USERS temporary tablespace TEMP;
+create user L.FIUZA identified by values '14DD9D4BDE2C7046' default tablespace USERS temporary tablespace TEMP
+             *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user NANCI.SANTOS identified by values '3D8507715985B8CF' default tablespace USER_DATA temporary tablespace TEMP;
+create user NANCI.SANTOS identified by values '3D8507715985B8CF' default tablespace USER_DATA temporary tablespace TEMP
+                 *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user JORGE.OLIVEIRA identified by values 'E90352634F87F9EA' default tablespace USERS temporary tablespace TEMP;
+create user JORGE.OLIVEIRA identified by values 'E90352634F87F9EA' default tablespace USERS temporary tablespace TEMP
+                 *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user VALDIR.COSTA identified by values 'CD7DDA2977DC3F82' default tablespace USERS temporary tablespace TEMP;
+create user VALDIR.COSTA identified by values 'CD7DDA2977DC3F82' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user CARLOS.VICENTE identified by values 'ABF01909B18C162C' default tablespace USERS temporary tablespace TEMP;
+create user CARLOS.VICENTE identified by values 'ABF01909B18C162C' default tablespace USERS temporary tablespace TEMP
+                  *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+
+SQL> create user MARCO.BELEM identified by values '562EEC69313A6ED0' default tablespace USERS temporary tablespace TEMP;
+create user MARCO.BELEM identified by values '562EEC69313A6ED0' default tablespace USERS temporary tablespace TEMP
+                 *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user ADRIANA.SANTOS identified by values '2BDC47252B8B8145' default tablespace USERS temporary tablespace TEMP;
+create user ADRIANA.SANTOS identified by values '2BDC47252B8B8145' default tablespace USERS temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user FABIANA.GLORIA identified by values 'B981B24CC51ABD2F' default tablespace USERS temporary tablespace TEMP;
+create user FABIANA.GLORIA identified by values 'B981B24CC51ABD2F' default tablespace USERS temporary tablespace TEMP
+                   *
+ERROR at line 1:
+ORA-01936: cannot specify owner when creating users or roles 
+
+SQL> create user VBUAS identified by values 'E83712833DE383FC' default tablespace USUARIOS temporary tablespace TEMP;
+create user VBUAS identified by values 'E83712833DE383FC' default tablespace USUARIOS temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'USUARIOS' does not exist 
+
+######################
+SQL> create user APP_DBA identified by values '6E4702300F3B63DE' default tablespace DBA_DATA temporary tablespace TEMP;
+create user APP_DBA identified by values '6E4702300F3B63DE' default tablespace DBA_DATA temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'DBA_DATA' does not exist 
+
+SQL> create user DB_ONLINE identified by values 'D15FAE9257A53E4C' default tablespace TAFDB_D temporary tablespace TEMP;
+create user DB_ONLINE identified by values 'D15FAE9257A53E4C' default tablespace TAFDB_D temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'TAFDB_D' does not exist 
+
+SQL> create user COMISSAO2 identified by values 'COMISSAO2' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+create user COMISSAO2 identified by values 'COMISSAO2' default tablespace SDBANCO_DATA temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-02153: invalid VALUES password string 
+
+SQL> create user DB_OPERATOR identified by values 'A003FD1888C46F03' default tablespace TAFDB_D temporary tablespace TEMP;
+create user DB_OPERATOR identified by values 'A003FD1888C46F03' default tablespace TAFDB_D temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'TAFDB_D' does not exist 
+
+SQL> create user OPERADOR identified by values '33867263782462E8' default tablespace USUARIOS temporary tablespace TEMP;
+create user OPERADOR identified by values '33867263782462E8' default tablespace USUARIOS temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'USUARIOS' does not exist 
+
+SQL> create user PERFSTAT identified by values '71B81E84C607151A' default tablespace PERFSTAT temporary tablespace TEMP;
+create user PERFSTAT identified by values '71B81E84C607151A' default tablespace PERFSTAT temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'PERFSTAT' does not exist 
+
+SQL> create user TOAD identified by values 'C7618B47BB2B1D6B' default tablespace USUARIOS temporary tablespace TEMP;
+create user TOAD identified by values 'C7618B47BB2B1D6B' default tablespace USUARIOS temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'USUARIOS' does not exist 
+
+SQL> create user BCSCADASTRO identified by values '5B83847A82CD2AAE' default tablespace BCS_DATA01 temporary tablespace TEMP;
+create user BCSCADASTRO identified by values '5B83847A82CD2AAE' default tablespace BCS_DATA01 temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'BCS_DATA01' does not exist 
+

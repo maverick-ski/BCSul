@@ -1,0 +1,82 @@
+SQL> set echo on
+SQL> CREATE ROLE SPDES_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.13
+SQL> CREATE ROLE ACESSO_RM;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE ACESSO_SDBANCO;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE BC_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE DB_DBAS;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE FN_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE SD_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE TC_ADMIN_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE TC_LDR_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE TC_MGR_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE RL_SUPORTE_TI_EXEC;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE DBA_PROD;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE RL_SUPORTE_TI;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE RL_SUPORTE_TI_DML;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE LG_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE PB_ROLE;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> spool off

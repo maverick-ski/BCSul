@@ -1,0 +1,8 @@
+spool gather_dict_stats.log;
+set echo on feedback on timing on
+
+EXECUTE DBMS_STATS.GATHER_DICTIONARY_STATS;
+EXECUTE DBMS_STATS.GATHER_FIXED_OBJECTS_STATS;
+EXECUTE DBMS_STATS.GATHER_SYSTEM_STATS;
+
+spool off

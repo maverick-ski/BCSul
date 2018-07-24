@@ -1,0 +1,194 @@
+SQL> 
+SQL> set echo on
+SQL> set timing on
+SQL> 
+SQL> create or replace directory IMPORT as '/u02/import';
+
+Directory created.
+
+Elapsed: 00:00:00.05
+SQL> create or replace directory PUMP_DIR as '/u02/dump';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory EXT_DIR as '/u02/temp';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> 
+SQL> create or replace directory GLOSA_LIDO	     as '/u02/retag/cpp/glosa_lido';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory GLOSA_RETORNO	     as '/u02/retag/cpp/glosa';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory TELESAQUE	     as '/u02/retag/cartao/dataprev/telesaque';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> create or replace directory BACEN			     as '/u02/retag/Bacen';
+
+Directory created.
+
+Elapsed: 00:00:00.04
+SQL> create or replace directory ARQUIVO_LIDO	     as '/u02/retag/cpp/arquivos/lido';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory ARQUIVO_RETORNO     as '/u02/retag/cpp/arquivos/retorno';
+
+Directory created.
+
+Elapsed: 00:00:00.01
+SQL> create or replace directory ARQUIVO_GERADO      as '/u02/retag/cpp/arquivos/gerado';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory ARQUIVO_MARGEM      as '/u02/retag/cpp/arquivos/margem';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory INF_GERENCIAL	     as '/u02/retag/cartao/inf_ger';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory OUTBOUND	     as '/u02/retag/utl_file/outbound';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory INBOUND		     as '/u02/retag/utl_file/inbound';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory CAMPANHA_CPP	     as '/u02/retag/cartao/dataprev/campanha_cpp';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> create or replace directory INSS_LIDO	     as '/u02/retag/cpp/dataprev/lido';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> create or replace directory INSS_RETORNO	     as '/u02/retag/cpp/dataprev/retornado';
+
+Directory created.
+
+Elapsed: 00:00:00.12
+SQL> create or replace directory INSS_ENVIADO	     as '/u02/retag/cpp/dataprev/enviado';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory INSS_REMESSA	     as '/u02/retag/cpp/dataprev/gerado';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory REMESSA_DFS	     as '/u02/retag/dfscartao/fidelity/remessa';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory RETORNO_DFS	     as '/u02/retag/dfscartao/fidelity/retorno';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> create or replace directory IMP_DIARIO_DFS      as '/u02/retag/dfscartao/dataprev/diario';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> create or replace directory DATAPREV_DFS	     as '/u02/retag/dfscartao/dataprev';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> create or replace directory CAMPANHA_DFS	     as '/u02/retag/dfscartao/dataprev/campanha';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory DATAPREV	     as '/u02/retag/cartao/dataprev';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory SIAPE_LIDO	     as '/u02/retag/siape/lido';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory SIAPE_REMESSA	     as '/u02/retag/siape/gerado';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory SIAPE_RETORNO	     as '/u02/retag/siape/retornado';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory SIAPE_ENVIADO	     as '/u02/retag/siape/enviado';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory IMP_DIARIO_TMP      as '/u02/retag/cartao/dataprev/diario/prmonre';
+
+Directory created.
+
+Elapsed: 00:00:00.03
+SQL> create or replace directory IMP_PRMONRE	     as '/u02/retag/cartao/dataprev/temp';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory EXTERNAL_TABLES     as '/u02/retag/external_tables';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory REMESSA		     as '/u02/retag/cartao/fidelity/remessa';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory RETORNO		     as '/u02/retag/cartao/fidelity/retorno';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory IMP_DIARIO	     as '/u02/retag/cartao/dataprev/diario';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> create or replace directory CAMPANHA	     as '/u02/retag/cartao/dataprev/campanha';
+
+Directory created.
+
+Elapsed: 00:00:00.02
+SQL> --create or replace directory EXTERNAL_RET_PROP R:/
+SQL> --create or replace directory INC_124526		     R:/BKP_TBLS_124526
+SQL> 
+SQL> -- Grant on sys.DBMS_AQADM
+SQL> 
+SQL> --grant execute on DBMS_AQADM to public;
+SQL> --grant execute on sys.DBMS_AQADM to public;
+SQL> 
+SQL> spool off

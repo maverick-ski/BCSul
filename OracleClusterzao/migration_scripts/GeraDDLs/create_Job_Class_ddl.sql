@@ -1,0 +1,11 @@
+
+
+BEGIN
+dbms_scheduler.create_job_class('"JOBS_FINPAC3"',NULL,'SRV_NODE3', NULL,
+'CLASS PARA JOBS QUE RODAM NO FINPAC3'
+);
+COMMIT;
+END;
+/
+
+

@@ -1,0 +1,38 @@
+SQL> set echo on
+SQL> CREATE ROLE RCARTAO;
+
+Role created.
+
+Elapsed: 00:00:00.55
+SQL> CREATE ROLE DBA_PROD;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE PLUSTRACE;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE RL_ADM_CARTAO;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE RL_SUPORTE_TI;
+
+Role created.
+
+Elapsed: 00:00:00.02
+SQL> CREATE ROLE RL_SUPORTE_TI_DML;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> CREATE ROLE RL_SUPORTE_TI_EXEC;
+
+Role created.
+
+Elapsed: 00:00:00.01
+SQL> 
+SQL> spool off

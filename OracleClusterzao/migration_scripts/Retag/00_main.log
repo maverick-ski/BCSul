@@ -1,0 +1,12 @@
+SQL> 
+SQL> 
+SQL> @@01_create_tbls.sql
+SQL> spool create_tbls.log
+SQL> 
+SQL> 
+SQL> @@01_create_tbls.sql
+SQL> spool create_tbls.log
+SQL> 
+SQL> 
+SQL> @@01_create_tbls.sql
+SQL> spool create_tbls.log

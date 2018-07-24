@@ -1,0 +1,3 @@
+USER_STRING="oragrid"
+ORA_STRING="!P13rr3CR"
+SCRIPTS_HOME="/netapp_cifs/migration_scripts/Retag"

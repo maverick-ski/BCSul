@@ -1,0 +1,8 @@
+SQL> 
+SQL> alter pluggable database matera open instances=ALL;
+
+Pluggable database altered.
+
+Elapsed: 00:00:00.38
+SQL> 
+SQL> spool off

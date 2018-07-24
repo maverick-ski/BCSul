@@ -1,0 +1,132 @@
+SQL> set echo on
+SQL> create user ACL identified by "076FED9D2617E2F5" default tablespace USERS temporary tablespace TEMP;
+create user ACL identified by "076FED9D2617E2F5" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'ACL' conflicts with another user or role name 
+
+
+SQL> create user AUDITORIA identified by "AF2B43494C6354F5" default tablespace SDBANCO_DATA temporary tablespace TEMP;
+create user AUDITORIA identified by "AF2B43494C6354F5" default tablespace SDBANCO_DATA temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'AUDITORIA' conflicts with another user or role name 
+
+
+SQL> create user BR_CONSULTA identified by "145C0F6C69163EE0" default tablespace USERS temporary tablespace TEMP;
+create user BR_CONSULTA identified by "145C0F6C69163EE0" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'BR_CONSULTA' conflicts with another user or role name 
+
+
+SQL> create user CADASTRO identified by "DEFD7D9D6A42AD82" default tablespace USERS temporary tablespace TEMP;
+create user CADASTRO identified by "DEFD7D9D6A42AD82" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'CADASTRO' conflicts with another user or role name 
+
+
+SQL> create user CHANGE identified by "A584D502925203EF" default tablespace USERS temporary tablespace TEMP;
+create user CHANGE identified by "A584D502925203EF" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'CHANGE' conflicts with another user or role name 
+
+
+SQL> create user CHANGE_SPB identified by "D640208D6B7CBBE6" default tablespace SPB_DATA temporary tablespace TEMP;
+create user CHANGE_SPB identified by "D640208D6B7CBBE6" default tablespace SPB_DATA temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'CHANGE_SPB' conflicts with another user or role name 
+
+
+SQL> create user COMISSAO identified by "4E09C4027EF82768" default tablespace SDBANCO_DATA temporary tablespace TEMP;
+create user COMISSAO identified by "4E09C4027EF82768" default tablespace SDBANCO_DATA temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'COMISSAO' conflicts with another user or role name 
+
+
+SQL> create user MIDDLE identified by "AE81E46C1781874F" default tablespace USERS temporary tablespace TEMP;
+create user MIDDLE identified by "AE81E46C1781874F" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'MIDDLE' conflicts with another user or role name 
+
+
+SQL> create user PAGCPP identified by "0456271928A2A5D8" default tablespace USERS temporary tablespace TEMP;
+create user PAGCPP identified by "0456271928A2A5D8" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'PAGCPP' conflicts with another user or role name 
+
+
+SQL> create user PAGREEMB identified by "2AF0F023D2FAA486" default tablespace USERS temporary tablespace TEMP;
+create user PAGREEMB identified by "2AF0F023D2FAA486" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'PAGREEMB' conflicts with another user or role name 
+
+
+SQL> create user RISCO identified by "EB637BEF357BC091" default tablespace USERS temporary tablespace TEMP;
+create user RISCO identified by "EB637BEF357BC091" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'RISCO' conflicts with another user or role name 
+
+
+SQL> create user SDCOMPE identified by "B69325D1BDA43C53" default tablespace SDBANCO_DATA temporary tablespace TEMP;
+create user SDCOMPE identified by "B69325D1BDA43C53" default tablespace SDBANCO_DATA temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'SDCOMPE' conflicts with another user or role name 
+
+
+SQL> create user SDCONTA identified by "4ABBF95BE047BEF3" default tablespace SDBANCO_DATA temporary tablespace TEMP;
+create user SDCONTA identified by "4ABBF95BE047BEF3" default tablespace SDBANCO_DATA temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'SDCONTA' conflicts with another user or role name 
+
+
+SQL> create user SDEMP identified by "2BF306AB00C28D22" default tablespace USERS temporary tablespace TEMP;
+create user SDEMP identified by "2BF306AB00C28D22" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'SDEMP' conflicts with another user or role name 
+
+
+SQL> create user SDGERVER identified by "39A6DFEFDB5AC470" default tablespace USERS temporary tablespace TEMP;
+create user SDGERVER identified by "39A6DFEFDB5AC470" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'SDGERVER' conflicts with another user or role name 
+
+
+SQL> create user SPB_BRIDGE identified by "512BE61AFD8FEFC5" default tablespace SPB_DATA temporary tablespace TEMP;
+
+User created.
+
+SQL> create user SUPMATERA identified by "69DDE338BACC150F" default tablespace SDBANCO_DATA temporary tablespace TEMP;
+create user SUPMATERA identified by "69DDE338BACC150F" default tablespace SDBANCO_DATA temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'SUPMATERA' conflicts with another user or role name 
+
+
+SQL> create user SUPORTERJ identified by "077EFAE36A0A3D1A" default tablespace USERS temporary tablespace TEMP;
+create user SUPORTERJ identified by "077EFAE36A0A3D1A" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'SUPORTERJ' conflicts with another user or role name 
+
+
+SQL> create user SUPORTESP identified by "DF01BC01745F86B0" default tablespace USERS temporary tablespace TEMP;
+create user SUPORTESP identified by "DF01BC01745F86B0" default tablespace USERS temporary tablespace TEMP
+            *
+ERROR at line 1:
+ORA-01920: user name 'SUPORTESP' conflicts with another user or role name 
+
+
+SQL> spool off

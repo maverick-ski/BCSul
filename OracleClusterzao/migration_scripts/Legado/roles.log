@@ -1,0 +1,61 @@
+SQL> CREATE ROLE SPDES_ROLE;
+
+Role created.
+
+SQL> CREATE ROLE ACESSO_RM;
+
+Role created.
+
+SQL> CREATE ROLE ACESSO_SDBANCO;
+
+Role created.
+
+SQL> CREATE ROLE BC_ROLE;
+
+Role created.
+
+SQL> CREATE ROLE DB_DBAS;
+
+Role created.
+
+SQL> CREATE ROLE FN_ROLE;
+
+Role created.
+
+SQL> CREATE ROLE SD_ROLE;
+
+Role created.
+
+SQL> CREATE ROLE TC_ADMIN_ROLE;
+
+Role created.
+
+SQL> CREATE ROLE TC_LDR_ROLE;
+
+Role created.
+
+SQL> CREATE ROLE TC_MGR_ROLE;
+
+Role created.
+
+SQL> CREATE ROLE RL_SUPORTE_TI_EXEC;
+
+Role created.
+
+SQL> CREATE ROLE DBA_PROD;
+
+Role created.
+
+SQL> CREATE ROLE RL_SUPORTE_TI;
+
+Role created.
+
+SQL> CREATE ROLE RL_SUPORTE_TI_DML;
+
+Role created.
+
+SQL> CREATE ROLE LG_ROLE;
+
+Role created.
+
+SQL> spool off

@@ -1,0 +1,640 @@
+SQL> set echo on
+SQL> --create user SPB_BRIDGE identified by "512BE61AFD8FEFC5" default tablespace SPB_DATA temporary tablespace TEMP;
+SQL> create user ACL identified by "076FED9D2617E2F5" default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.15
+SQL> create user APOIO identified by values '153B308E6EA29AC4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user APP_DBA identified by values '6E4702300F3B63DE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user AUDBACEN1 identified by values '45D890BB580D6532' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.05
+SQL> create user AUDBACEN2 identified by values '0828EED642B8F6D9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user AUDITORIA identified by values 'AF2B43494C6354F5' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user BACEN identified by values 'C94CFF9045B760C5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user BACEN1 identified by values '947B4CE09B534DB6' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user BCS1 identified by values '92190541352372F9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user BMF identified by values '7103C872AAF4164A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user BR_CONSULTA identified by values '145C0F6C69163EE0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CADASTRO identified by values 'DEFD7D9D6A42AD82' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CAIXA identified by values '99A410510331606A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA21 identified by values 'EB727EA5C72204F7' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA01 identified by values '4842121C4C66498B' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA02 identified by values 'ECDEC2EB37773822' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA03 identified by values 'FE37D6E70EAA78EA' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA04 identified by values 'A0397DEA9CDAD1F9' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA05 identified by values 'D63AD9ACC6383365' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA06 identified by values '6605325B88695CF4' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA07 identified by values '1DED8ECC6AA46260' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA08 identified by values '17BEB112632E2733' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA09 identified by values 'B1394367C64DFAEF' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA10 identified by values '857BB1F36F67EE90' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA11 identified by values '517EA2D042197B46' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA12 identified by values 'E408C1BC5CD88094' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA13 identified by values 'A68FECCDD90DE689' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA14 identified by values '2780B7F1D970A7E4' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA15 identified by values 'B387D597C7CC3653' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA16 identified by values 'C1D8CA2AE09FDCC7' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA17 identified by values 'E92DBD9CB5EEEC7F' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA18 identified by values '9098300FE2FA01CE' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CA19 identified by values 'AEC6DB155F3A85CE' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CA20 identified by values 'A2F5B2B0031F7FC3' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CENTRAL identified by values 'A98B26E2F65CA4D3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CENTRALRJ identified by values 'D042AA04A7EA0559' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CENTRALRJ1 identified by values '2506E3BDB74AC0B0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CENTRALRJ2 identified by values '83BDCFDD33136A91' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CENTRALRJ3 identified by values '776FA4555C20086D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CENTRALRJ4 identified by values '8FAC425B767DCDCA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CENTRALRJ5 identified by values '6C0E8A8CED2D5C41' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CENTRALRJ6 identified by values 'F755DCC3F3128B84' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CENTRAL1 identified by values 'B72976BBDD2751AC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CENTRAL2 identified by values '349E0F9A8E104EA9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user DB_ONLINE identified by values 'D15FAE9257A53E4C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CREDITOSP identified by values '41D3624407B349CB' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user COMISSAO identified by values '4E09C4027EF82768' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user COMISSAO2 identified by values 'COMISSAO2' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+create user COMISSAO2 identified by values 'COMISSAO2' default tablespace SDBANCO_DATA temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-02153: invalid VALUES password string 
+
+
+Elapsed: 00:00:00.01
+SQL> create user DB_OPERATOR identified by values 'A003FD1888C46F03' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user DIGRJ01 identified by values '7985CA4F03AC9941' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user DIGRJ02 identified by values '41123943E4B8ABCE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user DIGRJ03 identified by values '1E93BDFA45FC62CA' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user DIGRJ04 identified by values 'DF4E3F2FFEF7D2E3' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user DIGRJ05 identified by values 'CC5FB685D21BF84F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user DIGRJ06 identified by values '95FFF2D91C8B7EF4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user DIGSP01 identified by values '40D08CC3080A4ED5' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user INFORJ identified by values 'A86005C7C3E1ABAC' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user INFOSP identified by values '2AE7D2995E6677F2' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user INTEGCAIXA identified by values '2E44BAC0761BA72F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user MIGRACAO identified by values 'DEB904F9A8EF1537' default tablespace MIDDLE_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user OPERADOR identified by values '33867263782462E8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user OPERATOR identified by values '5740ACD7389F595B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user PERFSTAT identified by values '71B81E84C607151A' default tablespace PERFSTAT temporary tablespace TEMP;
+create user PERFSTAT identified by values '71B81E84C607151A' default tablespace PERFSTAT temporary tablespace TEMP
+*
+ERROR at line 1:
+ORA-00959: tablespace 'PERFSTAT' does not exist 
+
+
+Elapsed: 00:00:00.02
+SQL> create user PROCESSOS identified by values 'E74725624F5053C4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user PRO_SD identified by values '813B980E9FC4EAC0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user TRACESVR identified by values 'F9DA8977092B7B81' default tablespace SYSTEM temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SUBCUSTODIA identified by values 'E9A07AD76007D172' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user SUPORTE identified by values '3C75B6D40AD8F2D9' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SUPORTERJ identified by values '077EFAE36A0A3D1A' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user SUPORTESP identified by values 'DF01BC01745F86B0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user TECNOLOGIA identified by values '5CDF85C45E8A17B9' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user TELESAQUE identified by values '73D761F57EA2B11C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user TESTE identified by values '864B0E03A5061B6D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user TOAD identified by values 'C7618B47BB2B1D6B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user REPLICA identified by values '194EF3498AFA5163' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user EXFSYS identified by values '66F4EF5650C20355' default tablespace SYSAUX temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user SQLTXPLAIN identified by values 'AA8A1AD223BD7BA4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user BACEN2011 identified by values '1D69FF14D9443FEF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user DBLINK_TOOLS_HOMOLOG identified by values '583C59A7A193128F' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user CHANGE identified by values 'A584D502925203EF' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CHANGE_SPB identified by values 'D640208D6B7CBBE6' default tablespace SPB_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user BCSULRISCOM identified by values '2CF5D7D0BBC9BA8B' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user RISCO_HOMO identified by values '426EF969B7696093' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user EASYIRPJ identified by values '3A34BB7D3A1CA812' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user BCSCADASTRO identified by values '5B83847A82CD2AAE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SUPMATERA identified by values '69DDE338BACC150F' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user INTEGRARH identified by values '15AE8903E2475A1D' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user BCSULVIRTUAL identified by values 'C0985C09EDF22EB9' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user RAFAEL_BORGES identified by values '28234E2F3B4FD922' default tablespace SYSTEM temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user TESTE4 identified by values '0930BB58B38A1F6C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user TESTE5 identified by values 'A8B1355865EEFC5C' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user TESTE7 identified by values '500CD7FD842CC2C4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user TESTE8 identified by values 'E9BCF21D1F6FB6F4' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDCOMPE identified by values 'B69325D1BDA43C53' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user SDCONTA identified by values '4ABBF95BE047BEF3' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDCONTAB_PER identified by values '58D7DC0E77B6C8DD' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDEMP identified by values '2BF306AB00C28D22' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDGERVER identified by values '39A6DFEFDB5AC470' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDI identified by values '449906FD6CA30719' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SPOT identified by values '2DA4B45C505F6823' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDLOGON identified by values '7AC3785E8527AC49' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDOPEN identified by values '18949E458D5030B8' default tablespace SDBANCO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SPB identified by values '642190BBDDD810B0' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SPDES identified by values 'F8FC6147EBB90C50' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user MIDDLE identified by values 'AE81E46C1781874F' default tablespace MIDDLE_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user LK_SUPORTE_TI identified by values '6650045AD5945D6F' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user LK_SUPORTE_TI_2 identified by values '020F1A86C0D643A8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user CI identified by values 'D3471995F0A0FC7D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user LK_TOOLS_BACEN identified by values '25D772FA49C394B2' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SIS_CNAB identified by values '29FE08BFFB6D5015' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user ZABBIX identified by values '9A31F4B8D0743A01' default tablespace SYSTEM temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user SCA_HOMOLOG identified by values '598668DD68EC0A26' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user FRAMEWORK identified by values 'FAB9F1A9A8CAA460' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user BCSULRISCOM_JOBS identified by "92464AA113EFF137" default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.09
+SQL> create user PANDATA_JOBS identified by "DF3F07E48A1ED939" default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.06
+SQL> create user BCSULVIRTUAL_JOBS identified by "A9C8D2AE9D9B4F37" default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user FINPAC_JOBS identified by values '3EE06E6843FF2C43' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SDBANCO_JOBS identified by values 'D6D31FF902D1B462' default tablespace FINPAC_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user LK_BCSULBANCO_MIDDLE identified by values '3492ECFE86FCC70B' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user PAGCPP identified by values '0456271928A2A5D8' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user PAGREEMB identified by values '2AF0F023D2FAA486' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user RISCO identified by values 'EB637BEF357BC091' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user TRIBUTOSMIU identified by values '3FC328972CEC1E03' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user FINPAC_CP identified by values '8DE8FBA773DFD0BE' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> create user SCA identified by values '7ED8ECE4E517CD8D' default tablespace USER_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.03
+SQL> create user MTRAPPUSER identified by values '1A3A4834015079C1' default tablespace MIO_DATA temporary tablespace TEMP;
+
+User created.
+
+Elapsed: 00:00:00.04
+SQL> 
+SQL> spool off

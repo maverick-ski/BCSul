@@ -1,0 +1,8 @@
+SQL> 
+SQL> alter pluggable database retag open instances=ALL;
+
+Pluggable database altered.
+
+Elapsed: 00:00:00.13
+SQL> 
+SQL> spool off
