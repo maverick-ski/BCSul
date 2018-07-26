@@ -1,0 +1,101 @@
+*** Parâmetros para a criação da Instancia BCSULCDB
+
+DATABASE BCSULCDB CREDENTIALS
+
+SYS/SYSTEM/DBSNMP -> !P13rr3CR
+
+SQL> alter system set db_recovery_file_dest_size=200G scope=both;
+
+System altered.
+
+SQL> alter system set db_recovery_file_dest='/u01/app/oracle/fast_recovery_area' scope=both;
+
+alter database archivelog
+
+SQL> archive log list
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+*** Informações para FINPAC PDB
+
+BEGIN
+	EXECUTE IMMEDIATE 'alter pluggable database FINPAC close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database FINPAC including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "FINPAC" admin user "DBAMATERA" identified by "Db4F1np4c"';
+	EXECUTE IMMEDIATE 'alter pluggable database "FINPAC" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "FINPAC" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "FINPAC"'; 
+	EXECUTE IMMEDIATE 'grant dba to "DBAFINPAC"';
+END;
+/
+
+OBS: Não esquecer de redefinir EM Console HTTP Port
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+*** Informações para MATERA PDB
+
+BEGIN
+	EXECUTE IMMEDIATE 'alter pluggable database MATERA close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database MATERA including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "MATERA" admin user "DBAMATERA" identified by "Db4m4t3r4"';
+	EXECUTE IMMEDIATE 'alter pluggable database "MATERA" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "MATERA" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "MATERA"'; 
+	EXECUTE IMMEDIATE 'grant dba to "DBAMATERA"';
+END;
+/
+
+OBS: Não esquecer de redefinir EM Console HTTP Port
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+*** Informações para RETAG PDB
+
+BEGIN
+	EXECUTE IMMEDIATE 'alter pluggable database RETAG close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database RETAG including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "RETAG" admin user "DBARETAG" identified by "Db4r3t4g"';
+	EXECUTE IMMEDIATE 'alter pluggable database "RETAG" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "RETAG" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "RETAG"'; 
+	EXECUTE IMMEDIATE 'grant dba to "DBARETAG"';
+END;
+/
+
+OBS: Não esquecer de redefinir EM Console HTTP Port
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+*** Processo de clonagem de PDB's
+
+BEGIN
+    EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA CLOSE IMMEDIATE INSTANCES=ALL';
+	EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA OPEN READ ONLY';
+	EXECUTE IMMEDIATE 'CREATE PLUGGABLE DATABASE "FINPAC" FROM "MATERA"
+      STORAGE UNLIMITED TEMPFILE REUSE
+      FILE_NAME_CONVERT=NONE
+      PARALLEL 4';
+    EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE FINPAC OPEN READ WRITE INSTANCES=ALL';
+	EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA CLOSE IMMEDIATE INSTANCES=ALL';
+	EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA OPEN READ WRITE INSTANCES=ALL';
+END;
+/
+
+OBS: Não esquecer de redefinir EM Console HTTP Port
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+*** Scripts pra manipular o EM Console
+
+SELECT 'http://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_DOMAIN')||':'||dbms_xdb_config.gethttpport()||'/em/' from dual;
+
+SELECT 'http://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||dbms_xdb_config.gethttpport()||'/em/' from dual;
+
+SELECT 'https://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_DOMAIN')||':'||dbms_xdb_config.gethttpsport()||'/em/' from dual;
+
+SELECT 'https://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||dbms_xdb_config.gethttpsport()||'/em/' from dual;
+
+exec DBMS_XDB_CONFIG.SETHTTPPORT(5501);
+exec DBMS_XDB_CONFIG.SETHTTPSPORT(null);
+

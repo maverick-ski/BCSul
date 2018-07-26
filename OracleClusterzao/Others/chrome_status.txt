@@ -29,3 +29,5 @@ http://sdalessandro.blogspot.com.br/2016/01/script-para-calcular-hughpages.html
 https://oracle-base.com/articles/linux/configuring-huge-pages-for-oracle-on-linux-64
 
 http://en.community.dell.com/techcenter/enterprise-solutions/w/oracle_solutions/12290.how-to-deploy-oracle-12c-release-1-on-rhel-7oracle-linux-7
+
+https://blogs.oracle.com/db/em-express-12c-database-administration-page-faq
