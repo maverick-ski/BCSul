@@ -1,0 +1,191 @@
+1 - Parar e Desabilitar
+systemctl stop NetworkManager.service
+systemctl disable NetworkManager.service
+
+2 - Corrigir /etc/resolv.conf que foi cagado pelo NetworkManager.service
+search bcsul.corp
+nameserver 10.32.112.76
+nameserver 10.64.112.107
+
+3 - Criar diretórios e permissões em /u01
+
+mkdir -p /u01/stage
+mkdir -p /u01/app/oraInventory
+mkdir -p /u01/app/grid_base_dir
+mkdir -p /u01/app/grid_1
+mkdir -p /u01/app/grid_1/12.2.0.1
+mkdir -p /u01/app/oracle
+mkdir -p /u01/app/oracle/db_1/12.2.0.1
+
+chown -R oragrid:oinstall /u01/stage
+chown -R oragrid:oinstall /u01/app
+chown -R oragrid:oinstall /u01/app/oraInventory
+chown -R oragrid:oinstall /u01/app/grid_base_dir
+chown -R oragrid:oinstall /u01/app/grid_1
+chown -R oragrid:oinstall /u01/app/grid_1/12.2.0.1
+chown -R oracle:oinstall /u01/app/oracle
+chown -R oracle:oinstall /u01/app/oracle/db_1
+chown -R oracle:oinstall /u01/app/oracle/db_1/12.2.0.1
+
+chmod -R 775 /u01/stage
+chmod -R 775 /u01/app/grid_base_dir
+chmod -R 775 /u01/app/grid_1
+chmod -R 775 /u01/app/grid_1/12.2.0.1
+chmod -R 775 /u01/app/oracle
+chmod -R 775 /u01/app/oracle/db_1
+chmod -R 775 /u01/app/oracle/db_1/12.2.0.1
+
+4 - Instalar pkgs do asmlib
+
+yum localinstall oracleasmlib-2.0.12-1.el7.x86_64.rpm -y
+yum install oracleasm-support.x86_64 kmod-oracleasm.x86_64 -y
+
+5 - Acertar na mão multipath.conf com luns novas ou alteradas
+
+systemctl restart multipathd.service
+
+6 - Zerar luns com delunpart.sh
+
+7 - particionar com parted_lunpart.sh
+
+8 - Copiar .bashrc
+
+cat db_bashrc >> /home/oracle/.bashrc
+cat grid_bashrc >> /home/oragrid/.bashrc
+
+9 - configurar asmlib
+
+10 - stampar asmdisks
+
+11 - copiar binários para /u01/stage
+
+12 - extrair binário do grid para o GRID_HOME
+
+13 - install cvuqdisk 
+
+yum localinstall -y /tmp/cvuqdisk-1.0.10-1.rpm
+
+14 - acertar ntp
+
+mv /etc/ntp.conf /etc/ntp.conf.original
+
+15 - execute cluvfy
+
+$GRID_HOME/runcluvfy.sh stage -pre crsinst -fixup -n rj01linoracloud01
+
+$GRID_HOME/runcluvfy.sh comp admprv -n "rj01linoracloud01,rj01linoracloud02,rj01linoracloud03,rj01linoracloud04" -o user_equiv -verbose -fixup
+
+$GRID_HOME/runcluvfy.sh stage -pre crsinst -asm -presence local -asmgrp asmadmin -asmdev /dev/mapper/lun_ORACLOUDTEMP01p1,/dev/mapper/lun_ORACLOUDTEMP02p1 -networks bond0:10.32.118.0:PUBLIC/bond2:192.168.100.0:cluster_interconnect -n "rj01linoracloud01,rj01linoracloud02,rj01linoracloud03,rj01linoracloud04" -verbose -fixup
+
+
+
+Cluster Name = BCSulOraCluster
+SCAN Name    = rj01orascan
+Disk Groups  = DG_CRSDATAEXT (OCR,VOTING)
+	       DG_GIMRDATAEXT (GIMR)
+
+Oracle ASM PWD = SYS -> BC5u14sm4dmin (BCSulAsmAdmin)
+
+
+
+Create the Oracle Inventory Directory
+To create the Oracle Inventory directory, enter the following commands as the root user:
+  [root@ractw21 ~]# mkdir -p /u01/app/oraInventory
+  [root@ractw21 ~]# chown -R oragrid:oinstall /u01/app/oraInventory
+
+Creating the Oracle Base Directory for Grid
+  [root@ractw21 ~]# mkdir -p /u01/app/grid_base_dir
+  [root@ractw21 ~]# chown -R oragrid:oinstall /u01/app/grid_base_dir
+  [root@ractw21 ~]# chmod -R 775 /u01/app/grid_base_dir
+
+Creating GridHome 
+  [root@ractw21 ~]# mkdir -p /u01/app/grid_1/12.2.0.1
+  [root@ractw21 ~]# chown -R oragrid:oinstall /u01/app/grid_1
+  [root@ractw21 ~]# chown -R oragrid:oinstall /u01/app/grid_1/12.2.0.1
+  [root@ractw21 ~]# chmod -R 775 /u01/app/grid_1
+  [root@ractw21 ~]# chmod -R 775 /u01/app/grid_1/12.2.0.1
+
+Creating the Oracle Base Directory for Database Software 
+  [root@ractw21 ~]# mkdir -p /u01/app/oracle
+  [root@ractw21 ~]# chown -R oracle:oinstall /u01/app/oracle
+  [root@ractw21 ~]# chmod -R 775 /u01/app/oracle
+
+Creating the Oracle Home Directory for Database Software 
+  [root@ractw21 ~]# mkdir -p /u01/app/oracle/db_1/12.2.0.1
+  [root@ractw21 ~]# chown -R oracle:oinstall /u01/app/oracle/db_1
+  [root@ractw21 ~]# chown -R oracle:oinstall /u01/app/oracle/db_1/12.2.0.1
+  [root@ractw21 ~]# chmod -R 775 /u01/app/oracle/db_1
+  [root@ractw21 ~]# chmod -R 775 /u01/app/oracle/db_1/12.2.0.1
+
+yum localinstall oracleasmlib-2.0.12-1.el7.x86_64.rpm -y
+yum install oracleasm-support.x86_64 kmod-oracleasm.x86_64 -y
+
+
+DATABASE BCSULCDB CREDENTIALS
+
+SYS/SYSTEM/DBSNMP -> !P13rr3CR
+
+ALTER PLUGGABLE DATABASE MATERA CLOSE IMMEDIATE INSTANCES=ALL;
+drop pluggable database FINPAC including datafiles;
+
+drop pluggable database FINPAC including datafiles;
+
+create pluggable database "FINPAC" admin user "DBAFINPAC" identified by "F1np4c";
+alter pluggable database "FINPAC" open read write instances = all;
+alter pluggable database "FINPAC" save state instances=all;
+alter session set container = "FINPAC";
+grant dba to "DBAFINPAC";
+
+BEGIN
+	EXECUTE IMMEDIATE 'alter pluggable database MATERA close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database MATERA including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "MATERA" admin user "DBAMATERA" identified by "Db4m4t3r4"';
+	EXECUTE IMMEDIATE 'alter pluggable database "MATERA" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "MATERA" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "MATERA"'; 
+	EXECUTE IMMEDIATE 'grant dba to "DBAMATERA"';
+END;
+/
+
+
+EXECUTE DBMS_XDB_CONFIG.SETHTTPPORT(5502);
+
+
+
+BEGIN
+    EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA CLOSE IMMEDIATE INSTANCES=ALL';
+	EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA OPEN READ ONLY';
+	EXECUTE IMMEDIATE 'CREATE PLUGGABLE DATABASE "FINPAC" FROM "MATERA"
+      STORAGE UNLIMITED TEMPFILE REUSE
+      FILE_NAME_CONVERT=NONE
+      PARALLEL 4';
+    EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE FINPAC OPEN READ WRITE INSTANCES=ALL';
+	EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA CLOSE IMMEDIATE INSTANCES=ALL';
+	EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE MATERA OPEN READ WRITE INSTANCES=ALL';
+END;
+/
+
+
+SQL> alter system set db_recovery_file_dest_size=200G scope=both;
+
+System altered.
+
+SQL> alter system set db_recovery_file_dest='/u01/app/oracle/fast_recovery_area' scope=both;
+
+alter database archivelog
+
+archive log list
+
+
+
+BEGIN
+	EXECUTE IMMEDIATE 'alter pluggable database RETAG close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database RETAG including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "RETAG" admin user "DBARETAG" identified by "Db4r3t4g"';
+	EXECUTE IMMEDIATE 'alter pluggable database "RETAG" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "RETAG" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "RETAG"'; 
+	EXECUTE IMMEDIATE 'grant dba to "DBARETAG"';
+END;
+/
+EXECUTE DBMS_XDB_CONFIG.SETHTTPPORT(5505);

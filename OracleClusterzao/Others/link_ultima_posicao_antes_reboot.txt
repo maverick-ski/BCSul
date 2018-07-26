@@ -1,0 +1,9 @@
+https://backdrift.org/lacp-configure-network-bonding-linux
+http://phreek.org/blog/2014/10/centos-7-basic-nic-teaming
+http://www.cloudibee.com/network-bonding-modes/
+https://wiki.linuxfoundation.org/networking/bonding
+http://45drives.blogspot.com.br/2015/07/how-to-achieve-20gb-and-30gb-bandwidth.html
+http://rhelblog.redhat.com/2014/06/23/team-driver/
+https://github.com/jpirko/libteam/wiki/Infrastructure-Specification
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/ch-Configure_Network_Teaming.html
+https://people.freedesktop.org/~lkundrak/nm-docs/nm-settings-ifcfg-rh.html

@@ -1,0 +1,92 @@
+impdp \"sys\/$ORA_STRING@retag as sysdba\" status=600 schemas=\('CARTAO','PUBLIC','RETAGUARDA','RETAGUARDA_JOBS','RETAG_INSS','SUPORTERJ','TOOLS','SCA','SCPTOOLS','SCPTOOLS1'\) REMAP_TABLESPACE=TEMPORARY:TEMP TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACRET_01.DMP logfile=PUMP_DIR:metadata_imp_retag.log METRICS=y
+
+impdp \"sys\/$ORA_STRING@retag as sysdba\" status=600 schemas=\('PUBLIC','RETAGUARDA','RETAGUARDA_JOBS','RETAG_INSS','SUPORTERJ','TOOLS','SCA','SCPTOOLS','SCPTOOLS1'\) REMAP_TABLESPACE=TEMPORARY:TEMP TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACRET_01.DMP logfile=PUMP_DIR:metadata_imp_retag.log METRICS=y
+
+
+impdp \"sys\/$ORA_STRING@retag as sysdba\" parallel=8 status=600 schemas=\('RETAGUARDA','RETAG_INSS','SUPORTERJ','SCA','SCPTOOLS','SCPTOOLS1'\) CONTENT=DATA_ONLY TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y TABLE_EXISTS_ACTION=APPEND directory=PUMP_DIR dumpfile=RACRET_DATA_01.DMP, RACRET_DATA_02.DMP, RACRET_DATA_03.DMP, RACRET_DATA_04.DMP,RACRET_DATA_05.DMP,RACRET_DATA_06.DMP,RACRET_DATA_07.DMP,RACRET_DATA_08.DMP logfile=PUMP_DIR:data_imp_retag.log METRICS=y
+
+
+('CARTAO','DBL_BI_ODI','DBLINK_TOOLSH','DBLINK_FINHOMO11G','LK_MIS','LK_CARTAO','LK_CONSIG','LK_MIS_RETAG','LK_SUPORTE_TI','LK_CARTAO_BINOVO','NETBACKUP','RETAGUARDA','RETAG_INSS','RETAGUARDA_JOBS','SCA','SCPTOOLS','SCPTOOLS1','SUPORTERJ','TOOLS','BACEN','CARTAO_JOBS','SCPTOOLS1_JOBS','SQLGERENCIAL')
+
+- extrair ddls de:
+
+dblinks
+public tbl synonyms
+other plublic synonyms
+criação do users:
+
+CARTAO
+DBLINK_FINHOMO11G
+DBLINK_TOOLSH
+DBL_BI_ODI
+LK_CARTAO
+LK_CARTAO_BINOVO
+LK_CONSIG
+LK_MIS
+LK_MIS_RETAG
+LK_SUPORTE_TI
+RETAGUARDA
+RETAGUARDA_JOBS
+RETAG_INSS
+RETAG_INSS_JOBS
+SUPORTERJ
+SCPTOOLS
+SCPTOOLS1
+SCA
+TOOLS
+
+
+
+- alterar script de expdp
+
+inserir SCPTOOLS1
+
+
+expdp '/ as sysdba' CONTENT=METADATA_ONLY EXCLUDE=STATISTICS,TABLE_STATISTICS,INDEX_STATISTICS status=600 directory=PUMP_DIR dumpfile=METADATA_CARTAO_RACRET_%U.DMP logfile=PUMP_DIR:exp_METADATA_CARTAO_RACRET.log schemas=('CARTAO')
+
+expdp '/ as sysdba' PARALLEL=2 CONTENT=DATA_ONLY EXCLUDE=STATISTICS,TABLE_STATISTICS,INDEX_STATISTICS tables=(CARTAO.CCC_C22_PROPOSTAS,CARTAO.CCC_C24_HIST_PROPOSTAS,CARTAO.CCC_C07_STATUS_PROP,CARTAO.CCC_C09_FUNCIONALIDADES,CARTAO.CCC_C25_CLIENTES,CARTAO.CCC_C60_REPRESENTANTES,CARTAO.CCC_C06_CRITI_PROP) status=600 directory=PUMP_DIR dumpfile=RACRET_CARTAO_DATA_%U.DMP logfile=PUMP_DIR:exp_RACRET_CARTAO_DATA.log
+
+
+- Criar usuários vazios para diminuir erros no impdp
+
+BACEN
+CARTAO_JOBS
+SCPTOOLS1_JOBS
+SQLGERENCIAL
+
+
+- Refazer scripts de criação de usuários de sistema com seus privilégios necessários
+
+
+
+
+/usr/bin/find /videos/ -type f -name '*.avi' -mtime +30 -exec rm {} \;
+
+0 */6 * * * /usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb1/trace/ -type f -name '*.trc' -exec rm {} \; > /u02/logs/del_trc_files.log
+0 */6 * * * /usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb1/trace/ -type f -name '*.trm' -exec rm {} \; > /u02/logs/del_trm_files.log
+0 */6 * * * /usr/bin/find /u01/app/oracle/admin/bcsulcdb/adump -type f -name '*' -exec rm {} \; > /u02/logs/del_aud_files.log
+
+/usr/bin/ssh rj01linoracloud02 /usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb2/trace -type f -name '*.trc' -exec ls {} \;
+/usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb2/trace
+/usr/bin/find /u01/app/oracle/admin/bcsulcdb/adump
+
+/usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb3/trace
+/usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb3/trace
+/usr/bin/find /u01/app/oracle/admin/bcsulcdb/adump
+
+/usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb4/trace
+/usr/bin/find /u01/app/oracle/diag/rdbms/bcsulcdb/bcsulcdb4/trace
+/usr/bin/find /u01/app/oracle/admin/bcsulcdb/adump
+
+UDI-01017: operation generated ORACLE error 1017
+ORA-01017: invalid username/password; logon denied
+ORA-17503: ksfdopn:2 Failed to open file +DG_MATERA/BCSULCDB/PASSWORD/pwdbcsulcdb.278.960995061
+ORA-00603: ORACLE server session terminated by fatal error
+ORA-27504: IPC error creating OSD context
+ORA-27300: OS system dependent operation:sendmsg failed with status: 105
+ORA-27301: OS failure message: No buffer space available
+ORA-27302: failure occurred at: sskgxpsnd2
+
+ORA-39002: invalid operation
+ORA-39165: Schema TOOLS was not found.
+ORA-39165: Schema RETAGUARDA_JOBS was not found.

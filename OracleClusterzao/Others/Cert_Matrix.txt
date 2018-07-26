@@ -1,0 +1,42 @@
+**************Certification Matrix**************
+
+ACFS Support On OS Platforms (Certification Matrix). (Doc ID 1369107.1)
+
+ACFS 12.2.0.1 Supported Platforms
+Oracle Linux 7 – Unbreakable Enterprise Kernel - Update 4 with Red Hat compatible Kernel X86_64	- Base Release + Patch 26247490
+
+RAC Rolling Install Process for the "Oracle JavaVM Component Database PSU" (OJVM PSU) Patches (Doc ID 2217053.1)
+
+ALERT: Oracle 12c Release 2 (12.2) Support Status and Alerts (Doc ID 2239821.1)
+
+
+
+
+**************PATCH LIST**************
+
+Patch 26247490: 12.2 ACFS MODULE ERRORS & CRASH DURING MODULE LOAD & UNLOAD WITH OL7U4 RHCK - 31-Aug-2017 11:02 (1+ month ago) - Oracle Database 12.2.0.1.170718 ACFSRU
+ 
+Patch 26610291: GRID INFRASTRUCTURE RELEASE UPDATE 12.2.0.1.170814 - 14-Aug-2017 14:32 (1+ month ago) - Oracle Database 12.2.0.1.0
+
+Patch 26609817: DATABASE RELEASE UPDATE 12.2.0.1.170814 - 14-Aug-2017 14:32 (1+ month ago) - Oracle Database 12.2.0.1.0
+
+Patch 25811364: OJVM RELEASE UPDATE 12.2.0.1.170718 - 09-Jul-2017 06:45 (3+ months ago) - Oracle Database 12.2.0.1.0
+
+
+
+
+**************PATCH LIST DUVIDOSOS**************
+
+Patch 25717212: LNX64-12.2-GH: "DIAGSNAP.PL" DOES NOT WORK IN RHP PROVISIONED GI ENVIRONMENT - 04-Oct-2017 07:55 (12 days ago)
+
+Patch 26880281: MERGE REQUEST ON TOP OF 12.2.0.1.0 FOR BUGS 25648731 26367460 26829845 - 27-Sep-2017 19:36 (13 days ago)
+ 
+Patch 26751067: MERGE REQUEST ON TOP OF 12.2.0.1.0 FOR BUGS 25499276 26581118 - 27-Sep-2017 12:40 (14 days ago)
+
+Patch 26792202: MERGE REQUEST ON TOP OF 12.2.0.1.0 FOR BUGS 25556203 25717212 - 19-Sep-2017 03:17 (22 days ago)
+
+Patch 26783054: MERGE REQUEST ON TOP OF 12.2.0.1.0 FOR BUGS 26436809 23301767 24831217 25037011 - 12-Sep-2017 03:57 (29 days ago)
+
+Patch 26333037: REVERT_TO_SIHA: ASM RESOURCE IS OFFLINE AFTER RE CREATION - 31-Aug-2017 12:34 (1+ month ago)
+
+Patch 26230199: SRVCTL START/STOP THROWING JAVA ERRORS AND A JAVA STACK INTERMITTENTLY - 23-Aug-2017 04:45 (1+ month ago)

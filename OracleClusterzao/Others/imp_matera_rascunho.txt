@@ -1,0 +1,102 @@
+******* HINTS **********
+
+EXCLUDE=STATISTICS no expdp
+
+AUMENTAR as TBLS de UNDO para 10G
+
+Parametros para bcsulcdb
+
+alter system set sga_max_size=107374182400 scope=spfile sid='*';
+alter system set sga_min_size=53687091200 scope=spfile sid='*';
+alter system set sga_target=96636764160 scope=spfile sid='*';
+alter system set pga_aggregate_limit=10737418240 scope=spfile sid='*';
+alter system set pga_aggregate_target=5368709120 scope=spfile sid='*';
+alter system set gcs_server_processes=6 scope=spfile sid='*';
+alter system set "_ges_server_processes"=6 scope=spfile sid='*';
+alter system set cursor_sharing='FORCE' scope=spfile sid='*';
+alter system set parallel_execution_message_size=16384 scope=spfile sid='*';
+
+alter system set open_cursors=1000 scope=spfile sid='*';
+alter system set parallel_execution_message_size=16384 scope=spfile sid='*';
+alter system set parallel_threads_per_cpu=4 scope=spfile sid='*';
+alter system set processes=2000 scope=spfile sid='*';
+alter system set session_cached_cursors=500 scope=spfile sid='*';
+
+alter system set sec_case_sensitive_logon=false container=current scope=spfile sid='*';
+
+
+Parametros para matera
+
+alter system set sga_target=96636764160 scope=spfile sid='*';
+alter system set sga_min_size=48318382080 scope=spfile sid='*';
+alter system set shared_pool_size=48318382080 scope=spfile sid='*';
+alter system set "_optimizer_compute_index_stats"=FALSE scope=spfile sid='*';
+alter system set cursor_sharing='FORCE' scope=spfile sid='*';
+
+******* PRÉ STEPS *****
+
+- Alterar parâmetros em PDB matera e reboot no banco
+
+alter system set shared_pool_size=32212254720 scope=spfile;
+
+- Editar script de user create e adcionar: "MARCO_MATERA" , "MOACIR" , "TRIBUTOSMIU" - ok
+- criar directory PUMP_DIR para /u02/dump
+
+create or replace directory PUMP_DIR as '/u02/dump';
+
+- Gerar scripts para dblinks e indices via impdp sqlfile
+
+impdp \"sys@matera as sysdba\" status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) INCLUDE=INDEX SQLFILE=PUMP_DIR:create_indexes.sql directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:imp_idx_RACFINL_MATERA.log
+
+impdp \"sys@matera as sysdba\" status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) INCLUDE=DB_LINK SQLFILE=PUMP_DIR:create_db_links.sql directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:imp_dblink_RACFINL_MATERA.log
+
+******* ETAPAS ********
+
+export ORA_PASS='!P13rr3CR'
+
+1) Exec main.sql
+
+2) Reboot bcsulcdb
+
+3) imp METADADOS only, EXCLUDE statistics, indexes, pcks, bodys, procs, functions, triggers
+
+impdp \"sys\/$ORA_PASS@matera as sysdba\" status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) TABLE_EXISTS_ACTION=TRUNCATE REMAP_TABLESPACE=TEMP2:TEMP EXCLUDE=CONSTRAINT,REF_CONSTRAINT,STATISTICS,DB_LINK,INDEX,VIEW,PROCEDURE,FUNCTION,TRIGGER,PACKAGE,PACKAGE_BODY TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y ACCESS_METHOD=DIRECT_PATH CLUSTER=NO directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:metadata_imp_RACFINL_MATERA.log METRICS=y TRACE=480300
+
+4) Checar tabelas em READ ONLY e alter para READ WRITE
+
+5) imp parallel 4 DATA only
+
+impdp \"sys\/$ORA_PASS@matera as sysdba\" parallel=4 status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) CONTENT=DATA_ONLY TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y TABLE_EXISTS_ACTION=APPEND directory=PUMP_DIR dumpfile=RACFINL_MATERA_DATA_01.DMP, RACFINL_MATERA_DATA_02.DMP, RACFINL_MATERA_DATA_03.DMP, RACFINL_MATERA_DATA_04.DMP logfile=PUMP_DIR:data_imp_RACFINL_MATERA.log METRICS=y TRACE=480300
+
+6) imp no parallel objects INCLUDE pcks, bodys, procs, functions, views
+
+impdp \"sys\/$ORA_PASS@matera as sysdba\" status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) INCLUDE=VIEW,PROCEDURE,FUNCTION,PACKAGE,PACKAGE_BODY ACCESS_METHOD=DIRECT_PATH CLUSTER=NO directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:objs_imp_metadata_RACFINL_MATERA.log METRICS=y TRACE=480300
+
+7) imp no parallel objects INCLUDE triggers
+
+impdp \"sys\/$ORA_PASS@matera as sysdba\" status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) INCLUDE=TRIGGER ACCESS_METHOD=DIRECT_PATH CLUSTER=NO directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:objs_imp_metadata_RACFINL_MATERA.log METRICS=y TRACE=480300
+
+8) Exec create indexes
+
+impdp \"sys\/$ORA_PASS@matera as sysdba\" status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) TABLE_EXISTS_ACTION=TRUNCATE REMAP_TABLESPACE=TEMP2:TEMP INCLUDE=CONSTRAINT,REF_CONSTRAINT,INDEX TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y ACCESS_METHOD=DIRECT_PATH directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:idx_imp_metadata_RACFINL_MATERA.log METRICS=y TRACE=480300
+
+
+
+
+
+
+
+
+
+
+expdp '/ as sysdba' PARALLEL=4 CONTENT=DATA_ONLY schemas=('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA') EXCLUDE=TABLE:"IN\('BC_CENTRAL_RISCO_3020_VENC_HST'\,'BC_CENTRAL_RISCO_3030_HST'\,'BC_CENTRAL_RISCO_VENC3_CN_HST'\,'BC_CENTRAL_RISCO_OPERACAO_HST'\,'BC_CENTRAL_RISCO_3030_VENC_HST'\,'BC_CENTRAL_RISCO_TAB3_CONS_HST'\,'BC_CENTRAL_RISCO_3020_HST'\,'BCCADOC3040_VENCIMENTO_CONS_BK'\,'BCCADOC3040_OPERACAO_CONS_BK'\,'BC_CADOC_3040_VENCIMENTO_CONS'\,'BC_CENTRAL_RISCO_VENC3_CONS'\,'BC_CENTRAL_RISCO_OPERACAO'\,'BC_CADOC_3040_VENCIMENTO'\,'BC_CADOC_3040_OPERACAO'\,'BC_XML'\)" directory=NET_DUMP dumpfile=RACFINL_MATERA_DATA_%U.DMP logfile=NET_DUMP:exp_RACFINL_MATERA_DATA.log 
+
+
+expdp '/ as sysdba' CONTENT=METADATA_ONLY PARALLEL=4 status=1800 directory=NET_DUMP dumpfile=METADATA_RACFINL_MATERA_%U.DMP logfile=NET_DUMP:METADATA_RACFINL_MATERA.log schemas=('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA')
+
+
+
+set NLS_LANG=AMERICAN_AMERICA.WE8MSWIN1252
+
+impdp \"sys@matera as sysdba\" parallel=4 status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) TABLE_EXISTS_ACTION=TRUNCATE REMAP_TABLESPACE=TEMP2:TEMP EXCLUDE=STATISTICS TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y ACCESS_METHOD=DIRECT_PATH CLUSTER=NO COMPILE=FALSE directory=PUMP_DIR dumpfile=RACFINL_MATERA_DATA_01.DMP, RACFINL_MATERA_DATA_02.DMP, RACFINL_MATERA_DATA_03.DMP, RACFINL_MATERA_DATA_04.DMP logfile=PUMP_DIR:imp_RACFINL_MATERA.log
+

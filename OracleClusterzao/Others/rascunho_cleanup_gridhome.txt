@@ -1,0 +1,33 @@
+/u01/app/grid_1/12.2.0.1/rdbms/audit
+/u01/app/grid_base_dir/admin/_mgmtdb/adump
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/mgmtlsnr/alert
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/mgmtlsnr/trace
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener_scan3/alert
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener_scan3/trace
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener_scan2/alert
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener_scan2/trace
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener_scan1/alert
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener_scan1/trace
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener/alert
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/listener/trace
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/asmnet1lsnr_asm/alert
+/u01/app/grid_base_dir/diag/tnslsnr/rj01linoracloud01/asmnet1lsnr_asm/trace
+/u01/app/grid_base_dir/diag/asm/+asm/+ASM1/trace
+/u01/app/grid_base_dir/diag/apx/+apx/+APX1/trace
+/u01/app/grid_base_dir/diag/rdbms/_mgmtdb/-MGMTDB/trace
+/u01/app/grid_base_dir/diag/rdbms/_mgmtdb/-MGMTDB/alert
+/u01/app/grid_base_dir/diag/crs/rj01linoracloud01/crs/trace
+
+
+fcp stats 5a
+fcp stats 5b
+fcp stats 8a
+fcp stats 8b
+fcp stats -i 3 -c 30 -a
+
+
+988687004
+
+admin Dellsvcs1 Bc5V12o09!
+
+856900000014525000648135811987824406001056181207

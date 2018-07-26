@@ -1,0 +1,226 @@
+dd if=/dev/mapper/lun_ORACLOUDTEMP01 of=/u01/stage/backup/235140162-patch-level/DG_CRSDATAEXT.dd status=progress  
+
+
+ocrdump -stdout -keyname SYSTEM.version.activeversion.patchlevel -backupfile backup_20171018_163404.ocr.285.957717245
+
+ocrdump -stdout -keyname SYSTEM.version.activeversion.pacthlevel -backupfile backup_20171018_163404.ocr.285.957717245
+
+SYSTEM.version.activeversion.patchlevel
+SYSTEM.version.activeversion.patchlevel
+
+
+CREATE DISKGROUP DG_ACFS EXTERNAL REDUNDANCY DISK 'ORCL:ASMDISK_ORACLOUD001' ATTRIBUTE 'compatible.asm' = '12.2.0.1', 'compatible.advm' = '12.2.0.1';
+
+ALTER DISKGROUP DG_ACFS ADD VOLUME VOL_ACFS SIZE 90G;
+
+asmcmd volinfo -a
+
+
+5) From the first node, please create the ACFS filesystem on the new volume ( e.g. “/dev/asm/acfstestvol-76”) as “grid” user:
+
+/sbin/mkfs -t acfs /dev/asm/vol_acfs-358
+
+6) Register the ACFS filesystem & new volume with the CRS as root user:
+
+srvctl add filesystem -d /dev/asm/vol_acfs-358 -m /u02 -u oragrid -fstype ACFS -autostart ALWAYS
+
+
+7) Start the new ACFS CRS resource (as root user):
+
+
+srvctl start filesystem -d /dev/asm/vol_acfs-358
+
+
+8) Set the desired new ownership and permissions as root user:
+
+[root@dbaasm ~]# chown oragrid:oinstall /u02
+
+[root@dbaasm ~]# chmod 775 /u02
+
+
+
+[oragrid@rj01linoracloud04 ~]$ crsctl query crs activeversion -f
+Oracle Clusterware active version on the cluster is [12.2.0.1.0]. The cluster upgrade state is [NORMAL]. The cluster active patch level is [235140162].
+[oragrid@rj01linoracloud04 ~]$ crsctl query crs softwarepatch
+Oracle Clusterware patch level on node rj01linoracloud04 is [235140162].
+[oragrid@rj01linoracloud04 ~]$ crsctl query crs releasepatch
+Oracle Clusterware release patch level is [235140162] and the complete list of patches [25586399 26609817 26609966 ] have been applied on the local node.
+
+[root@rj01linoracloud04 ~]# crsctl query crs activeversion -f
+Oracle Clusterware active version on the cluster is [12.2.0.1.0]. The cluster upgrade state is [NORMAL]. The cluster active patch level is [2514915423].
+[root@rj01linoracloud04 ~]# crsctl query crs softwarepatch
+Oracle Clusterware patch level on node rj01linoracloud04 is [2514915423].
+[root@rj01linoracloud04 ~]# crsctl query crs releasepatch
+Oracle Clusterware release patch level is [2514915423] and the complete list of patches [25586399 26247490 26609817 26609966 ] have been applied on the local node.
+[root@rj01linoracloud04 ~]#
+
+
+[root@rj01linoracloud01 ~]# crsctl query crs activeversion -f
+Oracle Clusterware active version on the cluster is [12.2.0.1.0]. The cluster upgrade state is [NORMAL]. The cluster active patch level is [3590072161].
+[root@rj01linoracloud01 ~]# crsctl query crs softwarepatch
+Oracle Clusterware patch level on node rj01linoracloud01 is [3590072161].
+[root@rj01linoracloud01 ~]# crsctl query crs releasepatch
+Oracle Clusterware release patch level is [3590072161] and the complete list of patches [25717212 ] have been applied on the local node.
+[root@rj01linoracloud01 ~]#
+
+
+
+opatchauto apply /u01/stage/OtherPatches/26230199 -analyze - fora
+opatchauto apply /u01/stage/OtherPatches/26333037 -analyze - fora
+opatchauto apply /u01/stage/OtherPatches/26783054 -analyze - fora
+opatchauto apply /u01/stage/OtherPatches/26792202 -analyze - fora
+opatchauto apply /u01/stage/OtherPatches/26751067 -analyze - fora
+opatchauto apply /u01/stage/OtherPatches/26880281 -analyze - fora
+
+opatchauto apply /u01/stage/OtherPatches/25717212 -analyze
+
+
+
+
+systemctl enable o2cb
+systemctl enable ocfs2
+o2cb register-cluster BCSulOCFS2
+
+o2cb register-cluster BCSulOCFS2
+o2cb start-heartbeat BCSulOCFS2
+
+
+systemctl start o2cb
+systemctl status o2cb
+
+
+mkfs.ocfs2 --block-size 4k --cluster-size 1M --journal-options size=64M,block64 -T datafiles --node-slots 4 --label ocfs2_u02 --mount cluster --fs-feature-level=max-features --cluster-stack=o2cb --cluster-name=BCSulOCFS2 --global-heartbeat /dev/mapper/lun_ORAOCFS001p1
+
+
+mkfs.ocfs2 --block-size 4k --cluster-size 1M --journal-options size=64M,block64 -T datafiles --node-slots 4 --label ocfs2_u02 --fs-feature-level=max-features /dev/mapper/lun_ORAOCFS001p1
+
+
+
+parted -s -a optimal /dev/mapper/lun_ORAOCFS001 mklabel gpt mkpart primary 0% 100%
+
+kpartx -av /dev/mapper/lun_ORAOCFS001
+
+
+
+[root@rj01linoracloud01 ~]# mkfs.ocfs2 --block-size 4k --cluster-size 1M --journal-options size=32M,block64 -T datafiles --node-slots 4 --label ocfs2_u02 --mount cluster --fs-feature-level=max-features --cluster-stack=o2cb --cluster-name=BCSulOCFS2 --global-heartbeat /dev/mapper/lun_ORAOCFS001p1
+mkfs.ocfs2 1.8.6
+On disk cluster (o2cb,BCSulOCFS2,0) does not match the active cluster (o2cb,BCSulOCFS2,1).
+mkfs.ocfs2 will not be able to determine if this operation can be done safely.
+To skip this check, use --force or -F
+
+
+[root@rj01linoracloud01 ~]# mkfs.ocfs2 --block-size 4k --cluster-size 1M --journal-options size=64M,block64 -T datafiles --node-slots 4 --label ocfs2_u02 --fs-feature-level=max-features /dev/mapper/lun_ORAOCFS001p1
+mkfs.ocfs2 1.8.6
+On disk cluster (o2cb,BCSulOCFS2,1) does not match the active cluster (o2cb,BCSulOCFS2,0).
+mkfs.ocfs2 will not be able to determine if this operation can be done safely.
+To skip this check, use --force or -F
+
+
+mkfs.ocfs2 On disk cluster does not match the active cluster
+
+LABEL=oracrsfiles     /u02           ocfs2   _netdev,datavolume,nointr     0 0
+myocfs2vol  /dbvol1  ocfs2     _netdev,defaults  0 0
+
+mount -t cifs -o username=admin_ribeiro.pierre,password='!P13rr3R1b31r0',uid=oracle,gid=oinstall //10.32.112.49/oradumps /netapp_cifs
+
+
+SELECT 'http://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_DOMAIN')||':'||dbms_xdb_config.gethttpport()||'/em/' from dual;
+
+
+SQL> SELECT 'http://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_DOMAIN')||':'||dbms_xdb_config.gethttpport()||'/em/' from dual;
+
+'HTTP://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_
+--------------------------------------------------------------------------------
+http://rj01linoracloud01.bcsul.corp:0/em/
+
+SQL> SELECT 'http://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||dbms_xdb_config.gethttpport()||'/em/' from dual;
+
+'HTTP://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||DBMS_XDB_CONFIG.GETHTTPPOR
+--------------------------------------------------------------------------------
+http://rj01linoracloud01:0/em/
+
+SQL> SELECT 'https://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_DOMAIN')||':'||dbms_xdb_config.gethttpsport()||'/em/' from dual;
+
+'HTTPS://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB
+--------------------------------------------------------------------------------
+https://rj01linoracloud01.bcsul.corp:5500/em/
+
+SQL> SELECT 'https://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||dbms_xdb_config.gethttpsport()||'/em/' from dual;
+
+'HTTPS://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||DBMS_XDB_CONFIG.GETHTTPSP
+--------------------------------------------------------------------------------
+https://rj01linoracloud01:5500/em/
+
+SQL> exec DBMS_XDB_CONFIG.SETHTTPPORT(5501);
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT 'http://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_DOMAIN')||':'||dbms_xdb_config.gethttpport()||'/em/' from dual;
+
+'HTTP://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERENV','DB_
+--------------------------------------------------------------------------------
+http://rj01linoracloud01.bcsul.corp:5501/em/
+
+
+ORA-12850: Could not allocate slaves on all specified instances: 4 needed, 2 allocated
+Unexpected error caught by function "EMBaseController:onParseSuccess"
+
+select INST_ID, NAME, VALUE from gv$parameter where NAME ='parallel_threads_per_cpu'; 
+
+
+set NLS_LANG=AMERICAN_AMERICA.WE8MSWIN1252
+impdp \"sys@matera as sysdba\" parallel=4 status=900 schemas=\('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA'\) TABLE_EXISTS_ACTION=TRUNCATE REMAP_TABLESPACE=TEMP2:TEMP EXCLUDE=STATISTICS TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y ACCESS_METHOD=DIRECT_PATH CLUSTER=NO COMPILE=FALSE directory=PUMP_DIR dumpfile=RACFINL_MATERA_DATA_01.DMP, RACFINL_MATERA_DATA_02.DMP, RACFINL_MATERA_DATA_03.DMP, RACFINL_MATERA_DATA_04.DMP logfile=PUMP_DIR:imp_RACFINL_MATERA.log
+
+
+Waiting for event "library cache lock" in wait class "Concurrency" accounted for 98% of the database time spent in processing the SQL statement with SQL_ID "b6usrg82hwsa3".
+
+Investigate the cause for latch contention using the given blocking sessions or modules.
+
+ALTER SYSTEM KILL SESSION '1215,13473,@1' IMMEDIATE;
+ALTER SYSTEM KILL SESSION '1702,11866,@2' IMMEDIATE;
+
+alter system set pga_aggregate_limit='13312M' comment='prior value 25732M' scope=spfile sid='*';
+alter system set pga_aggregate_target='9216M' comment='prior value 12866M' scope=spfile sid='*';
+alter system set sga_max_size='102400M' comment='prior value 38656M' scope=spfile sid='*';
+alter system set sga_min_size='25600M' comment='prior value 0M' scope=spfile sid='*';
+alter system set sga_target='51200M' comment='prior value 38656M' scope=spfile sid='*';
+alter system set open_cursors=1000 comment='prior value 800'  container=ALL scope=spfile sid='*';
+alter system set session_cached_cursors=500 comment='prior value 50'  container=ALL scope=spfile sid='*';
+
+
+Failed to start monitoring of LVM2 mirrors, snapshots etc. usind dmeventd or progress polling
+
+journalctl -xb
+
+sys
+
+systemctl default
+
+systemctl status lvm2-monitor.service
+
+systemctl status systemd-udev-settle.service
+
+systemctl status lvm2-pvscan@8:2.service
+
+sed -e s/65536/56320/g sysctl.conf > sysctl.conf
+
+drop user FINPAC_CUSTOM cascade;
+drop user SPB_BRIDGE cascade;
+drop user PANDATA cascade;
+drop user SDIMIO cascade;
+drop user FINPAC cascade;
+drop user SDBANCO cascade;
+
+set pages 0 line 132 feedback off trim on
+spool /home/oracle/truncate.sql
+select 'truncate table '||a.OWNER||'.'||a.TABLE_NAME||';' from dba_tables a where a.OWNER in ('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA') order by owner;
+spool off;
+set pages 999 feedback on
+@/home/oracle/truncate.sql
+
+
+select 'alter table '||a.owner||'.'||a.table_name||' READ WRITE;'
+from dba_tables a
+where a.OWNER in ('FINPAC','FINPAC_CUSTOM','SDBANCO','SDIMIO','SPB_BRIDGE','PANDATA')
+and a.read_only = 'YES'
+order by owner;
