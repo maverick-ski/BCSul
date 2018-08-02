@@ -2,7 +2,7 @@
 
 DATABASE BCSULCDB CREDENTIALS
 
-SYS/SYSTEM/DBSNMP -> !P13rr3CR
+SYS/SYSTEM/DBSNMP -> P13rr3CR
 
 SQL> alter system set db_recovery_file_dest_size=200G scope=both;
 
@@ -98,4 +98,5 @@ SELECT 'https://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||dbms_xdb_config.ge
 
 exec DBMS_XDB_CONFIG.SETHTTPPORT(5501);
 exec DBMS_XDB_CONFIG.SETHTTPSPORT(null);
+exec dbms_xdb_config.SetGlobalPortEnabled(TRUE);
 
