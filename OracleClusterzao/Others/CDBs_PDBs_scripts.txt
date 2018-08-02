@@ -16,6 +16,23 @@ SQL> archive log list
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
+*** Informações para RACTOOLS PDB
+
+BEGIN
+	EXECUTE IMMEDIATE 'alter pluggable database RACTOOLS close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database RACTOOLS including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "RACTOOLS" admin user "DBARACTOOLS" identified by "Db4R4CT00LS"';
+	EXECUTE IMMEDIATE 'alter pluggable database "RACTOOLS" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "RACTOOLS" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "RACTOOLS" '; 
+	EXECUTE IMMEDIATE 'grant dba to "DBARACTOOLS"';
+END;
+/
+
+OBS: Não esquecer de redefinir EM Console HTTP Port
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 *** Informações para FINPAC PDB
 
 BEGIN
