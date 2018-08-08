@@ -1,4 +1,4 @@
-*** Par�metros para a cria��o da Instancia BCSULCDB
+*** Par�metros para a cria��o da Instancia BCSULCDB ãç
 
 DATABASE BCSULCDB CREDENTIALS
 
