@@ -1,8 +1,8 @@
-*** Parâmetros para a criação da Instancia BCSULCDB
+*** Parï¿½metros para a criaï¿½ï¿½o da Instancia BCSULCDB
 
 DATABASE BCSULCDB CREDENTIALS
 
-SYS/SYSTEM/DBSNMP -> P13rr3CR
+SYS/SYSTEM/DBSNMP/XDB -> P13rr3CR
 
 SQL> alter system set db_recovery_file_dest_size=200G scope=both;
 
@@ -16,71 +16,71 @@ SQL> archive log list
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informações para RACTOOLS PDB
+*** Informaï¿½ï¿½es para RACTOOLS PDB
 
 BEGIN
-	EXECUTE IMMEDIATE 'alter pluggable database RACTOOLS close immediate instances=all';
-	EXECUTE IMMEDIATE 'drop pluggable database RACTOOLS including datafiles';
-	EXECUTE IMMEDIATE 'create pluggable database "RACTOOLS" admin user "DBARACTOOLS" identified by "Db4R4CT00LS"';
-	EXECUTE IMMEDIATE 'alter pluggable database "RACTOOLS" open read write instances = all';
-	EXECUTE IMMEDIATE 'alter pluggable database "RACTOOLS" save state instances=all';
-	EXECUTE IMMEDIATE 'alter session set container = "RACTOOLS" '; 
+	EXECUTE IMMEDIATE 'alter pluggable database ractools close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database ractools including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "ractools" admin user "DBARACTOOLS" identified by "Db4R4CT00LS"';
+	EXECUTE IMMEDIATE 'alter pluggable database "ractools" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "ractools" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "ractools" '; 
 	EXECUTE IMMEDIATE 'grant dba to "DBARACTOOLS"';
 END;
 /
 
-OBS: Não esquecer de redefinir EM Console HTTP Port
+OBS: Nï¿½o esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informações para FINPAC PDB
+*** Informaï¿½ï¿½es para FINPAC PDB
 
 BEGIN
-	EXECUTE IMMEDIATE 'alter pluggable database FINPAC close immediate instances=all';
-	EXECUTE IMMEDIATE 'drop pluggable database FINPAC including datafiles';
-	EXECUTE IMMEDIATE 'create pluggable database "FINPAC" admin user "DBAMATERA" identified by "Db4F1np4c"';
-	EXECUTE IMMEDIATE 'alter pluggable database "FINPAC" open read write instances = all';
-	EXECUTE IMMEDIATE 'alter pluggable database "FINPAC" save state instances=all';
-	EXECUTE IMMEDIATE 'alter session set container = "FINPAC"'; 
+	EXECUTE IMMEDIATE 'alter pluggable database finpac close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database finpac including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "finpac" admin user "DBAMATERA" identified by "Db4F1np4c"';
+	EXECUTE IMMEDIATE 'alter pluggable database "finpac" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "finpac" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "finpac"'; 
 	EXECUTE IMMEDIATE 'grant dba to "DBAFINPAC"';
 END;
 /
 
-OBS: Não esquecer de redefinir EM Console HTTP Port
+OBS: Nï¿½o esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informações para MATERA PDB
+*** Informaï¿½ï¿½es para MATERA PDB
 
 BEGIN
-	EXECUTE IMMEDIATE 'alter pluggable database MATERA close immediate instances=all';
-	EXECUTE IMMEDIATE 'drop pluggable database MATERA including datafiles';
-	EXECUTE IMMEDIATE 'create pluggable database "MATERA" admin user "DBAMATERA" identified by "Db4m4t3r4"';
-	EXECUTE IMMEDIATE 'alter pluggable database "MATERA" open read write instances = all';
-	EXECUTE IMMEDIATE 'alter pluggable database "MATERA" save state instances=all';
-	EXECUTE IMMEDIATE 'alter session set container = "MATERA"'; 
+	EXECUTE IMMEDIATE 'alter pluggable database matera close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database matera including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "matera" admin user "DBAMATERA" identified by "Db4m4t3r4"';
+	EXECUTE IMMEDIATE 'alter pluggable database "matera" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "matera" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "matera"'; 
 	EXECUTE IMMEDIATE 'grant dba to "DBAMATERA"';
 END;
 /
 
-OBS: Não esquecer de redefinir EM Console HTTP Port
+OBS: Nï¿½o esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informações para RETAG PDB
+*** Informaï¿½ï¿½es para RETAG PDB
 
 BEGIN
-	EXECUTE IMMEDIATE 'alter pluggable database RETAG close immediate instances=all';
-	EXECUTE IMMEDIATE 'drop pluggable database RETAG including datafiles';
-	EXECUTE IMMEDIATE 'create pluggable database "RETAG" admin user "DBARETAG" identified by "Db4r3t4g"';
-	EXECUTE IMMEDIATE 'alter pluggable database "RETAG" open read write instances = all';
-	EXECUTE IMMEDIATE 'alter pluggable database "RETAG" save state instances=all';
-	EXECUTE IMMEDIATE 'alter session set container = "RETAG"'; 
+	EXECUTE IMMEDIATE 'alter pluggable database retag close immediate instances=all';
+	EXECUTE IMMEDIATE 'drop pluggable database retag including datafiles';
+	EXECUTE IMMEDIATE 'create pluggable database "retag" admin user "DBARETAG" identified by "Db4r3t4g"';
+	EXECUTE IMMEDIATE 'alter pluggable database "retag" open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database "retag" save state instances=all';
+	EXECUTE IMMEDIATE 'alter session set container = "retag"'; 
 	EXECUTE IMMEDIATE 'grant dba to "DBARETAG"';
 END;
 /
 
-OBS: Não esquecer de redefinir EM Console HTTP Port
+OBS: Nï¿½o esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ BEGIN
 END;
 /
 
-OBS: Não esquecer de redefinir EM Console HTTP Port
+OBS: Nï¿½o esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
