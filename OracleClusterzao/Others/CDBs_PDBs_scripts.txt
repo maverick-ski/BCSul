@@ -1,4 +1,4 @@
-*** Par�metros para a cria��o da Instancia BCSULCDB ãç
+﻿*** Parâmetros para a criação da Instancia BCSULCDB
 
 DATABASE BCSULCDB CREDENTIALS
 
@@ -16,7 +16,7 @@ SQL> archive log list
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informa��es para RACTOOLS PDB
+*** Informações para RACTOOLS PDB
 
 BEGIN
 	EXECUTE IMMEDIATE 'alter pluggable database ractools close immediate instances=all';
@@ -29,11 +29,11 @@ BEGIN
 END;
 /
 
-OBS: N�o esquecer de redefinir EM Console HTTP Port
+OBS: Não esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informa��es para FINPAC PDB
+*** Informações para FINPAC PDB
 
 BEGIN
 	EXECUTE IMMEDIATE 'alter pluggable database finpac close immediate instances=all';
@@ -46,11 +46,11 @@ BEGIN
 END;
 /
 
-OBS: N�o esquecer de redefinir EM Console HTTP Port
+OBS: Não esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informa��es para MATERA PDB
+*** Informações para MATERA PDB
 
 BEGIN
 	EXECUTE IMMEDIATE 'alter pluggable database matera close immediate instances=all';
@@ -63,11 +63,11 @@ BEGIN
 END;
 /
 
-OBS: N�o esquecer de redefinir EM Console HTTP Port
+OBS: Não esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-*** Informa��es para RETAG PDB
+*** Informações para RETAG PDB
 
 BEGIN
 	EXECUTE IMMEDIATE 'alter pluggable database retag close immediate instances=all';
@@ -80,7 +80,7 @@ BEGIN
 END;
 /
 
-OBS: N�o esquecer de redefinir EM Console HTTP Port
+OBS: Não esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ BEGIN
 END;
 /
 
-OBS: N�o esquecer de redefinir EM Console HTTP Port
+OBS: Não esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
