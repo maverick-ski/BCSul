@@ -4,7 +4,7 @@ alter system set open_links_per_instance=10 container=current scope=spfile sid='
 alter system set parallel_threads_per_cpu=6 container=current scope=spfile sid='*';
 alter system set pga_aggregate_limit=10G container=current scope=spfile sid='*';
 alter system set pga_aggregate_target=10G container=current scope=spfile sid='*';
-alter system set session_cached_cursors=100G container=current scope=spfile sid='*';
+alter system set session_cached_cursors=100 container=current scope=spfile sid='*';
 alter system set sga_max_size=90G container=current scope=spfile sid='*';
 alter system set sga_min_size=25G container=current scope=spfile sid='*';
 alter system set sga_target=50G container=current scope=spfile sid='*';
