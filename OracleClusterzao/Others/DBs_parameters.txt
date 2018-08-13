@@ -28,6 +28,19 @@ alter system set resumable_timeout=14400 container=current scope=spfile;
 
 -- Parâmetros em MATERA
 
+alter session set container=matera;
+show con_name
+
+alter system set pga_aggregate_limit=3G container=current scope=spfile;
+alter system set pga_aggregate_target=1G container=current scope=spfile;
+alter system set sga_min_size=5G container=current scope=spfile;
+alter system set sga_target=8G container=current scope=spfile;
+
+
+alter system set open_cursors=1200 container=current scope=spfile;
+alter system set open_links=10 container=current scope=spfile;
+alter system set job_queue_processes=50 container=current scope=spfile;
+alter system set sessions=500 container=current scope=spfile;
 alter system set shared_pool_size=48318382080 container=current scope=spfile sid='*';
 alter system set "_optimizer_compute_index_stats"=FALSE container=current scope=spfile sid='*';
 alter system set cursor_sharing='FORCE' container=current scope=spfile sid='*';
@@ -35,5 +48,14 @@ alter system set optimizer_mode='FIRST_ROWS_10' container=current scope=spfile s
 alter system set optimizer_index_cost_adj=15 container=current scope=spfile sid='*';
 alter system set optimizer_index_caching=85 container=current scope=spfile sid='*';
 alter system set "_optim_peek_user_binds"=FALSE container=current scope=spfile sid='*';
+alter system set resumable_timeout=14400 container=current scope=spfile;
 
 -- Parâmetros em RACTOOLS
+
+alter session set container=ractools;
+show con_name
+
+alter system set pga_aggregate_limit=3G container=current scope=spfile;
+alter system set pga_aggregate_target=1G container=current scope=spfile;
+alter system set sga_min_size=5G container=current scope=spfile;
+alter system set sga_target=8G container=current scope=spfile;
