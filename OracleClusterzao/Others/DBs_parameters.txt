@@ -1,8 +1,9 @@
 -- Parâmetros em BCSULCDB
 
+show con_name
 alter system set open_links_per_instance=10 container=current scope=spfile sid='*';
 alter system set parallel_threads_per_cpu=6 container=current scope=spfile sid='*';
-alter system set pga_aggregate_limit=10G container=current scope=spfile sid='*';
+alter system set pga_aggregate_limit=20G container=current scope=spfile sid='*';
 alter system set pga_aggregate_target=10G container=current scope=spfile sid='*';
 alter system set session_cached_cursors=100 container=current scope=spfile sid='*';
 alter system set sga_max_size=90G container=current scope=spfile sid='*';
@@ -12,15 +13,16 @@ alter system set sga_target=50G container=current scope=spfile sid='*';
 -- Parâmetros em RETAG
 
 alter session set container=retag;
-alter system set open_cursors=1200 container=retag scope=spfile;
-alter system set open_links=10 container=retag scope=spfile;
-alter system set job_queue_processes=50 container=retag scope=spfile;
-alter system set pga_aggregate_limit=3G container=retag scope=spfile;
-alter system set pga_aggregate_target=1G container=retag scope=spfile;
-alter system set sessions=500 container=retag scope=spfile;
-alter system set sga_min_size=5G container=retag scope=spfile;
-alter system set sga_target=8G container=retag scope=spfile;
-alter system set resumable_timeout=14400 container=retag scope=spfile;
+show con_name
+alter system set open_cursors=1200 container=current scope=spfile;
+alter system set open_links=10 container=current scope=spfile;
+alter system set job_queue_processes=50 container=current scope=spfile;
+alter system set pga_aggregate_limit=3G container=current scope=spfile;
+alter system set pga_aggregate_target=1G container=current scope=spfile;
+alter system set sessions=500 container=current scope=spfile;
+alter system set sga_min_size=5G container=current scope=spfile;
+alter system set sga_target=8G container=current scope=spfile;
+alter system set resumable_timeout=14400 container=current scope=spfile;
 
 
 
