@@ -23,7 +23,7 @@ BEGIN
 	EXECUTE IMMEDIATE 'drop pluggable database ractools including datafiles';
 	EXECUTE IMMEDIATE 'create pluggable database "ractools" admin user "DBARACTOOLS" identified by "Db4R4CT00LS"';
 	EXECUTE IMMEDIATE 'alter pluggable database "ractools" open read write instances = all';
-	EXECUTE IMMEDIATE 'alter pluggable database "ractools" save state instances=all';
+	EXECUTE IMMEDIATE 'alter pluggable database ractools save state instances=all';
 	EXECUTE IMMEDIATE 'alter session set container = "ractools" '; 
 	EXECUTE IMMEDIATE 'grant dba to "DBARACTOOLS"';
 END;
@@ -55,9 +55,9 @@ OBS: Não esquecer de redefinir EM Console HTTP Port
 BEGIN
 	EXECUTE IMMEDIATE 'alter pluggable database matera close immediate instances=all';
 	EXECUTE IMMEDIATE 'drop pluggable database matera including datafiles';
-	EXECUTE IMMEDIATE 'create pluggable database "matera" admin user "DBAMATERA" identified by "Db4m4t3r4"';
-	EXECUTE IMMEDIATE 'alter pluggable database "matera" open read write instances = all';
-	EXECUTE IMMEDIATE 'alter pluggable database "matera" save state instances=all';
+	EXECUTE IMMEDIATE 'create pluggable database matera admin user "DBAMATERA" identified by "Db4m4t3r4"';
+	EXECUTE IMMEDIATE 'alter pluggable database matera open read write instances = all';
+	EXECUTE IMMEDIATE 'alter pluggable database matera save state instances=all';
 	EXECUTE IMMEDIATE 'alter session set container = "matera"'; 
 	EXECUTE IMMEDIATE 'grant dba to "DBAMATERA"';
 END;

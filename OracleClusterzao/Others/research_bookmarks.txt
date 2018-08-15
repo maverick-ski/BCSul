@@ -54,3 +54,4 @@ https://library.netapp.com/ecmdocs/ECMP1654939/html/GUID-ADD56A15-EE4A-451A-8B46
 http://caribou.kamikamamak.com/2014/09/30/iscsi-and-device-mapper-multipath-test-setup/
 https://docs.oracle.com/cd/E52668_01/E54669/html/ol7-s20-storage.html
 http://thegeekdiary.com/how-to-identifymatch-lun-presented-from-san-with-underlying-os-disk/
+http://www.voleg.info/netapp_serial_to_wwid_converter.html
