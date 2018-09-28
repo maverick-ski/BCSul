@@ -69,15 +69,15 @@ OBS: Não esquecer de redefinir EM Console HTTP Port
 
 *** Informações para RETAG PDB
 
-BEGIN
-	EXECUTE IMMEDIATE 'alter pluggable database retag close immediate instances=all';
-	EXECUTE IMMEDIATE 'drop pluggable database retag including datafiles';
-	EXECUTE IMMEDIATE 'create pluggable database "retag" admin user "DBARETAG" identified by "Db4r3t4g"';
-	EXECUTE IMMEDIATE 'alter pluggable database "retag" open read write instances = all';
-	EXECUTE IMMEDIATE 'alter pluggable database "retag" save state instances=all';
-	EXECUTE IMMEDIATE 'alter session set container = "retag"'; 
-	EXECUTE IMMEDIATE 'grant dba to "DBARETAG"';
-END;
+--BEGIN
+--	EXECUTE IMMEDIATE 'alter pluggable database retag close immediate instances=all';
+--	EXECUTE IMMEDIATE 'drop pluggable database retag including datafiles';
+--	EXECUTE IMMEDIATE 'create pluggable database "retag" admin user "DBARETAG" identified by "Db4r3t4g"';
+--	EXECUTE IMMEDIATE 'alter pluggable database "retag" open read write instances = all';
+--	EXECUTE IMMEDIATE 'alter pluggable database "retag" save state instances=all';
+--	EXECUTE IMMEDIATE 'alter session set container = "retag"'; 
+--	EXECUTE IMMEDIATE 'grant dba to "DBARETAG"';
+--END;
 /
 
 OBS: Não esquecer de redefinir EM Console HTTP Port
