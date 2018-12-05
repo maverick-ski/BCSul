@@ -18,7 +18,7 @@ echo " Starting Instance BCSulCDB "
 echo "****************************"
 TimeStamp
 echo "****************************"
-echo $USER_STRING | su - oragrid -c "srvctl start database -d bcsulcdb"
+echo $USER_STRING | sudo su - oragrid -c "srvctl start database -d bcsulcdb"
 sleep 20
 echo "*********************"
 echo " Starting PDB Matera "
@@ -37,7 +37,7 @@ echo "***************************"
 echo " Stoping Instance BCSulCDB "
 echo "***************************"
 TimeStamp
-echo $USER_STRING | su - oragrid -c "srvctl stop database -d bcsulcdb"
+echo $USER_STRING | sudo su - oragrid -c "srvctl stop database -d bcsulcdb"
 sleep 20
 echo " "
 echo "Ending function stop_bcsulcdb" 
@@ -201,7 +201,7 @@ echo "***************************"
 echo " Importing Matera metadata "
 echo "***************************"
 TimeStamp
-impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=8 status=600 schemas=\('BCSULVIRTUAL_JOBS','CHANGE_SPB','EXTRATO','FINPAC','FINPAC_CUSTOM','FINPAC_JOBS','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) EXCLUDE=CONSTRAINT,REF_CONSTRAINT,DB_LINK,INDEX,VIEW,PROCEDURE,FUNCTION,TRIGGER,PACKAGE,PACKAGE_BODY TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:metadata_imp_RACFINL_MATERA.log METRICS=y
+impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=6 status=600 schemas=\('BCSULVIRTUAL_JOBS','CHANGE_SPB','EXTRATO','FINPAC','FINPAC_CUSTOM','FINPAC_JOBS','FRAMEWORK','MIDDLE','PANDATA','PUBLIC','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) EXCLUDE=CONSTRAINT,REF_CONSTRAINT,DB_LINK,INDEX,VIEW,PROCEDURE,FUNCTION,TRIGGER,PACKAGE,PACKAGE_BODY TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:metadata_imp_RACFINL_MATERA.log METRICS=y
 echo " "
 echo "Ending function imp_metadata"
 TimeStamp
@@ -214,7 +214,7 @@ echo "***********************"
 echo " Importing Matera data "
 echo "***********************"
 TimeStamp
-impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=8 status=600 schemas=\('CHANGE_SPB','FINPAC','FINPAC_CUSTOM','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) CONTENT=DATA_ONLY TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y TABLE_EXISTS_ACTION=APPEND directory=PUMP_DIR dumpfile=RACFINL_MATERA_DATA_01.DMP, RACFINL_MATERA_DATA_02.DMP, RACFINL_MATERA_DATA_03.DMP, RACFINL_MATERA_DATA_04.DMP,RACFINL_MATERA_DATA_05.DMP,RACFINL_MATERA_DATA_06.DMP,RACFINL_MATERA_DATA_07.DMP,RACFINL_MATERA_DATA_08.DMP logfile=PUMP_DIR:data_imp_RACFINL_MATERA.log METRICS=y
+impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=6 status=600 schemas=\('CHANGE_SPB','FINPAC','FINPAC_CUSTOM','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) CONTENT=DATA_ONLY TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y TABLE_EXISTS_ACTION=APPEND directory=PUMP_DIR dumpfile=RACFINL_MATERA_DATA_01.DMP, RACFINL_MATERA_DATA_02.DMP, RACFINL_MATERA_DATA_03.DMP, RACFINL_MATERA_DATA_04.DMP,RACFINL_MATERA_DATA_05.DMP,RACFINL_MATERA_DATA_06.DMP logfile=PUMP_DIR:data_imp_RACFINL_MATERA.log METRICS=y
 echo " "
 echo "Ending function imp_data"
 TimeStamp
@@ -227,7 +227,7 @@ echo "***********************"
 echo " Importing Matera PFVP "
 echo "***********************"
 TimeStamp
-impdp \"sys\/$ORA_STRING@matera as sysdba\" status=600 schemas=\('BCSULVIRTUAL_JOBS','CHANGE_SPB','EXTRATO','FINPAC','FINPAC_CUSTOM','FINPAC_JOBS','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) INCLUDE=VIEW,PROCEDURE,FUNCTION,PACKAGE,PACKAGE_BODY CLUSTER=NO directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:pfvp_imp_metadata_RACFINL_MATERA.log METRICS=y
+impdp \"sys\/$ORA_STRING@matera as sysdba\" status=600 schemas=\('BCSULVIRTUAL_JOBS','CHANGE_SPB','EXTRATO','FINPAC','FINPAC_CUSTOM','FINPAC_JOBS','FRAMEWORK','MIDDLE','PANDATA','PUBLIC','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) INCLUDE=VIEW,PROCEDURE,FUNCTION,PACKAGE,PACKAGE_BODY CLUSTER=NO directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:pfvp_imp_metadata_RACFINL_MATERA.log METRICS=y
 echo " "
 echo "Ending function imp_pfvp"
 TimeStamp
@@ -240,8 +240,8 @@ echo "**************************"
 echo " Importing Matera indexes "
 echo "**************************"
 TimeStamp
-#impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=8 status=600 schemas=\('CHANGE_SPB','FINPAC','FINPAC_CUSTOM','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) REMAP_TABLESPACE=TEMP1:TEMP,TEMP2:TEMP INCLUDE=CONSTRAINT,REF_CONSTRAINT,INDEX TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:idx_imp_metadata_RACFINL_MATERA.log METRICS=y
-impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=8 status=600 schemas=\('CHANGE_SPB','FINPAC','FINPAC_CUSTOM','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) REMAP_TABLESPACE=TEMP1:TEMP,TEMP2:TEMP INCLUDE=INDEX TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:idx_imp_metadata_RACFINL_MATERA.log METRICS=y
+impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=6 status=600 schemas=\('CHANGE_SPB','FINPAC','FINPAC_CUSTOM','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) INCLUDE=CONSTRAINT,REF_CONSTRAINT,INDEX TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:idx_imp_metadata_RACFINL_MATERA.log METRICS=y
+#impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=8 status=600 schemas=\('CHANGE_SPB','FINPAC','FINPAC_CUSTOM','FRAMEWORK','MIDDLE','PANDATA','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) REMAP_TABLESPACE=TEMP1:TEMP,TEMP2:TEMP INCLUDE=INDEX TRANSFORM=DISABLE_ARCHIVE_LOGGING:Y directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:idx_imp_metadata_RACFINL_MATERA.log METRICS=y
 echo " "
 echo "Ending function imp_index"
 TimeStamp
