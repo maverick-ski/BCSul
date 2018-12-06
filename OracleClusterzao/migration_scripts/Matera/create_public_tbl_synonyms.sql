@@ -1,3 +1,5 @@
+set pages 999 feedback on timing on echo on
+spool created_public_tbl_synonyms.log
 
   CREATE OR REPLACE PUBLIC SYNONYM "AAACLEAN_COLUMN" FOR "FINPAC"."AAACLEAN_COLUMN";
 
@@ -23940,4 +23942,4 @@
 
 
   CREATE OR REPLACE PUBLIC SYNONYM "IL_TIPO_EVENTO" FOR "SPB_BRIDGE"."IL_TIPO_EVENTO";
-
+  spool off

@@ -227,7 +227,7 @@ echo "***********************"
 echo " Importing Matera PFVP "
 echo "***********************"
 TimeStamp
-impdp \"sys\/$ORA_STRING@matera as sysdba\" status=600 schemas=\('BCSULVIRTUAL_JOBS','CHANGE_SPB','EXTRATO','FINPAC','FINPAC_CUSTOM','FINPAC_JOBS','FRAMEWORK','MIDDLE','PANDATA','PUBLIC','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) INCLUDE=VIEW,PROCEDURE,FUNCTION,PACKAGE,PACKAGE_BODY CLUSTER=NO directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:pfvp_imp_metadata_RACFINL_MATERA.log METRICS=y
+impdp \"sys\/$ORA_STRING@matera as sysdba\" parallel=1 status=600 schemas=\('BCSULVIRTUAL_JOBS','CHANGE_SPB','EXTRATO','FINPAC','FINPAC_CUSTOM','FINPAC_JOBS','FRAMEWORK','MIDDLE','PANDATA','PUBLIC','SDBANCO','SDIMIO','SCA','SPB_BRIDGE','SUPORTERJ'\) INCLUDE=VIEW,PROCEDURE,FUNCTION,PACKAGE,PACKAGE_BODY CLUSTER=NO directory=PUMP_DIR dumpfile=METADATA_RACFINL_MATERA_01.DMP logfile=PUMP_DIR:pfvp_imp_metadata_RACFINL_MATERA.log METRICS=y
 echo " "
 echo "Ending function imp_pfvp"
 TimeStamp
@@ -326,8 +326,8 @@ do
 		z)	set_parameters			
 			skeleton_scripts
 			restart_bcsulcdb
-			imp_metadata
 			create_dblinks
+			imp_metadata			
 			put_tbl_rwrite
 			create_public_tbl_synonyms
 			create_public_others_synonyms
@@ -335,10 +335,9 @@ do
 			restart_bcsulcdb
 			imp_data
 			restart_bcsulcdb
-			imp_index
-			add_constraints
-			imp_triggers;;			
-			#recompile;;			
+			imp_index			
+			imp_triggers			
+			recompile;;			
 		h)	Usage;;
 		\?)	echo >&2 "usage: $0 [-v] [-f filename] [file ...]"
 			exit 1;;

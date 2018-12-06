@@ -1,3 +1,5 @@
+set pages 999 feedback on timing on echo on
+spool created_public_others_synonyms.log
 
   CREATE OR REPLACE PUBLIC SYNONYM "DEMO_PROC" FOR "FINPAC"."DEMO_PROC";
 
@@ -70353,4 +70355,4 @@
 
 
   CREATE OR REPLACE PUBLIC SYNONYM "VIL_API_PARAMETRO_EVENTO" FOR "SPB_BRIDGE"."VIL_API_PARAMETRO_EVENTO";
-
+  spool off
