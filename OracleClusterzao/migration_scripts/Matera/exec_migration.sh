@@ -182,6 +182,19 @@ TimeStamp
 echo " "
 }
 
+post_migration_grants () {
+
+echo "********************************"
+echo " Granting Matera privileges     "
+echo "********************************"
+TimeStamp
+echo @$SCRIPTS_HOME/07_grants_main.sql | sysmatera
+echo " "
+echo "Ending function post_migration_grants"
+TimeStamp
+echo " "
+}
+
 imp_metadata_full () {
 
 echo "**************************************************************************************"
@@ -336,7 +349,8 @@ do
 			imp_data
 			restart_bcsulcdb
 			imp_index			
-			imp_triggers			
+			imp_triggers
+			post_migration_grants			
 			recompile;;			
 		h)	Usage;;
 		\?)	echo >&2 "usage: $0 [-v] [-f filename] [file ...]"

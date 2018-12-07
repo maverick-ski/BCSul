@@ -63,6 +63,10 @@ BEGIN
 END;
 /
 
+exec DBMS_XDB_CONFIG.SETHTTPPORT(5502);
+exec DBMS_XDB_CONFIG.SETHTTPSPORT(0);
+exec dbms_xdb_config.SetGlobalPortEnabled(TRUE);
+
 OBS: Não esquecer de redefinir EM Console HTTP Port
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -114,6 +118,6 @@ SELECT 'https://'||SYS_CONTEXT('USERENV','SERVER_HOST')||'.'||SYS_CONTEXT('USERE
 SELECT 'https://'||SYS_CONTEXT('USERENV','SERVER_HOST')||':'||dbms_xdb_config.gethttpsport()||'/em/' from dual;
 
 exec DBMS_XDB_CONFIG.SETHTTPPORT(5501);
-exec DBMS_XDB_CONFIG.SETHTTPSPORT(null);
+exec DBMS_XDB_CONFIG.SETHTTPSPORT(0);
 exec dbms_xdb_config.SetGlobalPortEnabled(TRUE);
 
