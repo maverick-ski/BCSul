@@ -85,6 +85,7 @@ Disk Groups  = DG_CRSDATAEXT (OCR,VOTING)
 	       DG_GIMRDATAEXT (GIMR)
 
 Oracle ASM PWD = SYS -> BC5u14sm4dmin (BCSulAsmAdmin)
+	       = SYSTEM -> BC5u14sm4dmin
 	       = ASMSNMP -> BC5u14sm4dmin
 
 

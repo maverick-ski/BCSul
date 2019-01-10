@@ -1,0 +1,22 @@
+alter system set "_Lm_share_Lock_opt"=FALSE scope=spfile sid='*';
+
+ORA-30740: cannot grant UNDER privilege on this object
+ORA-31685: Object type DEFAULT_ROLE:"PUBLIC" failed due to insufficient privileges. Failing sql is:
+ ALTER USER "PUBLIC" DEFAULT ROLE ALL
+
+
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=rj01linoracloud01.bcsul.corp)(PORT=5502))(Presentation=HTTP)(Session=RAW))
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=rj01linoracloud01.bcsul.corp)(PORT=5500))(Presentation=HTTP)(Session=RAW))
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=rj01linoracloud01.bcsul.corp)(PORT=5503))(Presentation=HTTP)(Session=RAW))
+
+/u01/app/oracle/db_1/12.2.0.1/bin/srvctl add service -d bcsulcdb -s hamatera -r "bcsulcdb2" -a "bcsulcdb1,bcsulcdb3" -P BASIC -j LONG -B SERVICE_TIME -q false -x false -pdb matera
+
+sqlplus system@\"rj01linoracloud01:1521/+ASM\" AS SYSASM
+
+create user system identified by BC5u14sm4dmin;
+grant sysdba to system;
+grant sysoper to system;
+grant sysasm to system;
+grant sysbackup to system;
+grant sysdg to system;
+grant syskm to system;
